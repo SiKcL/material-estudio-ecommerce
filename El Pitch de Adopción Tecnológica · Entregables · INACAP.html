@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)https://aai.inacap.cl/pluginfile.php/2979801/mod_resource/content/1/Sumativa2.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Pitch de Adopción Tecnológica · Entregables · INACAP</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./El Pitch de Adopción Tecnológica · Entregables · INACAP_files/css2" rel="stylesheet">
+
+<link rel="stylesheet" href="./El Pitch de Adopción Tecnológica · Entregables · INACAP_files/all.min.css">
+
+<style>
+:root {
+  --rojo: #e53935;
+  --rojo-dark: #b71c1c;
+  --amarillo: #fdd835;
+  --amarillo-dark: #f9a825;
+  --verde: #43a047;
+  --verde-dark: #2e7d32;
+  --celeste: #29b6f6;
+  --celeste-dark: #0277bd;
+  --morado: #8e24aa;
+  --naranja: #f57c00;
+  --oscuro: #0b0d17;
+  --oscuro-2: #141827;
+  --gris-3: #64748b;
+  --gris-4: #94a3b8;
+  --gris-5: #cbd5e1;
+  --blanco: #f0f4ff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--oscuro);
+  color: var(--blanco);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--oscuro-2); }
+::-webkit-scrollbar-thumb { background: var(--rojo); border-radius: 4px; }
+::selection { background: var(--rojo); color: #fff; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(11, 13, 23, 0.9);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  padding: 0.7rem 0;
+  transition: all 0.3s;
+}
+.navbar.scrolled { padding: 0.45rem 0; background: rgba(11, 13, 23, 0.97); box-shadow: 0 4px 30px rgba(0,0,0,0.4); }
+.navbar .container { display: flex; justify-content: space-between; align-items: center; }
+.nav-logo { font-weight: 900; font-size: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+.nav-logo i { color: var(--rojo); font-size: 1.2rem; }
+.nav-links { display: flex; gap: 1.3rem; list-style: none; }
+.nav-links a {
+  color: var(--gris-4);
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: color 0.2s;
+  position: relative;
+}
+.nav-links a:hover { color: #fff; }
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0;
+  width: 0; height: 2px;
+  background: var(--rojo);
+  transition: width 0.3s;
+}
+.nav-links a:hover::after { width: 100%; }
+.menu-toggle { display: none; background: none; border: none; color: #fff; font-size: 1.4rem; cursor: pointer; }
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 7rem 1.5rem 3rem;
+  overflow: hidden;
+  background: radial-gradient(circle at 20% 40%, #1a1d2e 0%, #0b0d17 70%);
+}
+.hero .glow {
+  position: absolute;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(229,57,53,0.1) 0%, transparent 70%);
+  top: -150px; right: -100px;
+  pointer-events: none;
+}
+.hero .glow-2 {
+  position: absolute;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(41,182,246,0.07) 0%, transparent 70%);
+  bottom: -150px; left: -100px;
+  pointer-events: none;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(229,57,53,0.15);
+  border: 1px solid rgba(229,57,53,0.3);
+  color: var(--rojo);
+  padding: 0.35rem 1.3rem;
+  border-radius: 40px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  position: relative;
+  z-index: 2;
+}
+.hero h1 {
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+.hero h1 .gradient {
+  background: linear-gradient(135deg, var(--rojo) 0%, var(--amarillo) 50%, var(--celeste) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero .hero-sub {
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  color: var(--gris-4);
+  max-width: 720px;
+  margin: 0 auto 1.8rem;
+  font-weight: 300;
+  line-height: 1.7;
+  position: relative;
+  z-index: 2;
+}
+.hero .hero-lema {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--rojo);
+  color: #fff;
+  padding: 0.5rem 2rem;
+  border-radius: 60px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  box-shadow: 0 0 40px rgba(229,57,53,0.3);
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== SECCIONES ===== */
+section { padding: 4rem 0; position: relative; }
+section:nth-child(even) { background: var(--oscuro-2); }
+section:nth-child(odd) { background: var(--oscuro); }
+
+.section-title {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+  line-height: 1.15;
+}
+.section-title span { color: var(--rojo); }
+.section-subtitle {
+  color: var(--gris-4);
+  font-size: 0.95rem;
+  max-width: 750px;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+.text-center { text-align: center; }
+.text-center .section-subtitle { margin-left: auto; margin-right: auto; }
+
+.badge {
+  display: inline-block;
+  background: var(--rojo);
+  color: #fff;
+  padding: 0.2rem 0.9rem;
+  border-radius: 40px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.badge-outline {
+  background: transparent;
+  border: 1.5px solid var(--rojo);
+  color: var(--rojo);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ===== REPASO CARDS (INTERACTIVAS) ===== */
+.repaso-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+}
+.repaso-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 20px;
+  padding: 1.5rem 1.2rem;
+  transition: all 0.3s;
+  border-top: 4px solid var(--rojo);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+.repaso-card:nth-child(2) { border-top-color: var(--amarillo); }
+.repaso-card:nth-child(3) { border-top-color: var(--verde); }
+.repaso-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.12);
+}
+.repaso-card .rc-icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
+.repaso-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.3rem; }
+.repaso-card p { color: var(--gris-4); font-size: 0.82rem; line-height: 1.6; }
+.repaso-card .rc-tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.15rem 0.6rem;
+  border-radius: 20px;
+  margin-top: 0.6rem;
+}
+.rc-tag.crit { background: rgba(229,57,53,0.15); color: #ef9a9a; }
+.rc-tag.crit2 { background: rgba(253,216,53,0.15); color: #fdd835; }
+.rc-tag.crit3 { background: rgba(67,160,71,0.15); color: #81c784; }
+.repaso-card .rc-hint {
+  position: absolute;
+  bottom: 0.6rem;
+  right: 0.8rem;
+  font-size: 0.65rem;
+  color: var(--gris-3);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color 0.3s;
+}
+.repaso-card:hover .rc-hint { color: var(--rojo); }
+
+/* ===== MODAL (CARD DESPLEGABLE) ===== */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(8px);
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  animation: fadeInModal 0.3s ease;
+}
+.modal-overlay.active { display: flex; }
+
+@keyframes fadeInModal {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.modal-content {
+  background: var(--oscuro-2);
+  max-width: 850px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 28px;
+  padding: 2rem 2rem 2.5rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 50px 100px rgba(0,0,0,0.6);
+  position: relative;
+  scrollbar-width: thin;
+  scrollbar-color: var(--rojo) var(--oscuro-2);
+}
+.modal-content::-webkit-scrollbar { width: 6px; }
+.modal-content::-webkit-scrollbar-track { background: var(--oscuro-2); }
+.modal-content::-webkit-scrollbar-thumb { background: var(--rojo); border-radius: 4px; }
+
+.modal-content .close-btn {
+  position: sticky;
+  top: 0;
+  float: right;
+  background: rgba(255,255,255,0.05);
+  border: none;
+  color: #fff;
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: 0.2rem 0.8rem;
+  border-radius: 50%;
+  transition: 0.2s;
+  margin-bottom: 0.5rem;
+  z-index: 10;
+}
+.modal-content .close-btn:hover { background: var(--rojo); }
+
+.modal-content .modal-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+.modal-content .modal-sub {
+  color: var(--gris-4);
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding-bottom: 0.8rem;
+}
+.modal-content .modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.modal-content .modal-body .story {
+  background: rgba(255,255,255,0.03);
+  padding: 1.2rem 1.5rem;
+  border-radius: 18px;
+  border-left: 4px solid var(--rojo);
+}
+.modal-content .modal-body .story h4 {
+  color: var(--amarillo);
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.modal-content .modal-body .story p {
+  color: var(--gris-4);
+  line-height: 1.7;
+  font-size: 0.88rem;
+}
+.modal-content .modal-body .story ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.4rem;
+}
+.modal-content .modal-body .story ul li {
+  color: var(--gris-5);
+  font-size: 0.85rem;
+  padding: 0.35rem 0;
+  display: flex;
+  gap: 0.6rem;
+  line-height: 1.5;
+}
+.modal-content .modal-body .story ul li i {
+  color: var(--verde);
+  margin-top: 0.25rem;
+  font-size: 0.7rem;
+  flex-shrink: 0;
+}
+.modal-content .modal-body .story .tag-mini {
+  display: inline-block;
+  background: rgba(229,57,53,0.12);
+  color: #ef9a9a;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.1rem 0.6rem;
+  border-radius: 20px;
+  margin-left: 0.4rem;
+}
+.modal-content .modal-body .quote-box {
+  background: linear-gradient(135deg, rgba(229,57,53,0.08), rgba(253,216,53,0.04));
+  padding: 1rem 1.5rem;
+  border-radius: 16px;
+  font-style: italic;
+  color: var(--gris-5);
+  border-left: 4px solid var(--amarillo);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+.modal-content .modal-body .quote-box i {
+  color: var(--amarillo);
+  margin-right: 0.4rem;
+}
+
+/* ===== TAM/UTAUT SVG ===== */
+.tam-diagram {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 24px;
+  padding: 2rem;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+.tam-diagram svg { max-width: 100%; height: auto; }
+
+/* ===== ENTREGABLES DETALLE ===== */
+.entregable-block {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 24px;
+  padding: 2rem;
+  margin-bottom: 1.8rem;
+  position: relative;
+  overflow: hidden;
+}
+.entregable-block::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 5px; height: 100%;
+}
+.entregable-block.e1::before { background: var(--rojo); }
+.entregable-block.e2::before { background: var(--amarillo); }
+.entregable-block.e3::before { background: var(--verde); }
+.entregable-block .eb-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  flex-wrap: wrap;
+}
+.entregable-block .eb-num {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+.entregable-block.e1 .eb-num { background: var(--rojo); color: #fff; }
+.entregable-block.e2 .eb-num { background: var(--amarillo); color: #0f172a; }
+.entregable-block.e3 .eb-num { background: var(--verde); color: #fff; }
+.entregable-block .eb-title { font-size: 1.2rem; font-weight: 800; }
+.entregable-block .eb-sub { font-size: 0.8rem; color: var(--gris-4); }
+.entregable-block .eb-content { color: var(--gris-4); font-size: 0.9rem; line-height: 1.7; }
+.entregable-block .eb-content strong { color: var(--blanco); }
+.entregable-block .eb-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+.eb-step {
+  background: rgba(255,255,255,0.04);
+  border-radius: 14px;
+  padding: 1rem 1.2rem;
+  border-left: 3px solid var(--gris-3);
+}
+.eb-step .es-num { font-size: 0.7rem; font-weight: 700; color: var(--rojo); text-transform: uppercase; letter-spacing: 0.05em; }
+.eb-step h4 { font-size: 0.9rem; font-weight: 700; margin: 0.3rem 0; }
+.eb-step p { font-size: 0.8rem; color: var(--gris-4); line-height: 1.5; }
+.eb-step .es-check {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--verde);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.eb-step .es-check input { accent-color: var(--verde); }
+
+/* ===== ESCALA DE APRECIACIÓN ===== */
+.escala-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  background: rgba(255,255,255,0.02);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.escala-table th {
+  background: rgba(229,57,53,0.2);
+  color: #fff;
+  padding: 0.8rem 0.6rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+}
+.escala-table td {
+  padding: 0.7rem 0.6rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  color: var(--gris-4);
+  vertical-align: top;
+  line-height: 1.5;
+}
+.escala-table tr:last-child td { border-bottom: none; }
+.escala-table .crit-name { font-weight: 700; color: var(--blanco); font-size: 0.8rem; }
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--oscuro-2);
+  padding: 2.5rem 1.5rem 1.8rem;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+.footer .footer-logo { font-size: 1.2rem; font-weight: 900; margin-bottom: 0.3rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
+.footer .footer-logo i { color: var(--rojo); }
+.footer .footer-lema { color: var(--rojo); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.1em; margin-bottom: 0.8rem; }
+.footer .footer-text { color: var(--gris-3); font-size: 0.72rem; line-height: 1.8; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .menu-toggle { display: block; }
+  .nav-links.open {
+    display: flex; flex-direction: column;
+    position: absolute; top: 100%; left: 0; width: 100%;
+    background: rgba(11,13,23,0.98); padding: 1.2rem; gap: 0.8rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+}
+@media (max-width: 768px) {
+  section { padding: 3rem 0; }
+  .hero h1 { font-size: 1.9rem; }
+  .entregable-block { padding: 1.2rem; }
+  .modal-content { padding: 1.5rem; }
+  .modal-content .modal-title { font-size: 1.3rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="nav-logo"><i class="fas fa-chart-line"></i> Pitch de Adopción</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="https://aai.inacap.cl/pluginfile.php/2979801/mod_resource/content/1/Sumativa2.html#repaso">Repaso</a></li>
+      <li><a href="https://aai.inacap.cl/pluginfile.php/2979801/mod_resource/content/1/Sumativa2.html#entregable1">Entregable 1</a></li>
+      <li><a href="https://aai.inacap.cl/pluginfile.php/2979801/mod_resource/content/1/Sumativa2.html#entregable2">Entregable 2</a></li>
+      <li><a href="https://aai.inacap.cl/pluginfile.php/2979801/mod_resource/content/1/Sumativa2.html#entregable3">Entregable 3</a></li>
+      <li><a href="https://aai.inacap.cl/pluginfile.php/2979801/mod_resource/content/1/Sumativa2.html#escala">Escala</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="hero">
+  <div class="glow"></div>
+  <div class="glow-2"></div>
+
+  <div class="hero-badge"><i class="fas fa-graduation-cap"></i> Criterios 2.1.1 · 2.1.3 · 2.1.4</div>
+
+  <h1>
+    El Pitch de <span class="gradient">Adopción Tecnológica</span>
+  </h1>
+
+  <p class="hero-sub">
+    Guía completa para desarrollar los tres entregables de la actividad. <strong>Haz clic en cada contenido clave</strong> para desplegar una tarjeta con los detalles de aprendizaje, luego sigue los pasos para construir cada documento y revisa la <strong>escala de apreciación</strong>.
+  </p>
+
+  <div class="hero-lema"><i class="fas fa-flag-checkered"></i> Todo por INACAP, Todo por Chile</div>
+</header>
+
+<!-- REPASO DE CONTENIDOS -->
+<section id="repaso">
+  <div class="container">
+    <div class="text-center reveal visible">
+      <span class="badge">Fase de Repaso</span>
+      <h2 class="section-title" style="margin-top:0.8rem;">Contenidos <span>Clave</span> para tu Pitch</h2>
+      <p class="section-subtitle">
+        Antes de construir los entregables, repasa estos tres pilares. <strong>Haz clic en cada tarjeta</strong> para desplegar los detalles de aprendizaje.
+      </p>
+    </div>
+
+    <div class="repaso-grid">
+      <!-- Card 1: TAM/UTAUT -->
+      <div class="repaso-card reveal visible" data-content="tam">
+        <div class="rc-icon" style="color:var(--rojo);"><i class="fas fa-brain"></i></div>
+        <h3>Modelos de Aceptación Tecnológica</h3>
+        <p><strong>TAM</strong> (Davis, 1987): Utilidad Percibida (PU) y Facilidad de Uso Percibida (PEOU) determinan la intención de adopción. <strong>UTAUT</strong> (Venkatesh, 2003) añade: Expectativa de Rendimiento, Expectativa de Esfuerzo, Influencia Social y Condiciones Facilitadoras.</p>
+        <span class="rc-tag crit">Criterio 2.1.1</span>
+        <div class="rc-hint"><i class="fas fa-expand"></i> Clic para detalles</div>
+      </div>
+
+      <!-- Card 2: Diseño Persuasivo -->
+      <div class="repaso-card reveal visible" data-content="cialdini">
+        <div class="rc-icon" style="color:var(--amarillo);"><i class="fas fa-magnet"></i></div>
+        <h3>Diseño Persuasivo</h3>
+        <p>Los 6 principios de Cialdini aplicados a UX: <strong>Reciprocidad</strong>, <strong>Prueba Social</strong>, <strong>Escasez</strong> (ética), <strong>Autoridad</strong>, <strong>Simpatía</strong> y <strong>Compromiso</strong>. El anclaje de precios reduce la hesitación.</p>
+        <span class="rc-tag crit2">Criterio 2.1.3</span>
+        <div class="rc-hint"><i class="fas fa-expand"></i> Clic para detalles</div>
+      </div>
+
+      <!-- Card 3: Ética y Jurídico -->
+      <div class="repaso-card reveal visible" data-content="legal">
+        <div class="rc-icon" style="color:var(--verde);"><i class="fas fa-balance-scale"></i></div>
+        <h3>Ética y Marco Jurídico Chileno</h3>
+        <p><strong>Código de Buenas Prácticas CCS</strong> (2025), <strong>Ley 19.496</strong> (Protección al Consumidor), <strong>Ley 21.719</strong> (Datos Personales, vigente dic. 2025). Obligaciones de transparencia, retracto, garantía y consentimiento.</p>
+        <span class="rc-tag crit3">Criterio 2.1.4</span>
+        <div class="rc-hint"><i class="fas fa-expand"></i> Clic para detalles</div>
+      </div>
+    </div>
+
+    <!-- SVG TAM/UTAUT -->
+    <div class="tam-diagram reveal">
+      <h4 style="font-size:1rem; font-weight:700; margin-bottom:1rem; color:var(--gris-5);">Diagrama: Variables de Adopción que debes fundamentar</h4>
+      <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;">
+        <!-- Cajas TAM -->
+        <rect x="20" y="30" width="150" height="55" rx="10" fill="rgba(229,57,53,0.15)" stroke="#e53935" stroke-width="1.5"></rect>
+        <text x="95" y="52" text-anchor="middle" fill="#e53935" font-size="11" font-weight="bold">Utilidad Percibida</text>
+        <text x="95" y="68" text-anchor="middle" fill="#94a3b8" font-size="9">(PU)</text>
+
+        <rect x="20" y="105" width="150" height="55" rx="10" fill="rgba(253,216,53,0.12)" stroke="#fdd835" stroke-width="1.5"></rect>
+        <text x="95" y="127" text-anchor="middle" fill="#fdd835" font-size="11" font-weight="bold">Facilidad de Uso</text>
+        <text x="95" y="143" text-anchor="middle" fill="#94a3b8" font-size="9">(PEOU)</text>
+
+        <!-- Flechas -->
+        <line x1="170" y1="57" x2="280" y2="90" stroke="#64748b" stroke-width="2" marker-end="url(#arrowTAM)"></line>
+        <line x1="170" y1="132" x2="280" y2="100" stroke="#64748b" stroke-width="2" marker-end="url(#arrowTAM)"></line>
+
+        <!-- Intención -->
+        <rect x="285" y="65" width="160" height="60" rx="12" fill="rgba(41,182,246,0.12)" stroke="#29b6f6" stroke-width="2"></rect>
+        <text x="365" y="90" text-anchor="middle" fill="#29b6f6" font-size="12" font-weight="bold">Intención de</text>
+        <text x="365" y="107" text-anchor="middle" fill="#29b6f6" font-size="12" font-weight="bold">Adopción</text>
+
+        <!-- UTAUT adicionales -->
+        <rect x="20" y="185" width="150" height="50" rx="10" fill="rgba(67,160,71,0.12)" stroke="#43a047" stroke-width="1.5"></rect>
+        <text x="95" y="207" text-anchor="middle" fill="#43a047" font-size="10" font-weight="bold">Influencia Social</text>
+        <text x="95" y="222" text-anchor="middle" fill="#94a3b8" font-size="8">(UTAUT)</text>
+
+        <rect x="190" y="185" width="150" height="50" rx="10" fill="rgba(142,36,170,0.12)" stroke="#8e24aa" stroke-width="1.5"></rect>
+        <text x="265" y="207" text-anchor="middle" fill="#ce93d8" font-size="10" font-weight="bold">Condiciones</text>
+        <text x="265" y="222" text-anchor="middle" fill="#94a3b8" font-size="8">Facilitadoras</text>
+
+        <rect x="360" y="185" width="150" height="50" rx="10" fill="rgba(245,124,0,0.12)" stroke="#f57c00" stroke-width="1.5"></rect>
+        <text x="435" y="207" text-anchor="middle" fill="#ffb74d" font-size="10" font-weight="bold">Confianza</text>
+        <text x="435" y="222" text-anchor="middle" fill="#94a3b8" font-size="8">(crítico en Chile)</text>
+
+        <!-- Flechas a intención -->
+        <line x1="170" y1="210" x2="280" y2="125" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4" marker-end="url(#arrowTAM)"></line>
+        <line x1="340" y1="210" x2="340" y2="130" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4" marker-end="url(#arrowTAM)"></line>
+        <line x1="435" y1="185" x2="390" y2="130" stroke="#f57c00" stroke-width="2" marker-end="url(#arrowTAM)"></line>
+
+        <!-- Resultado -->
+        <rect x="500" y="65" width="170" height="60" rx="12" fill="rgba(67,160,71,0.15)" stroke="#43a047" stroke-width="2"></rect>
+        <text x="585" y="90" text-anchor="middle" fill="#81c784" font-size="12" font-weight="bold">Adopción</text>
+        <text x="585" y="107" text-anchor="middle" fill="#81c784" font-size="12" font-weight="bold">Exitosa</text>
+
+        <line x1="445" y1="95" x2="495" y2="95" stroke="#64748b" stroke-width="2" marker-end="url(#arrowTAM)"></line>
+
+        <defs>
+          <marker id="arrowTAM" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill="#64748b"></path>
+          </marker>
+        </defs>
+      </svg>
+      <p style="font-size:0.75rem; color:var(--gris-3); margin-top:0.8rem;">Debes citar al menos 3 de estas variables en tu Entregable 1.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ENTREGABLE 1 -->
+<section id="entregable1">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="badge">Entregable 1</span>
+      <h2 class="section-title" style="margin-top:0.8rem;">Documento de <span>Justificación Teórica</span></h2>
+      <p class="section-subtitle">
+        3 páginas máximo. Fundamenta por qué los usuarios chilenos adoptarán tu e-commerce usando TAM/UTAUT y variables del contexto local.
+      </p>
+    </div>
+
+    <div class="entregable-block e1 reveal">
+      <div class="eb-header">
+        <div class="eb-num">1</div>
+        <div>
+          <div class="eb-title">Documento de Justificación Teórica de Adopción</div>
+          <div class="eb-sub">Criterio 2.1.1 · 30% de la evaluación</div>
+        </div>
+      </div>
+      <div class="eb-content">
+        <p><strong>Propósito:</strong> Demostrar que comprendes las teorías de aceptación tecnológica y que puedes aplicarlas al contexto específico de tu e-commerce en Chile.</p>
+      </div>
+      <div class="eb-steps">
+        <div class="eb-step">
+          <div class="es-num">Paso 1.1</div>
+          <h4>Define tu usuario objetivo</h4>
+          <p>Describe al comprador chileno que usará tu plataforma. Edad, nivel socioeconómico, hábitos digitales, motivaciones y miedos. ¿Por qué esta persona adoptaría (o no) tu e-commerce?</p>
+          <div class="es-check"><input type="checkbox"> Buyer persona con datos concretos</div>
+        </div>
+        <div class="eb-step">
+          <div class="es-num">Paso 1.2</div>
+          <h4>Aplica TAM: PU y PEOU</h4>
+          <p>Explica cómo tu e-commerce maximiza la <strong>Utilidad Percibida</strong> (¿qué problema le resuelve?) y la <strong>Facilidad de Uso Percibida</strong> (¿qué fricciones elimina?). Cita a Davis (1987).</p>
+          <div class="es-check"><input type="checkbox"> Variables TAM citadas y aplicadas</div>
+        </div>
+        <div class="eb-step">
+          <div class="es-num">Paso 1.3</div>
+          <h4>Añade variables UTAUT</h4>
+          <p>Selecciona al menos 2 variables UTAUT: <strong>Influencia Social</strong> (¿cómo las recomendaciones de otros afectan la adopción?), <strong>Condiciones Facilitadoras</strong> (¿qué soporte ofreces?) o <strong>Expectativa de Esfuerzo</strong>.</p>
+          <div class="es-check"><input type="checkbox"> Al menos 2 variables UTAUT aplicadas</div>
+        </div>
+        <div class="eb-step">
+          <div class="es-num">Paso 1.4</div>
+          <h4>Integra la confianza</h4>
+          <p>En países emergentes, la <strong>confianza percibida</strong> es el antecedente más fuerte de la intención de uso de e-commerce. Explica cómo construirás confianza desde el día 1 (sellos, políticas, transparencia).</p>
+          <div class="es-check"><input type="checkbox"> Confianza abordada explícitamente</div>
+        </div>
+        <div class="eb-step">
+          <div class="es-num">Paso 1.5</div>
+          <h4>Cierra con una hipótesis</h4>
+          <p>Formula una hipótesis clara: <em>"Si [acción de diseño], entonces [variable TAM/UTAUT] aumentará, lo que llevará a [intención de adopción]."</em></p>
+          <div class="es-check"><input type="checkbox"> Hipótesis formulada</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENTREGABLE 2 -->
+<section id="entregable2">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="badge">Entregable 2</span>
+      <h2 class="section-title" style="margin-top:0.8rem;">Mockup con <span>Diseño Persuasivo</span></h2>
+      <p class="section-subtitle">
+        Captura o prototipo donde se evidencien al menos 4 principios de Cialdini aplicados. Cada técnica debe estar etiquetada y justificada.
+      </p>
+    </div>
+
+    <div class="entregable-block e2 reveal">
+      <div class="eb-header">
+        <div class="eb-num">2</div>
+        <div>
+          <div class="eb-title">Mockup Etiquetado de Diseño Persuasivo</div>
+          <div class="eb-sub">Criterio 2.1.3 · 25% de la evaluación</div>
+        </div>
+      </div>
+      <div class="eb-content">
+        <p><strong>Propósito:</strong> Demostrar que sabes aplicar técnicas de persuasión de forma ética, sin manipular al usuario.</p>
+      </div>
+      <div class="eb-steps">
+        <div class="eb-step">
+          <div class="es-num">Paso 2.1</div>
+          <h4>Selecciona 4 principios</h4>
+          <p>Elige entre: <strong>Prueba Social</strong> (reseñas, "X compraron"), <strong>Escasez</strong> (solo si es real), <strong>Autoridad</strong> (sellos, expertos), <strong>Reciprocidad</strong> (valor antes de la venta), <strong>Anclaje de precios</strong> o <strong>Simpatía</strong> (storytelling de marca).</p>
+          <div class="es-check"><input type="checkbox"> 4 principios seleccionados y justificados</div>
+        </div>
+        <div class="eb-step">
+          <div class="es-num">Paso 2.2</div>
+          <h4>Diséñalos en el mockup</h4>
+          <p>En tu wireframe o prototipo (Figma, Canva o captura), coloca etiquetas visuales que indiquen qué principio es cada elemento. Ejemplo: <em>"Prueba Social: 127 reseñas verificadas"</em>.</p>
+          <div class="es-check"><input type="checkbox"> Mockup con etiquetas de persuasión</div>
+        </div>
+        <div class="eb-step">
+          <div class="es-num">Paso 2.3</div>
+          <h4>Justifica cada técnica</h4>
+          <p>Para cada principio, explica <strong>por qué funciona para tu usuario objetivo</strong>. No basta con decir "usé escasez"; debes argumentar por qué esa técnica específica reduce la fricción en ese contexto.</p>
+          <div class="es-check"><input type="checkbox"> Justificación por técnica</div>
+        </div>
+        <div class="eb-step">
+          <div class="es-num">Paso 2.4</div>
+          <h4>Demuestra ética</h4>
+          <p>Identifica un <strong>dark pattern que decidiste NO usar</strong> y explica por qué. Ejemplo: "No usamos urgencia falsa porque destruye la confianza y viola el Código CCS".</p>
+          <div class="es-check"><input type="checkbox"> Dark pattern identificado y rechazado</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENTREGABLE 3 -->
+<section id="entregable3">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="badge">Entregable 3</span>
+      <h2 class="section-title" style="margin-top:0.8rem;">Checklist de <span>Cumplimiento Legal</span></h2>
+      <p class="section-subtitle">
+        Demuestra que tu e-commerce cumple con el Código CCS, la Ley 19.496 y la Ley 21.719. Al menos 6 obligaciones identificadas y explicadas.
+      </p>
+    </div>
+
+    <div class="entregable-block e3 reveal">
+      <div class="eb-header">
+        <div class="eb-num">3</div>
+        <div>
+          <div class="eb-title">Checklist de Cumplimiento Normativo y Ético</div>
+          <div class="eb-sub">Criterio 2.1.4 · 25% de la evaluación</div>
+        </div>
+      </div>
+      <div class="eb-content">
+        <p><strong>Propósito:</strong> Fundamentar que tu e-commerce es legal, ético y confiable para el consumidor chileno.</p>
+      </div>
+      <div class="eb-steps">
+        <div class="eb-step">
+          <div class="es-num">Paso 3.1</div>
+          <h4>Cumplimiento del Código CCS</h4>
+          <p>Identifica al menos 3 exigencias del Código de Buenas Prácticas: transparencia algorítmica, privacidad por diseño, reembolsos en 10 días, notificación de incidentes en 72 horas.</p>
+          <div class="es-check"><input type="checkbox"> 3 exigencias del Código CCS</div>
+        </div>
+        <div class="eb-step">
+          <div class="es-num">Paso 3.2</div>
+          <h4>Ley 19.496 (Consumidor)</h4>
+          <p>Explica cómo cumples con: <strong>derecho de retracto</strong> (10 días), <strong>garantía legal</strong> (6 meses, triple opción) e <strong>información básica comercial</strong> (precio total, costos de envío antes del contrato).</p>
+          <div class="es-check"><input type="checkbox"> 3 obligaciones de la Ley 19.496</div>
+        </div>
+        <div class="eb-step">
+          <div class="es-num">Paso 3.3</div>
+          <h4>Ley 21.719 (Datos Personales)</h4>
+          <p>Describe cómo obtienes <strong>consentimiento explícito</strong> para datos, cómo garantizas los derechos ARCO (acceso, rectificación, cancelación, oposición) y qué medidas de seguridad implementas.</p>
+          <div class="es-check"><input type="checkbox"> Consentimiento y derechos ARCO</div>
+        </div>
+        <div class="eb-step">
+          <div class="es-num">Paso 3.4</div>
+          <h4>Ética profesional</h4>
+          <p>Conecta tu propuesta con el <strong>Código de Ética del Ingeniero</strong>: ¿Cómo aseguras que tu diseño no discrimina? ¿Cómo evitas sesgos algorítmicos en las recomendaciones? ¿Cómo proteges a menores?</p>
+          <div class="es-check"><input type="checkbox"> Reflexión ética profesional</div>
+        </div>
+        <div class="eb-step">
+          <div class="es-num">Paso 3.5</div>
+          <h4>Formato de entrega</h4>
+          <p>Presenta el checklist como una tabla de 2 columnas: <strong>Obligación</strong> | <strong>Cómo la cumple tu e-commerce</strong>. Mínimo 6 filas.</p>
+          <div class="es-check"><input type="checkbox"> Tabla completa (≥6 obligaciones)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESCALA DE APRECIACIÓN -->
+<section id="escala">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="badge badge-outline">Evaluación</span>
+      <h2 class="section-title" style="margin-top:0.8rem;">Escala de <span>Apreciación</span></h2>
+      <p class="section-subtitle">
+        El panel de inversores evaluará tu pitch y entregables con los siguientes indicadores. Cada criterio se puntúa de 1 a 4.
+      </p>
+    </div>
+
+    <div class="reveal" style="overflow-x:auto;">
+      <table class="escala-table">
+        <thead>
+          <tr>
+            <th style="width:18%;">Criterio</th>
+            <th style="width:20%;">Indicador</th>
+            <th style="width:15%;">Insuficiente (1)</th>
+            <th style="width:15%;">Suficiente (2)</th>
+            <th style="width:16%;">Bueno (3)</th>
+            <th style="width:16%;">Excelente (4)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="crit-name" rowspan="3">2.1.1<br><span style="font-weight:400; font-size:0.7rem; color:var(--gris-4);">30%</span></td>
+            <td>Identificación de teorías</td>
+            <td>No menciona TAM ni UTAUT</td>
+            <td>Menciona TAM o UTAUT pero sin aplicar</td>
+            <td>Aplica TAM y al menos 1 variable UTAUT</td>
+            <td>Integra TAM y UTAUT con confianza percibida, citando fuentes</td>
+          </tr>
+          <tr>
+            <td>Aplicación al contexto chileno</td>
+            <td>No considera el contexto local</td>
+            <td>Menciona Chile pero sin profundidad</td>
+            <td>Adapta variables al mercado chileno</td>
+            <td>Integra confianza y reputación como mediadores críticos en Chile</td>
+          </tr>
+          <tr>
+            <td>Hipótesis de adopción</td>
+            <td>No formula hipótesis</td>
+            <td>Hipótesis vaga o sin fundamento</td>
+            <td>Hipótesis clara pero sin conexión teórica</td>
+            <td>Hipótesis conecta acción de diseño → variable → adopción</td>
+          </tr>
+          <tr>
+            <td class="crit-name" rowspan="2">2.1.3<br><span style="font-weight:400; font-size:0.7rem; color:var(--gris-4);">25%</span></td>
+            <td>Aplicación de principios</td>
+            <td>No evidencia principios de persuasión</td>
+            <td>Menciona 1-2 principios sin aplicación visual</td>
+            <td>Mockup con 3 principios etiquetados</td>
+            <td>Mockup con ≥4 principios etiquetados y justificados por usuario</td>
+          </tr>
+          <tr>
+            <td>Ética del diseño</td>
+            <td>Usa dark patterns o no los menciona</td>
+            <td>Reconoce dark patterns pero no los evita</td>
+            <td>Evita dark patterns evidentes</td>
+            <td>Identifica y rechaza explícitamente un dark pattern con argumento ético</td>
+          </tr>
+          <tr>
+            <td class="crit-name" rowspan="3">2.1.4<br><span style="font-weight:400; font-size:0.7rem; color:var(--gris-4);">25%</span></td>
+            <td>Código CCS</td>
+            <td>No lo menciona</td>
+            <td>Lo menciona sin detalle</td>
+            <td>Identifica 2 exigencias del Código</td>
+            <td>Identifica ≥3 exigencias y explica cómo las cumple</td>
+          </tr>
+          <tr>
+            <td>Ley 19.496</td>
+            <td>No la menciona</td>
+            <td>Menciona solo una obligación</td>
+            <td>Cubre retracto y garantía</td>
+            <td>Cubre retracto, garantía e información precontractual</td>
+          </tr>
+          <tr>
+            <td>Ley 21.719 (Datos)</td>
+            <td>No la menciona</td>
+            <td>Menciona consentimiento sin detalle</td>
+            <td>Cubre consentimiento y derechos ARCO</td>
+            <td>Integra privacidad por diseño y medidas de seguridad</td>
+          </tr>
+          <tr>
+            <td class="crit-name" rowspan="2">Calidad del Pitch<br><span style="font-weight:400; font-size:0.7rem; color:var(--gris-4);">20%</span></td>
+            <td>Claridad y evidencia</td>
+            <td>Pitch confuso, sin soporte visual</td>
+            <td>Pitch comprensible pero sin evidencia</td>
+            <td>Pitch claro con mockup y documento</td>
+            <td>Pitch convincente, evidencia visual clara, responde preguntas del panel</td>
+          </tr>
+          <tr>
+            <td>Trabajo en equipo</td>
+            <td>Un solo integrante participa</td>
+            <td>Participación desigual</td>
+            <td>Todos participan pero sin cohesión</td>
+            <td>Roles claros, transiciones fluidas, equipo cohesionado</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="reveal" style="margin-top:1.5rem; background:rgba(229,57,53,0.06); border:1px solid rgba(229,57,53,0.15); border-radius:16px; padding:1.2rem 1.5rem;">
+      <p style="font-size:0.85rem; color:var(--gris-5); line-height:1.7;">
+        <i class="fas fa-calculator" style="color:var(--rojo); margin-right:0.5rem;"></i>
+        <strong>Cálculo del puntaje final:</strong> Cada criterio suma los puntajes de sus indicadores. El máximo es: 2.1.1 (12 pts) + 2.1.3 (8 pts) + 2.1.4 (12 pts) + Calidad (8 pts) = <strong>40 puntos</strong>. La nota se calcula como (puntaje obtenido / 40) × 100.
+      </p>
+    </div>
+
+    <div class="reveal" style="margin-top:1rem; background:rgba(253,216,53,0.05); border:1px solid rgba(253,216,53,0.15); border-radius:16px; padding:1.2rem 1.5rem;">
+      <p style="font-size:0.85rem; color:var(--gris-5); line-height:1.7;">
+        <i class="fas fa-star" style="color:var(--amarillo); margin-right:0.5rem;"></i>
+        <strong>Recompensas adicionales:</strong> Si obtienes ≥36/40, recibes la insignia <strong>"Inversión Asegurada"</strong> y puntos extra en la evaluación de la fase. Si cumples al 100% en un criterio específico, desbloqueas la insignia correspondiente (Validación Teórica, Maestros de la Persuasión o Ética Digital).
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-logo"><i class="fas fa-chart-line"></i> Pitch de Adopción Tecnológica</div>
+  <div class="footer-lema"><i class="fas fa-flag-checkered"></i> Todo por INACAP, Todo por Chile</div>
+  <div class="footer-text">
+    Guía de entregables y evaluación · Criterios 2.1.1 · 2.1.3 · 2.1.4<br>
+    Ingeniería Informática · INACAP 2026
+  </div>
+</footer>
+
+<!-- ===== MODALES (CARDS DESPLEGABLES) ===== -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-content" id="modalContent">
+    <button class="close-btn" id="modalClose">×</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+/* ===== DATOS DE CONTENIDOS CLAVE ===== */
+const contentData = {
+  tam: {
+    icon: 'fa-brain',
+    color: '#e53935',
+    title: 'Modelos de Aceptación Tecnológica',
+    subtitle: 'TAM (Davis, 1987) · UTAUT (Venkatesh, 2003) · Confianza en e-commerce',
+    sections: [
+      {
+        icon: 'fa-cube',
+        title: 'TAM: Technology Acceptance Model',
+        content: 'El modelo más influyente en adopción de tecnología. Postula que la intención de usar una tecnología está determinada por dos variables principales: <strong>Utilidad Percibida (PU)</strong> —el grado en que el usuario cree que usar el sistema mejorará su desempeño— y <strong>Facilidad de Uso Percibida (PEOU)</strong> —el grado en que el usuario cree que usar el sistema será libre de esfuerzo. Davis (1987) demostró que estas dos variables explican gran parte de la varianza en la intención de adopción.'
+      },
+      {
+        icon: 'fa-cubes',
+        title: 'UTAUT: Unified Theory of Acceptance and Use of Technology',
+        content: 'Venkatesh et al. (2003) integraron 8 modelos previos en uno solo. UTAUT añade cuatro variables clave: <ul><li><strong>Expectativa de Rendimiento:</strong> ¿el sistema ayuda a lograr mejores resultados?</li><li><strong>Expectativa de Esfuerzo:</strong> ¿es fácil de usar?</li><li><strong>Influencia Social:</strong> ¿las personas importantes para el usuario creen que debería usarlo?</li><li><strong>Condiciones Facilitadoras:</strong> ¿existe infraestructura y soporte para usarlo?</li></ul>'
+      },
+      {
+        icon: 'fa-shield-halved',
+        title: 'Confianza: el mediador crítico en Chile',
+        content: 'En países emergentes y en el contexto chileno específicamente, la <strong>confianza percibida</strong> es el antecedente más fuerte de la intención de uso de e-commerce. El usuario chileno necesita sentirse seguro antes de comprar online. Construir confianza desde el día 1 (sellos de seguridad, políticas claras, transparencia) es tan importante como la utilidad y la facilidad de uso.'
+      },
+      {
+        icon: 'fa-lightbulb',
+        title: 'Cómo aplicarlo en tu Entregable 1',
+        content: 'Debes citar al menos 3 variables en tu documento. Ejemplo de aplicación: <em>"Nuestra plataforma maximiza la Utilidad Percibida al ofrecer envío en 24 horas (resuelve el problema de la espera). Maximiza la Facilidad de Uso Percibida con un checkout en 3 pasos. Y construye Confianza con sellos de seguridad visibles y reseñas verificadas, abordando el principal mediador de adopción en Chile."</em>'
+      }
+    ],
+    footer: 'Criterio 2.1.1 · Integración de influencias teóricas de adopción'
+  },
+  cialdini: {
+    icon: 'fa-magnet',
+    color: '#fdd835',
+    title: 'Diseño Persuasivo: Los 6 Principios de Cialdini',
+    subtitle: 'Aplicación ética de la psicología del consumidor en UX',
+    sections: [
+      {
+        icon: 'fa-gift',
+        title: '1. Reciprocidad',
+        content: 'Las personas devuelven favores. En e-commerce: ofrece contenido gratuito (guías, ebooks, muestras), envío gratis en la primera compra, descuentos exclusivos por registrarse. El usuario siente que "debe" algo a cambio.'
+      },
+      {
+        icon: 'fa-check-double',
+        title: '2. Compromiso y Coherencia',
+        content: 'Somos consecuentes con nuestras decisiones. En e-commerce: listas de deseos, suscripción a newsletter (micro-compromiso), programas de puntos por compras recurrentes. Una vez que el usuario se compromete con algo pequeño, es más probable que complete la compra.'
+      },
+      {
+        icon: 'fa-users',
+        title: '3. Prueba Social',
+        content: 'Seguimos el comportamiento de otros. En e-commerce: reseñas y calificaciones visibles, "X personas compraron este producto", testimonios en video, fotos de usuarios usando el producto (UGC). Es especialmente efectiva en situaciones de incertidumbre.'
+      },
+      {
+        icon: 'fa-award',
+        title: '4. Autoridad',
+        content: 'Obedecemos a figuras de autoridad. En e-commerce: sellos de seguridad y certificaciones, menciones en medios, opiniones de expertos o influencers, premios y reconocimientos de la marca.'
+      },
+      {
+        icon: 'fa-heart',
+        title: '5. Simpatía',
+        content: 'Compramos a quien nos cae bien. En e-commerce: diseño cálido y cercano, personalización basada en preferencias, atención al cliente empática y rápida, storytelling de marca auténtico.'
+      },
+      {
+        icon: 'fa-clock',
+        title: '6. Escasez y Urgencia',
+        content: 'Valoramos lo que es limitado. En e-commerce: ofertas por tiempo limitado con contador, "¡Solo quedan 3 unidades!" (real, no falso), acceso anticipado para suscriptores, ediciones limitadas. <strong>Ética:</strong> la urgencia debe ser real y verificable. La urgencia falsa destruye la confianza y viola el Código CCS.'
+      },
+      {
+        icon: 'fa-exclamation-triangle',
+        title: 'Dark Patterns: lo que NO debes hacer',
+        content: 'Los dark patterns son técnicas de diseño que engañan o manipulan al usuario. Ejemplos: urgencia falsa (contadores que se reinician), costos ocultos (envío solo al final), registro forzado (no ofrecer guest checkout), suscripciones ocultas (dificultad para cancelar). <strong>Identifica uno que decidiste NO usar y explica por qué.</strong>'
+      }
+    ],
+    footer: 'Criterio 2.1.3 · Técnicas de diseño de tecnología persuasiva'
+  },
+  legal: {
+    icon: 'fa-balance-scale',
+    color: '#43a047',
+    title: 'Ética y Marco Jurídico Chileno',
+    subtitle: 'Código CCS · Ley 19.496 · Ley 21.719 · Ética profesional',
+    sections: [
+      {
+        icon: 'fa-handshake',
+        title: 'Código de Buenas Prácticas de la CCS (2025)',
+        content: 'Actualizado en 2025, incorpora transparencia algorítmica (explicar cómo las recomendaciones afectan la visibilidad), privacidad por diseño, reembolsos en máximo 10 días hábiles, notificación de incidentes de seguridad en 72 horas y protección reforzada de menores. <strong>Debes identificar al menos 3 exigencias y explicar cómo las cumples.</strong>'
+      },
+      {
+        icon: 'fa-shopping-cart',
+        title: 'Ley 19.496 (Protección al Consumidor)',
+        content: 'Establece el <strong>derecho de retracto</strong> (10 días desde la recepción del producto), la <strong>garantía legal</strong> (6 meses, con triple opción: reparación, reposición o devolución) y la obligación de <strong>información básica comercial</strong> (precio total, costos de envío y condiciones antes de la compra).'
+      },
+      {
+        icon: 'fa-lock',
+        title: 'Ley 21.719 (Protección de Datos Personales)',
+        content: 'Vigente desde diciembre de 2025. Exige <strong>consentimiento explícito</strong> para el tratamiento de datos, garantiza los <strong>derechos ARCO</strong> (acceso, rectificación, cancelación, oposición) y crea la Agencia de Protección de Datos. Debes describir cómo obtienes consentimiento y qué medidas de seguridad implementas.'
+      },
+      {
+        icon: 'fa-user-shield',
+        title: 'Ética Profesional del Ingeniero',
+        content: 'El Código de Ética del Ingeniero exige: actuar con integridad, no discriminar, proteger la seguridad y privacidad de los usuarios, evitar sesgos algorítmicos y actuar en beneficio de la sociedad. Conecta tu propuesta con estos principios: ¿cómo aseguras que tu diseño no discrimina? ¿cómo evitas sesgos en las recomendaciones? ¿cómo proteges a menores?'
+      },
+      {
+        icon: 'fa-file-invoice',
+        title: 'IVA Digital y Obligaciones Tributarias',
+        content: 'Si tu e-commerce realiza ventas internacionales de bienes de bajo valor (hasta USD$500), debes declarar y pagar el <strong>IVA Digital (19%)</strong>. Además, debes realizar el <strong>Inicio de Actividades en el SII</strong> y emitir <strong>boleta electrónica</strong> por cada venta.'
+      }
+    ],
+    footer: 'Criterio 2.1.4 · Fundamentación de la adopción con ética y marco jurídico'
+  }
+};
+
+/* ===== MODAL ===== */
+const modalOverlay = document.getElementById('modalOverlay');
+const modalContent = document.getElementById('modalContent');
+const modalBody = document.getElementById('modalBody');
+const modalClose = document.getElementById('modalClose');
+
+function openModal(key) {
+  const data = contentData[key];
+  if (!data) return;
+
+  let html = `
+    <div class="modal-title">
+      <i class="fas ${data.icon}" style="color:${data.color};"></i>
+      ${data.title}
+    </div>
+    <div class="modal-sub">${data.subtitle}</div>
+    <div class="modal-body">
+  `;
+
+  data.sections.forEach(sec => {
+    html += `
+      <div class="story" style="border-left-color: ${data.color};">
+        <h4><i class="fas ${sec.icon}" style="color:${data.color};"></i> ${sec.title}</h4>
+        <p>${sec.content}</p>
+      </div>
+    `;
+  });
+
+  html += `
+    </div>
+    <div class="quote-box" style="margin-top:1rem;">
+      <i class="fas fa-info-circle"></i> <strong>${data.footer}</strong>
+    </div>
+  `;
+
+  modalBody.innerHTML = html;
+  modalOverlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+  modalContent.scrollTop = 0;
+}
+
+function closeModal() {
+  modalOverlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+modalClose.addEventListener('click', closeModal);
+modalOverlay.addEventListener('click', (e) => {
+  if (e.target === modalOverlay) closeModal();
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeModal();
+});
+
+/* ===== CLICK EN REPASO CARDS ===== */
+document.querySelectorAll('.repaso-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const key = card.dataset.content;
+    if (key) openModal(key);
+  });
+});
+
+/* ===== INTERSECTION OBSERVER ===== */
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+/* ===== NAVBAR ===== */
+const navbar = document.getElementById('navbar');
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => navLinks.classList.remove('open'));
+});
+
+/* ===== SMOOTH SCROLL ===== */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+
+</body></html>

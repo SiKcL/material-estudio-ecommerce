@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<!-- saved from url=(0095)https://aai.inacap.cl/pluginfile.php/2936741/mod_resource/content/1/crear%20un%20ecommerce.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ruta del Éxito E-commerce · De la Idea a la Adopción · INACAP</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./Ruta del Éxito E-commerce · De la Idea a la Adopción · INACAP_files/css2" rel="stylesheet">
+
+<link rel="stylesheet" href="./Ruta del Éxito E-commerce · De la Idea a la Adopción · INACAP_files/all.min.css">
+<link rel="stylesheet" href="./Ruta del Éxito E-commerce · De la Idea a la Adopción · INACAP_files/swiper-bundle.min.css">
+
+<style>
+:root {
+  --rojo: #e53935;
+  --rojo-dark: #b71c1c;
+  --amarillo: #fdd835;
+  --amarillo-dark: #f9a825;
+  --verde: #43a047;
+  --verde-dark: #2e7d32;
+  --celeste: #29b6f6;
+  --celeste-dark: #0277bd;
+  --morado: #8e24aa;
+  --naranja: #f57c00;
+  --oscuro: #0b0d17;
+  --oscuro-2: #141827;
+  --gris-3: #64748b;
+  --gris-4: #94a3b8;
+  --gris-5: #cbd5e1;
+  --blanco: #f0f4ff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--oscuro);
+  color: var(--blanco);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--oscuro-2); }
+::-webkit-scrollbar-thumb { background: var(--rojo); border-radius: 4px; }
+::selection { background: var(--rojo); color: #fff; }
+
+.container { max-width: 1300px; margin: 0 auto; padding: 0 1.5rem; }
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+  line-height: 1.15;
+}
+.section-title span { color: var(--rojo); }
+
+.section-subtitle {
+  color: var(--gris-4);
+  font-size: 1.05rem;
+  max-width: 750px;
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+}
+
+.text-center { text-align: center; }
+.text-center .section-subtitle { margin-left: auto; margin-right: auto; }
+
+.badge {
+  display: inline-block;
+  background: var(--rojo);
+  color: #fff;
+  padding: 0.25rem 1rem;
+  border-radius: 40px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.badge-outline {
+  background: transparent;
+  border: 1.5px solid var(--rojo);
+  color: var(--rojo);
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(11, 13, 23, 0.88);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  padding: 0.8rem 0;
+  transition: all 0.3s;
+}
+.navbar.scrolled { padding: 0.5rem 0; background: rgba(11, 13, 23, 0.96); box-shadow: 0 4px 30px rgba(0,0,0,0.4); }
+.navbar .container { display: flex; justify-content: space-between; align-items: center; }
+.nav-logo { font-weight: 900; font-size: 1.15rem; display: flex; align-items: center; gap: 0.6rem; }
+.nav-logo i { color: var(--rojo); font-size: 1.4rem; }
+.nav-links { display: flex; gap: 1.5rem; list-style: none; }
+.nav-links a {
+  color: var(--gris-4);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: color 0.2s;
+  position: relative;
+}
+.nav-links a:hover { color: #fff; }
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0;
+  width: 0; height: 2px;
+  background: var(--rojo);
+  transition: width 0.3s;
+}
+.nav-links a:hover::after { width: 100%; }
+.menu-toggle { display: none; background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer; }
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 6rem 1.5rem 3rem;
+  overflow: hidden;
+  background: radial-gradient(circle at 20% 40%, #1a1d2e 0%, #0b0d17 70%);
+}
+.hero .glow {
+  position: absolute;
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(229,57,53,0.12) 0%, transparent 70%);
+  top: -200px; right: -150px;
+  pointer-events: none;
+}
+.hero .glow-2 {
+  position: absolute;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(41,182,246,0.08) 0%, transparent 70%);
+  bottom: -200px; left: -150px;
+  pointer-events: none;
+}
+.hero .glow-3 {
+  position: absolute;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(253,216,53,0.06) 0%, transparent 70%);
+  top: 30%; left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(229,57,53,0.15);
+  border: 1px solid rgba(229,57,53,0.3);
+  color: var(--rojo);
+  padding: 0.4rem 1.4rem;
+  border-radius: 40px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+.hero h1 {
+  font-size: clamp(2.6rem, 7vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+}
+.hero h1 .gradient {
+  background: linear-gradient(135deg, var(--rojo) 0%, var(--amarillo) 50%, var(--celeste) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero .hero-sub {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--gris-4);
+  max-width: 750px;
+  margin: 0 auto 2rem;
+  font-weight: 300;
+  line-height: 1.7;
+  position: relative;
+  z-index: 2;
+}
+.hero .hero-lema {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--rojo);
+  color: #fff;
+  padding: 0.6rem 2.5rem;
+  border-radius: 60px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.1em;
+  box-shadow: 0 0 50px rgba(229,57,53,0.3);
+  position: relative;
+  z-index: 2;
+}
+.hero .scroll-hint {
+  position: absolute;
+  bottom: 30px; left: 50%;
+  transform: translateX(-50%);
+  color: var(--gris-3);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  animation: bounce 2s infinite;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-10px); }
+}
+
+/* SECCIONES */
+section { padding: 5rem 0; position: relative; }
+section:nth-child(even) { background: var(--oscuro-2); }
+section:nth-child(odd) { background: var(--oscuro); }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* LEAN STARTUP - CICLO */
+.lean-cycle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+.lean-step {
+  flex: 1 1 220px;
+  max-width: 280px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 24px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+}
+.lean-step:hover {
+  border-color: var(--rojo);
+  background: rgba(229,57,53,0.05);
+  transform: translateY(-6px);
+}
+.lean-step .step-icon {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: rgba(229,57,53,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 1.8rem;
+  color: var(--rojo);
+}
+.lean-step h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; }
+.lean-step p { color: var(--gris-4); font-size: 0.88rem; line-height: 1.6; }
+
+/* COMPARATIVA PLATAFORMAS */
+.platforms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.platform-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 24px;
+  padding: 2rem 1.5rem;
+  transition: all 0.35s;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.platform-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 5px;
+}
+.platform-card.tiendanube::before { background: var(--celeste); }
+.platform-card.shopify::before { background: var(--verde); }
+.platform-card.jumpseller::before { background: var(--amarillo); }
+.platform-card.micrositios::before { background: var(--morado); }
+.platform-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255,255,255,0.12);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+.platform-card .platform-logo {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+.platform-card h3 { font-size: 1.4rem; font-weight: 800; margin-bottom: 0.3rem; }
+.platform-card .platform-tag {
+  font-size: 0.75rem;
+  color: var(--gris-4);
+  margin-bottom: 1rem;
+  display: block;
+}
+.platform-card .platform-features {
+  list-style: none;
+  padding: 0;
+  flex: 1;
+  margin-bottom: 1rem;
+}
+.platform-card .platform-features li {
+  font-size: 0.85rem;
+  color: var(--gris-5);
+  padding: 0.35rem 0;
+  display: flex;
+  gap: 0.5rem;
+  line-height: 1.5;
+}
+.platform-card .platform-features li i { margin-top: 0.25rem; font-size: 0.7rem; flex-shrink: 0; }
+.platform-card .price-tag {
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  font-size: 0.85rem;
+  color: var(--gris-4);
+}
+.platform-card .price-tag strong { color: var(--amarillo); font-size: 1.1rem; }
+
+/* RUTAS DE IMPLEMENTACIÓN */
+.routes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+.route-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 20px;
+  padding: 1.8rem 1.5rem;
+  text-align: center;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.route-card:hover {
+  border-color: var(--verde);
+  background: rgba(67,160,71,0.05);
+  transform: translateY(-4px);
+}
+.route-card .route-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+}
+.route-card h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.3rem; }
+.route-card .route-level {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 1rem;
+  border-radius: 30px;
+  display: inline-block;
+  margin-bottom: 0.6rem;
+}
+.route-level.principiante { background: rgba(67,160,71,0.15); color: #81c784; }
+.route-level.intermedio { background: rgba(253,216,53,0.15); color: #fdd835; }
+.route-level.avanzado { background: rgba(229,57,53,0.15); color: #ef9a9a; }
+.route-card p { color: var(--gris-4); font-size: 0.85rem; line-height: 1.6; }
+
+/* PASOS LEGALES */
+.legal-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.legal-step {
+  display: flex;
+  gap: 1.2rem;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 20px;
+  padding: 1.5rem;
+  transition: all 0.3s;
+}
+.legal-step:hover {
+  border-color: var(--verde);
+  background: rgba(67,160,71,0.04);
+}
+.legal-step .step-num {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--verde);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+.legal-step .step-content h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.3rem; }
+.legal-step .step-content p { color: var(--gris-4); font-size: 0.88rem; line-height: 1.6; }
+.legal-step .step-content .legal-note {
+  margin-top: 0.4rem;
+  padding: 0.4rem 0.8rem;
+  background: rgba(253,216,53,0.08);
+  border-left: 3px solid var(--amarillo);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: var(--gris-5);
+}
+
+/* VALIDACIÓN CON PRESUPUESTO */
+.budget-section {
+  background: linear-gradient(135deg, rgba(229,57,53,0.06), rgba(253,216,53,0.04));
+  border: 1px solid rgba(229,57,53,0.15);
+  border-radius: 28px;
+  padding: 2.5rem;
+  margin-top: 2rem;
+}
+.budget-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.budget-step {
+  background: rgba(255,255,255,0.04);
+  border-radius: 20px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.budget-step .budget-num {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--rojo);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.budget-step h4 { font-size: 1rem; font-weight: 700; margin: 0.4rem 0; }
+.budget-step p { color: var(--gris-4); font-size: 0.85rem; line-height: 1.6; }
+.budget-step .budget-amount {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--amarillo);
+  margin-top: 0.5rem;
+}
+
+/* CHECKLIST FINAL */
+.checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+.checklist-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 20px;
+  padding: 1.5rem;
+  transition: all 0.3s;
+}
+.checklist-card:hover {
+  border-color: var(--celeste);
+  background: rgba(41,182,246,0.04);
+}
+.checklist-card h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.checklist-card h4 i { color: var(--celeste); }
+.checklist-card ul { list-style: none; padding: 0; }
+.checklist-card ul li {
+  padding: 0.35rem 0;
+  font-size: 0.85rem;
+  color: var(--gris-4);
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+.checklist-card ul li i {
+  color: var(--gris-3);
+  font-size: 0.7rem;
+  margin-top: 0.3rem;
+  flex-shrink: 0;
+}
+
+/* FOOTER */
+.footer {
+  background: var(--oscuro-2);
+  padding: 3rem 1.5rem 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+.footer .footer-logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+.footer .footer-logo i { color: var(--rojo); }
+.footer .footer-lema { color: var(--rojo); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.1em; margin-bottom: 1rem; }
+.footer .footer-text { color: var(--gris-3); font-size: 0.8rem; line-height: 1.8; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .menu-toggle { display: block; }
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%; left: 0;
+    width: 100%;
+    background: rgba(11,13,23,0.98);
+    padding: 1.5rem;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+}
+@media (max-width: 768px) {
+  section { padding: 3.5rem 0; }
+  .hero h1 { font-size: 2.2rem; }
+  .budget-section { padding: 1.5rem; }
+}
+@media (max-width: 480px) {
+  .platforms-grid { grid-template-columns: 1fr; }
+  .routes-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="nav-logo"><i class="fas fa-rocket"></i> Ruta del Éxito E-commerce</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="https://aai.inacap.cl/pluginfile.php/2936741/mod_resource/content/1/crear%20un%20ecommerce.html#lean">Metodología</a></li>
+      <li><a href="https://aai.inacap.cl/pluginfile.php/2936741/mod_resource/content/1/crear%20un%20ecommerce.html#plataformas">Plataformas</a></li>
+      <li><a href="https://aai.inacap.cl/pluginfile.php/2936741/mod_resource/content/1/crear%20un%20ecommerce.html#rutas">Rutas</a></li>
+      <li><a href="https://aai.inacap.cl/pluginfile.php/2936741/mod_resource/content/1/crear%20un%20ecommerce.html#legal">Legal</a></li>
+      <li><a href="https://aai.inacap.cl/pluginfile.php/2936741/mod_resource/content/1/crear%20un%20ecommerce.html#presupuesto">Validación</a></li>
+      <li><a href="https://aai.inacap.cl/pluginfile.php/2936741/mod_resource/content/1/crear%20un%20ecommerce.html#checklist">Checklist</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="hero">
+  <div class="glow"></div>
+  <div class="glow-2"></div>
+  <div class="glow-3"></div>
+
+  <div class="hero-badge"><i class="fas fa-graduation-cap"></i> Fase 0.5 · Preparación para el Éxito</div>
+
+  <h1>
+    De la <span class="gradient">Idea Brillante</span><br>
+    al E-commerce <span class="gradient">Exitoso</span>
+  </h1>
+
+  <p class="hero-sub">
+    Aprende la ruta completa para montar un comercio electrónico <strong>sin programar desde cero</strong>, usando las plataformas y herramientas disponibles en el mercado chileno. Desde la validación de la idea hasta la adopción por parte de los clientes.
+  </p>
+
+  <div class="hero-lema"><i class="fas fa-flag-checkered"></i> Todo por INACAP, Todo por Chile</div>
+
+  <div class="scroll-hint"><span>DESCUBRE LA RUTA</span><i class="fas fa-chevron-down"></i></div>
+</header>
+
+<!-- SECCIÓN 1: METODOLOGÍA LEAN STARTUP -->
+<section id="lean">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="badge">Metodología</span>
+      <h2 class="section-title" style="margin-top:1rem;">El Ciclo <span>Lean Startup</span></h2>
+      <p class="section-subtitle">
+        Eric Ries demostró que las startups exitosas no siguen un plan rígido, sino un ciclo de <strong>aprendizaje validado</strong>: Construir, Medir y Aprender [citation:5][citation:10]. Este es el motor que impulsa la ruta del éxito.
+      </p>
+    </div>
+
+    <div class="lean-cycle">
+      <div class="lean-step reveal">
+        <div class="step-icon"><i class="fas fa-hammer"></i></div>
+        <h3>1. Construir</h3>
+        <p>Crea un <strong>MVP (Producto Mínimo Viable)</strong>: la versión más simple de tu idea que permita validar si hay demanda real. No necesita ser perfecto, necesita existir.</p>
+      </div>
+      <div class="lean-step reveal">
+        <div class="step-icon"><i class="fas fa-chart-bar"></i></div>
+        <h3>2. Medir</h3>
+        <p>Define <strong>métricas accionables</strong> (no vanidad). ¿Cuántos visitantes se convierten? ¿Cuántos carritos se abandonan? Los datos guían las decisiones.</p>
+      </div>
+      <div class="lean-step reveal">
+        <div class="step-icon"><i class="fas fa-lightbulb"></i></div>
+        <h3>3. Aprender</h3>
+        <p><strong>¿Pivotar o perseverar?</strong> Si los datos validan la hipótesis, escala. Si no, ajusta la propuesta. El aprendizaje validado es el verdadero progreso.</p>
+      </div>
+    </div>
+
+    <div class="reveal" style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06); border-radius:20px; padding:1.5rem 2rem; margin-top:1.5rem; border-left:4px solid var(--amarillo);">
+      <p style="color:var(--gris-5); font-size:0.95rem; line-height:1.7;">
+        <i class="fas fa-quote-left" style="color:var(--amarillo); margin-right:0.5rem;"></i>
+        <strong>Lección clave:</strong> "Las startups fallan no porque el producto sea malo, sino porque construyen algo que nadie quiere comprar" [citation:10]. El ciclo Lean Startup evita este error al poner al cliente en el centro desde el día uno.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN 2: PLATAFORMAS DISPONIBLES -->
+<section id="plataformas">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="badge badge-outline">Herramientas</span>
+      <h2 class="section-title" style="margin-top:1rem;">Plataformas para <span>Montar tu E-commerce</span></h2>
+      <p class="section-subtitle">
+        No necesitas programar desde cero. Estas son las plataformas líderes en Chile, cada una con diferentes niveles de facilidad, control y costo [citation:1][citation:2][citation:19].
+      </p>
+    </div>
+
+    <div class="platforms-grid">
+      <!-- Tiendanube -->
+      <div class="platform-card tiendanube reveal">
+        <div class="platform-logo" style="color:var(--celeste);"><i class="fas fa-store"></i></div>
+        <h3>Tiendanube</h3>
+        <span class="platform-tag">La más popular en LATAM · Sin comisiones</span>
+        <ul class="platform-features">
+          <li><i class="fas fa-check" style="color:var(--celeste);"></i> Plan gratuito para empezar</li>
+          <li><i class="fas fa-check" style="color:var(--celeste);"></i> +60 diseños personalizables sin código</li>
+          <li><i class="fas fa-check" style="color:var(--celeste);"></i> Integración nativa con Webpay, Mercado Pago</li>
+          <li><i class="fas fa-check" style="color:var(--celeste);"></i> Soporte local en español</li>
+        </ul>
+        <div class="price-tag">
+          Desde <strong>$5.999 CLP/mes</strong> +IVA<br>
+          <span style="font-size:0.75rem;">Plan gratuito disponible · 7 días de prueba</span>
+        </div>
+      </div>
+
+      <!-- Shopify -->
+      <div class="platform-card shopify reveal">
+        <div class="platform-logo" style="color:var(--verde);"><i class="fab fa-shopify"></i></div>
+        <h3>Shopify</h3>
+        <span class="platform-tag">Global · Escalable · Ecosistema de apps</span>
+        <ul class="platform-features">
+          <li><i class="fas fa-check" style="color:var(--verde);"></i> Infraestructura global rápida y estable</li>
+          <li><i class="fas fa-check" style="color:var(--verde);"></i> +180 temas profesionales</li>
+          <li><i class="fas fa-check" style="color:var(--verde);"></i> Ideal para escalar internacionalmente</li>
+          <li><i class="fas fa-check" style="color:var(--verde);"></i> Requiere apps para integraciones locales</li>
+        </ul>
+        <div class="price-tag">
+          Desde <strong>US$25/mes</strong> (≈$23.000 CLP)<br>
+          <span style="font-size:0.75rem;">+ comisión por transacción · 3 días de prueba</span>
+        </div>
+      </div>
+
+      <!-- Jumpseller -->
+      <div class="platform-card jumpseller reveal">
+        <div class="platform-logo" style="color:var(--amarillo);"><i class="fas fa-bolt"></i></div>
+        <h3>Jumpseller</h3>
+        <span class="platform-tag">La opción más económica para PYMES chilenas</span>
+        <ul class="platform-features">
+          <li><i class="fas fa-check" style="color:var(--amarillo);"></i> Webpay/Transbank nativo (sin apps)</li>
+          <li><i class="fas fa-check" style="color:var(--amarillo);"></i> 0% comisión por transacción</li>
+          <li><i class="fas fa-check" style="color:var(--amarillo);"></i> Boleta electrónica SII integrada</li>
+          <li><i class="fas fa-check" style="color:var(--amarillo);"></i> Soporte local en Santiago</li>
+        </ul>
+        <div class="price-tag">
+          Desde <strong>US$11/mes</strong> (≈$10.500 CLP)<br>
+          <span style="font-size:0.75rem;">0% comisión · pago mensual o anual</span>
+        </div>
+      </div>
+
+      <!-- Micrositios -->
+      <div class="platform-card micrositios reveal">
+        <div class="platform-logo" style="color:var(--morado);"><i class="fas fa-bolt-lightning"></i></div>
+        <h3>Micrositios (Banchile)</h3>
+        <span class="platform-tag">Lanza en minutos · Sin sitio web propio</span>
+        <ul class="platform-features">
+          <li><i class="fas fa-check" style="color:var(--morado);"></i> Sin necesidad de página web</li>
+          <li><i class="fas fa-check" style="color:var(--morado);"></i> Plantillas prediseñadas editables</li>
+          <li><i class="fas fa-check" style="color:var(--morado);"></i> Pasarela de pago integrada</li>
+          <li><i class="fas fa-check" style="color:var(--morado);"></i> Ideal para probar una idea rápido</li>
+        </ul>
+        <div class="price-tag">
+          <strong>Consultar con Banchile Pagos</strong><br>
+          <span style="font-size:0.75rem;">Enlace único para compartir en redes</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal" style="margin-top:2rem; background:rgba(253,216,53,0.04); border:1px solid rgba(253,216,53,0.15); border-radius:20px; padding:1.5rem 2rem;">
+      <p style="color:var(--gris-5); font-size:0.95rem; line-height:1.7;">
+        <i class="fas fa-info-circle" style="color:var(--amarillo); margin-right:0.5rem;"></i>
+        <strong>¿Cuál elegir?</strong> Si tu prioridad es <strong>empezar rápido y sin costo</strong>: Tiendanube (plan gratuito). Si quieres <strong>la opción más económica para PYMES chilenas</strong>: Jumpseller. Si planeas <strong>escalar globalmente</strong>: Shopify. Si solo quieres <strong>probar una idea en minutos</strong>: Micrositios [citation:2][citation:8].
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN 3: RUTAS DE IMPLEMENTACIÓN -->
+<section id="rutas">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="badge badge-outline">Posibilidades</span>
+      <h2 class="section-title" style="margin-top:1rem;">4 Rutas para <span>Implementar tu E-commerce</span></h2>
+      <p class="section-subtitle">
+        Cada negocio tiene necesidades diferentes. Estas son las cuatro rutas principales, desde la más simple hasta la más personalizable [citation:2][citation:8][citation:19].
+      </p>
+    </div>
+
+    <div class="routes-grid">
+      <div class="route-card reveal">
+        <div class="route-icon" style="color:var(--verde);"><i class="fas fa-rocket"></i></div>
+        <span class="route-level principiante">Principiante</span>
+        <h4>Ruta 1: Todo-en-Uno</h4>
+        <p>Usar una plataforma SaaS como Tiendanube o Shopify. <strong>No programas nada.</strong> Pagas una suscripción mensual y tienes todo: hosting, dominio, pagos, envíos. Ideal para empezar rápido y validar.</p>
+      </div>
+      <div class="route-card reveal">
+        <div class="route-icon" style="color:var(--celeste);"><i class="fas fa-puzzle-piece"></i></div>
+        <span class="route-level principiante">Principiante</span>
+        <h4>Ruta 2: Micrositio Express</h4>
+        <p>Usar un micrositio como Banchile Pagos. <strong>Creas un enlace, cargas productos y vendes.</strong> No tienes sitio web propio, pero puedes compartir el enlace en redes sociales. Perfecto para probar una idea sin inversión.</p>
+      </div>
+      <div class="route-card reveal">
+        <div class="route-icon" style="color:var(--amarillo);"><i class="fas fa-sliders-h"></i></div>
+        <span class="route-level intermedio">Intermedio</span>
+        <h4>Ruta 3: Plataforma Local</h4>
+        <p>Usar Jumpseller por su <strong>integración nativa con Webpay y boleta electrónica SII</strong>. Es la opción más económica para PYMES chilenas que quieren todo integrado sin pagar apps adicionales.</p>
+      </div>
+      <div class="route-card reveal">
+        <div class="route-icon" style="color:var(--rojo);"><i class="fas fa-code"></i></div>
+        <span class="route-level avanzado">Avanzado</span>
+        <h4>Ruta 4: WordPress + WooCommerce</h4>
+        <p>Usar WordPress con WooCommerce. <strong>Máximo control y personalización</strong>, pero requiere conocimientos técnicos y mantenimiento. Ideal si tienes equipo de desarrollo o quieres escalar con SEO avanzado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN 4: PASOS LEGALES EN CHILE -->
+<section id="legal">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="badge badge-outline" style="border-color:var(--verde); color:var(--verde);">Cumplimiento</span>
+      <h2 class="section-title" style="margin-top:1rem;">Pasos Legales en <span>Chile</span></h2>
+      <p class="section-subtitle">
+        Antes de vender, debes formalizar tu negocio. Estos son los pasos obligatorios ante el SII [citation:3][citation:4].
+      </p>
+    </div>
+
+    <div class="legal-steps">
+      <div class="legal-step reveal">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h4>Inicio de Actividades en el SII</h4>
+          <p>Debes dar aviso de inicio de actividades dentro de los <strong>2 meses siguientes</strong> al comienzo de tus operaciones comerciales. El trámite se realiza en línea en sii.cl [citation:4].</p>
+          <div class="legal-note"><i class="fas fa-exclamation-triangle" style="color:var(--amarillo);"></i> Define uno o varios códigos de actividad económica. Para e-commerce, el código principal suele ser <strong>479100</strong> (Venta al por menor por internet).</div>
+        </div>
+      </div>
+      <div class="legal-step reveal">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h4>Obtención de RUT e Inicio de Actividades</h4>
+          <p>Para personas naturales, solo necesitas tu <strong>RUT y Clave Tributaria</strong> (o ClaveÚnica) para hacer el trámite en línea. El certificado se obtiene inmediatamente [citation:4].</p>
+          <div class="legal-note"><i class="fas fa-file-invoice" style="color:var(--amarillo);"></i> Si eres extranjero, necesitas cédula RUT y visa que autorice actividades remuneradas.</div>
+        </div>
+      </div>
+      <div class="legal-step reveal">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h4>Facturación Electrónica</h4>
+          <p>En Chile, todos los comercios deben emitir <strong>boleta electrónica</strong> por sus ventas. Las plataformas como Jumpseller ya tienen integración nativa con proveedores de facturación [citation:2][citation:8].</p>
+          <div class="legal-note"><i class="fas fa-calculator" style="color:var(--amarillo);"></i> Proveedores: Haulmer, OpenFactura, Acepta. Costo típico: $10.000-$30.000 CLP/mes.</div>
+        </div>
+      </div>
+      <div class="legal-step reveal">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h4>IVA Digital para Ventas Internacionales</h4>
+          <p>Si vendes productos digitales o bienes de bajo valor desde el extranjero a Chile, debes declarar y pagar el <strong>IVA Digital</strong> (19%) [citation:9].</p>
+          <div class="legal-note"><i class="fas fa-globe" style="color:var(--amarillo);"></i> Aplica para plataformas no residentes que vendan bienes por hasta USD$500 a Chile.</div>
+        </div>
+      </div>
+      <div class="legal-step reveal">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <h4>Ley 19.496 (Protección al Consumidor)</h4>
+          <p>Todo e-commerce debe cumplir con el <strong>derecho de retracto</strong> (10 días), garantías legales y transparencia en precios. Es obligatorio tener políticas de devolución claras.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN 5: VALIDACIÓN CON PRESUPUESTO REDUCIDO -->
+<section id="presupuesto">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="badge badge-outline" style="border-color:var(--amarillo); color:var(--amarillo);">Validación</span>
+      <h2 class="section-title" style="margin-top:1rem;">Validar la Idea con <span>Presupuesto Reducido</span></h2>
+      <p class="section-subtitle">
+        No necesitas miles de dólares para probar si tu idea funciona. Con <strong>$500 USD o menos</strong> puedes validar tu producto y empezar a vender [citation:6][citation:17].
+      </p>
+    </div>
+
+    <div class="budget-section reveal">
+      <h3 style="font-size:1.3rem; font-weight:700; margin-bottom:1rem;"><i class="fas fa-wallet" style="color:var(--amarillo);"></i> Desglose de un Presupuesto de Validación</h3>
+
+      <div class="budget-steps">
+        <div class="budget-step">
+          <div class="budget-num">Paso 1</div>
+          <h4>Fundación (Gratis - $50)</h4>
+          <p>Usa el plan gratuito de Tiendanube o la prueba de Shopify. Elige un tema limpio y rápido. Carga <strong>3-5 productos máximo</strong>. Enfócate en un solo producto ganador [citation:6].</p>
+          <div class="budget-amount">$0 - $50 USD</div>
+        </div>
+        <div class="budget-step">
+          <div class="budget-num">Paso 2</div>
+          <h4>Contenido y Confianza (Gratis)</h4>
+          <p>Toma fotos y videos reales con tu teléfono. Crea contenido estilo <strong>UGC</strong> (unboxing, "cómo usarlo"). Publica consistentemente en Instagram, TikTok y Pinterest. El alcance orgánico todavía funciona cuando el contenido se siente real [citation:6][citation:17].</p>
+          <div class="budget-amount">$0</div>
+        </div>
+        <div class="budget-step">
+          <div class="budget-num">Paso 3</div>
+          <h4>Test de Ads Inteligente ($300-$350)</h4>
+          <p>Ejecuta campañas pequeñas en <strong>Meta Ads o Google Performance Max</strong>. Prueba tu producto con $10-$15/día. Analiza CTR, CPC y conversión. No solo "impulses", aprende y optimiza [citation:6].</p>
+          <div class="budget-amount">$300 - $350 USD</div>
+        </div>
+        <div class="budget-step">
+          <div class="budget-num">Paso 4</div>
+          <h4>Retención ($100)</h4>
+          <p>Construye flujos de email en <strong>Klaviyo o Mailchimp</strong>: carrito abandonado, oferta de bienvenida, post-compra. Ofrece un pequeño descuento por referidos o reseñas [citation:6].</p>
+          <div class="budget-amount">$100 USD</div>
+        </div>
+      </div>
+
+      <div style="margin-top:1.5rem; background:rgba(67,160,71,0.08); border:1px solid rgba(67,160,71,0.2); border-radius:16px; padding:1.2rem 1.5rem;">
+        <p style="color:var(--gris-5); font-size:0.9rem; line-height:1.7;">
+          <i class="fas fa-chart-line" style="color:var(--verde); margin-right:0.5rem;"></i>
+          <strong>Caso real:</strong> Una emprendedora empezó con $450 USD, probó 2 creativos de ads y 1 video UGC. En 3 semanas, su ROAS (Retorno de Inversión en Publicidad) llegó a <strong>3.2x</strong>, y reinvirtió las ganancias para escalar [citation:6]. El mindset es: <strong>ganar → reinvertir → crecer</strong>.
+        </p>
+      </div>
+
+      <div style="margin-top:1rem; background:rgba(41,182,246,0.08); border:1px solid rgba(41,182,246,0.2); border-radius:16px; padding:1.2rem 1.5rem;">
+        <p style="color:var(--gris-5); font-size:0.9rem; line-height:1.7;">
+          <i class="fas fa-lightbulb" style="color:var(--celeste); margin-right:0.5rem;"></i>
+          <strong>Estrategia "Done is better than perfect":</strong> Chelsea Branch, fundadora de Kōv Essentials, lanzó su tienda el mismo día que un video suyo se volvió viral en TikTok (2M de views). Facturó <strong>$1M USD en su primer año sin gastar en ads</strong> [citation:17]. La lección: <strong>si tienes una idea, ejecútala. No esperes a que sea perfecta.</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN 6: CHECKLIST DEL ÉXITO -->
+<section id="checklist">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="badge badge-outline" style="border-color:var(--celeste); color:var(--celeste);">Entregable</span>
+      <h2 class="section-title" style="margin-top:1rem;">Checklist del <span>E-commerce Exitoso</span></h2>
+      <p class="section-subtitle">
+        Antes de lanzar tu tienda, verifica que cumples con todos estos criterios. Es la diferencia entre un proyecto amateur y un negocio profesional.
+      </p>
+    </div>
+
+    <div class="checklist-grid">
+      <div class="checklist-card reveal">
+        <h4><i class="fas fa-lightbulb"></i> Validación de la Idea</h4>
+        <ul>
+          <li><i class="fas fa-check"></i> Identificaste un problema real del cliente</li>
+          <li><i class="fas fa-check"></i> Validaste la demanda con un MVP</li>
+          <li><i class="fas fa-check"></i> Tienes al menos 3-5 productos listos</li>
+          <li><i class="fas fa-check"></i> Conoces tu cliente ideal (buyer persona)</li>
+        </ul>
+      </div>
+      <div class="checklist-card reveal">
+        <h4><i class="fas fa-store"></i> Plataforma Elegida</h4>
+        <ul>
+          <li><i class="fas fa-check"></i> Elegiste la plataforma según tu presupuesto y necesidades</li>
+          <li><i class="fas fa-check"></i> Configuraste métodos de pago (Webpay, Mercado Pago)</li>
+          <li><i class="fas fa-check"></i> Configuraste opciones de envío (Chilexpress, Starken, etc.)</li>
+          <li><i class="fas fa-check"></i> Tienes dominio propio (ej: tumarca.cl)</li>
+        </ul>
+      </div>
+      <div class="checklist-card reveal">
+        <h4><i class="fas fa-file-invoice"></i> Cumplimiento Legal</h4>
+        <ul>
+          <li><i class="fas fa-check"></i> Realizaste el Inicio de Actividades en el SII</li>
+          <li><i class="fas fa-check"></i> Tienes facturación electrónica configurada</li>
+          <li><i class="fas fa-check"></i> Cumples con la Ley 19.496 (derecho de retracto)</li>
+          <li><i class="fas fa-check"></i> Tienes políticas de privacidad y devolución</li>
+        </ul>
+      </div>
+      <div class="checklist-card reveal">
+        <h4><i class="fas fa-bullhorn"></i> Marketing y Validación</h4>
+        <ul>
+          <li><i class="fas fa-check"></i> Creaste contenido UGC (fotos/videos reales)</li>
+          <li><i class="fas fa-check"></i> Configuraste una campaña de ads de bajo presupuesto</li>
+          <li><i class="fas fa-check"></i> Tienes flujo de email para recuperación de carritos</li>
+          <li><i class="fas fa-check"></i> Defines métricas: CTR, CPA, ROAS</li>
+        </ul>
+      </div>
+      <div class="checklist-card reveal">
+        <h4><i class="fas fa-chart-line"></i> Métricas de Éxito</h4>
+        <ul>
+          <li><i class="fas fa-check"></i> Tasa de conversión objetivo: 2-3% mínimo</li>
+          <li><i class="fas fa-check"></i> Costo de adquisición (CAC) &lt; Valor de vida (LTV)</li>
+          <li><i class="fas fa-check"></i> Carritos abandonados: objetivo &lt;70%</li>
+          <li><i class="fas fa-check"></i> Velocidad de carga: &lt;3 segundos</li>
+        </ul>
+      </div>
+      <div class="checklist-card reveal">
+        <h4><i class="fas fa-users"></i> Adopción y Fidelización</h4>
+        <ul>
+          <li><i class="fas fa-check"></i> Ofreces atención al cliente multicanal (chat, WhatsApp)</li>
+          <li><i class="fas fa-check"></i> Tienes programa de reseñas o referidos</li>
+          <li><i class="fas fa-check"></i> Envías emails post-compra y de fidelización</li>
+          <li><i class="fas fa-check"></i> Mides la satisfacción del cliente (NPS)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-logo"><i class="fas fa-rocket"></i> Ruta del Éxito E-commerce</div>
+  <div class="footer-lema"><i class="fas fa-flag-checkered"></i> Todo por INACAP, Todo por Chile</div>
+  <div class="footer-text">
+    Material didáctico interactivo · Fase 0.5 · Ingeniería Informática<br>
+    Construido con HTML5, CSS3, Vanilla JS, Font Awesome y Swiper · 2026
+  </div>
+</footer>
+
+<script>
+/* INTERSECTION OBSERVER */
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+/* NAVBAR */
+const navbar = document.getElementById('navbar');
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => navLinks.classList.remove('open'));
+});
+
+/* SMOOTH SCROLL */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+
+</body></html>

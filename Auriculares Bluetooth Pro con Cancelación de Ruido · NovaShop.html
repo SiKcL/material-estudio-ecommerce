@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)https://aai.inacap.cl/pluginfile.php/2895173/mod_resource/content/2/Landing.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1D4ED8">
+<title>Auriculares Bluetooth Pro con Cancelación de Ruido · NovaShop</title>
+<meta name="description" content="Auriculares Bluetooth Pro con ANC, batería 40h y sonido Hi-Res. 4.8★ (1.247 reseñas). Envío gratis y devolución 30 días.">
+
+<style>
+/* ============================================================
+   1. DESIGN TOKENS
+   ============================================================ */
+:root {
+  --brand-50:#EFF6FF; --brand-100:#DBEAFE; --brand-500:#3B82F6;
+  --brand-600:#2563EB; --brand-700:#1D4ED8; --brand-900:#1E3A8A;
+  --success-50:#ECFDF5; --success-500:#10B981; --success-600:#059669; --success-700:#047857;
+  --danger-50:#FEF2F2; --danger-500:#EF4444; --danger-600:#DC2626;
+  --gold-50:#FFFBEB; --gold-500:#F59E0B; --gold-600:#D97706;
+  --neutral-50:#F9FAFB; --neutral-100:#F3F4F6; --neutral-200:#E5E7EB;
+  --neutral-300:#D1D5DB; --neutral-400:#9CA3AF; --neutral-500:#6B7280;
+  --neutral-700:#374151; --neutral-900:#111827;
+
+  --radius-sm:8px; --radius-md:12px; --radius-lg:16px;
+  --radius-xl:24px; --radius-full:9999px;
+
+  --shadow-sm:0 1px 3px rgba(0,0,0,.08);
+  --shadow-md:0 4px 12px rgba(0,0,0,.08);
+  --shadow-lg:0 10px 25px rgba(0,0,0,.10);
+  --shadow-xl:0 20px 40px rgba(0,0,0,.12);
+
+  --font-sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  --t-fast:150ms cubic-bezier(.4,0,.2,1);
+  --t-base:250ms cubic-bezier(.4,0,.2,1);
+
+  --header-h:64px;
+}
+
+/* ============================================================
+   2. RESET + BASE
+   ============================================================ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-tap-highlight-color:transparent}
+body{font-family:var(--font-sans);background:var(--neutral-50);color:var(--neutral-900);
+  line-height:1.5;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+ul{list-style:none}
+input,select,textarea{font:inherit}
+
+:focus-visible{outline:2px solid var(--brand-600);outline-offset:2px;border-radius:4px}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+
+/* ============================================================
+   3. LAYOUT
+   ============================================================ */
+.container{width:100%;max-width:1440px;margin-inline:auto;padding-inline:16px}
+@media(min-width:640px){.container{padding-inline:24px}}
+@media(min-width:1024px){.container{padding-inline:32px}}
+
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+
+/* ============================================================
+   4. ANIMACIONES
+   ============================================================ */
+@keyframes fadeInUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulseSoft{0%,100%{opacity:1}50%{opacity:.65}}
+@keyframes pulseDot{0%,100%{box-shadow:0 0 0 0 rgba(16,185,129,.7)}70%{box-shadow:0 0 0 8px rgba(16,185,129,0)}}
+@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.animate-fadeInUp{animation:fadeInUp .5s ease-out both}
+
+/* ============================================================
+   5. HEADER (compartido)
+   ============================================================ */
+.header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--neutral-200)}
+.header__inner{display:flex;align-items:center;gap:16px;padding-block:12px}
+.logo{display:inline-flex;align-items:center;gap:8px;font-weight:800;
+  font-size:1.125rem;color:var(--brand-700);flex-shrink:0}
+.logo__mark{display:inline-flex;align-items:center;justify-content:center;
+  width:34px;height:34px;background:linear-gradient(135deg,var(--brand-600),var(--brand-900));
+  color:white;border-radius:var(--radius-sm);font-size:1rem}
+.search{flex:1;display:flex;align-items:center;gap:8px;background:var(--neutral-100);
+  border:1px solid transparent;border-radius:var(--radius-full);padding:10px 16px;transition:var(--t-base)}
+.search:focus-within{background:white;border-color:var(--brand-500);box-shadow:0 0 0 4px rgba(37,99,235,.12)}
+.search input{flex:1;border:none;background:transparent;font-size:.9375rem;outline:none}
+.search input::placeholder{color:var(--neutral-400)}
+.search__icon{color:var(--neutral-500);flex-shrink:0}
+.header__actions{display:flex;align-items:center;gap:4px}
+.icon-btn{position:relative;display:inline-flex;align-items:center;justify-content:center;
+  width:44px;height:44px;border-radius:var(--radius-md);color:var(--neutral-700);transition:var(--t-fast)}
+.icon-btn:hover{background:var(--neutral-100)}
+.icon-btn__badge{position:absolute;top:6px;right:6px;min-width:18px;height:18px;padding:0 5px;
+  background:var(--danger-500);color:white;font-size:.6875rem;font-weight:700;
+  border-radius:var(--radius-full);display:flex;align-items:center;justify-content:center;
+  border:2px solid white}
+@media(max-width:768px){.search{padding:8px 12px}.logo__text{display:none}}
+
+/* ============================================================
+   6. BREADCRUMB
+   ============================================================ */
+.breadcrumb{padding-block:16px 8px;font-size:.8125rem;color:var(--neutral-500)}
+.breadcrumb ol{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.breadcrumb li:not(:last-child)::after{content:'/';margin-left:6px;color:var(--neutral-300)}
+.breadcrumb a:hover{color:var(--brand-600)}
+.breadcrumb [aria-current="page"]{color:var(--neutral-900);font-weight:600}
+
+/* ============================================================
+   7. PDP LAYOUT (galería + info)
+   ============================================================ */
+.pdp{padding-bottom:48px}
+.pdp__grid{display:grid;grid-template-columns:1fr;gap:32px}
+@media(min-width:1024px){.pdp__grid{grid-template-columns:minmax(0,1fr) 480px;gap:48px;align-items:start}}
+
+/* ============================================================
+   8. GALERÍA
+   ============================================================ */
+.gallery{position:sticky;top:calc(var(--header-h) + 16px)}
+@media(max-width:1023px){.gallery{position:static}}
+
+.gallery__main{position:relative;background:white;border-radius:var(--radius-lg);
+  overflow:hidden;box-shadow:var(--shadow-sm);aspect-ratio:1/1}
+.gallery__img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.4,0,.2,1)}
+.gallery__main:hover .gallery__img{transform:scale(1.05)}
+
+.gallery__badges{position:absolute;top:16px;left:16px;display:flex;flex-direction:column;gap:8px;z-index:2}
+.badge{display:inline-flex;align-items:center;gap:4px;padding:6px 12px;
+  font-size:.75rem;font-weight:800;border-radius:var(--radius-full);
+  box-shadow:var(--shadow-sm);letter-spacing:.02em;white-space:nowrap}
+.badge--danger{background:var(--danger-500);color:white}
+.badge--gold{background:var(--gold-500);color:white}
+.badge--success{background:var(--success-500);color:white}
+.badge--brand{background:var(--brand-600);color:white}
+.badge--pulse{animation:pulseSoft 1.8s infinite}
+
+.gallery__zoom{position:absolute;bottom:16px;right:16px;
+  display:inline-flex;align-items:center;gap:6px;padding:8px 14px;
+  background:rgba(255,255,255,.95);backdrop-filter:blur(6px);
+  border-radius:var(--radius-full);font-size:.75rem;font-weight:700;
+  color:var(--neutral-700);box-shadow:var(--shadow-sm);transition:var(--t-fast)}
+.gallery__zoom:hover{background:white}
+
+/* Thumbnails */
+.thumbs{display:flex;gap:8px;margin-top:12px;overflow-x:auto;
+  scrollbar-width:none;-ms-overflow-style:none}
+.thumbs::-webkit-scrollbar{display:none}
+.thumb{flex:0 0 72px;height:72px;background:white;border-radius:var(--radius-md);
+  overflow:hidden;border:2px solid transparent;cursor:pointer;transition:var(--t-fast);
+  box-shadow:var(--shadow-sm)}
+@media(min-width:768px){.thumb{flex:0 0 88px;height:88px}}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.thumb:hover{border-color:var(--brand-500)}
+.thumb.is-active{border-color:var(--brand-600);box-shadow:0 0 0 3px rgba(37,99,235,.15)}
+
+/* ============================================================
+   9. BLOQUE DE INFO
+   ============================================================ */
+.info{display:flex;flex-direction:column;gap:20px}
+
+.info__brand{font-size:.75rem;font-weight:700;text-transform:uppercase;
+  letter-spacing:.08em;color:var(--brand-700)}
+.info__title{font-size:clamp(1.375rem,3vw,1.875rem);font-weight:800;
+  line-height:1.2;letter-spacing:-.01em;color:var(--neutral-900)}
+
+/* Rating */
+.rating{display:flex;align-items:center;gap:10px;font-size:.875rem;flex-wrap:wrap}
+.rating__stars{color:var(--gold-500);letter-spacing:2px;font-size:1rem}
+.rating__score{font-weight:800;color:var(--neutral-900)}
+.rating__count{color:var(--neutral-500)}
+.rating__count a{color:var(--brand-600);text-decoration:underline;font-weight:600}
+
+/* Price block */
+.price-box{background:linear-gradient(135deg,var(--success-50),white);
+  border:1px solid var(--success-100, #D1FAE5);
+  border-radius:var(--radius-lg);padding:16px 20px;display:flex;
+  flex-direction:column;gap:8px;position:relative;overflow:hidden}
+.price-box__row{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.price-box__current{font-size:2rem;font-weight:800;color:var(--neutral-900);letter-spacing:-.02em}
+.price-box__old{font-size:1rem;color:var(--neutral-400);text-decoration:line-through}
+.price-box__discount{font-size:.875rem;font-weight:800;color:white;
+  background:var(--danger-500);padding:4px 10px;border-radius:var(--radius-full)}
+.price-box__savings{font-size:.875rem;color:var(--success-700);font-weight:700}
+.price-box__installment{font-size:.8125rem;color:var(--neutral-500)}
+
+/* Urgencia */
+.urgency{display:flex;flex-direction:column;gap:10px}
+.urgency__row{display:flex;align-items:center;gap:10px;font-size:.875rem;font-weight:600;
+  padding:10px 14px;border-radius:var(--radius-md)}
+.urgency__row--danger{background:var(--danger-50);color:var(--danger-700)}
+.urgency__row--brand{background:var(--brand-50);color:var(--brand-700)}
+.urgency__row--success{background:var(--success-50);color:var(--success-700)}
+.urgency__dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.urgency__row--success .urgency__dot{background:var(--success-500);animation:pulseDot 1.6s infinite}
+.urgency__row--danger .urgency__dot{background:var(--danger-500);animation:pulseSoft 1.6s infinite}
+
+/* Stock bar */
+.stock-bar{margin-top:4px}
+.stock-bar__track{height:6px;background:var(--neutral-200);
+  border-radius:var(--radius-full);overflow:hidden}
+.stock-bar__fill{height:100%;background:linear-gradient(90deg,var(--danger-500),var(--gold-500));
+  border-radius:var(--radius-full);transition:width .5s ease-out}
+.stock-bar__label{font-size:.75rem;color:var(--neutral-500);margin-top:6px}
+
+/* Variantes */
+.variant-group{display:flex;flex-direction:column;gap:10px}
+.variant-group__head{display:flex;align-items:baseline;gap:10px;font-size:.875rem}
+.variant-group__label{font-weight:800;color:var(--neutral-900)}
+.variant-group__value{color:var(--neutral-500);font-weight:500}
+.variant-group__options{display:flex;flex-wrap:wrap;gap:8px}
+
+.variant-btn{min-height:40px;padding:0 16px;border:2px solid var(--neutral-200);
+  background:white;border-radius:var(--radius-md);font-size:.875rem;font-weight:700;
+  color:var(--neutral-700);transition:var(--t-fast)}
+.variant-btn:hover{border-color:var(--brand-500);color:var(--brand-700)}
+.variant-btn.is-active{border-color:var(--brand-600);color:var(--brand-700);
+  background:var(--brand-50);box-shadow:0 0 0 3px rgba(37,99,235,.1)}
+.variant-btn[disabled]{opacity:.4;cursor:not-allowed;text-decoration:line-through}
+
+.variant-color{width:44px;height:44px;padding:0;border-radius:50%;
+  border:2px solid var(--neutral-200);position:relative;transition:var(--t-fast)}
+.variant-color:hover{border-color:var(--brand-500)}
+.variant-color.is-active{border-color:var(--brand-600);
+  box-shadow:0 0 0 3px rgba(37,99,235,.15)}
+.variant-color__dot{position:absolute;inset:4px;border-radius:50%}
+
+/* Cantidad */
+.qty{display:inline-flex;align-items:center;border:2px solid var(--neutral-200);
+  border-radius:var(--radius-md);overflow:hidden;height:48px;width:fit-content}
+.qty button{width:44px;height:100%;display:inline-flex;align-items:center;justify-content:center;
+  color:var(--neutral-700);font-size:1.125rem;font-weight:700;transition:var(--t-fast)}
+.qty button:hover{background:var(--neutral-100)}
+.qty button[disabled]{opacity:.35;cursor:not-allowed}
+.qty input{width:52px;height:100%;border:none;text-align:center;font-size:1rem;
+  font-weight:800;background:white;outline:none;-moz-appearance:textfield}
+.qty input::-webkit-outer-spin-button,.qty input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+
+/* CTAs */
+.ctas{display:flex;flex-direction:column;gap:10px}
+@media(min-width:640px){
+  .ctas{flex-direction:row}
+  .ctas .btn--primary{flex:1}
+}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:56px;padding:0 28px;border-radius:var(--radius-md);
+  font-size:1rem;font-weight:800;transition:var(--t-base);white-space:nowrap}
+.btn:active{transform:scale(.97)}
+.btn--primary{background:var(--success-600);color:white;
+  box-shadow:0 8px 20px rgba(5,150,105,.25);width:100%}
+.btn--primary:hover{background:var(--success-700);transform:translateY(-1px);
+  box-shadow:0 12px 24px rgba(5,150,105,.35)}
+.btn--ghost{background:white;color:var(--neutral-700);
+  border:2px solid var(--neutral-200)}
+.btn--ghost:hover{border-color:var(--neutral-300);background:var(--neutral-50)}
+.btn--wish{width:56px;padding:0;flex-shrink:0}
+.btn--wish svg{transition:var(--t-fast)}
+.btn--wish.is-active{color:var(--danger-500);border-color:var(--danger-500)}
+.btn--wish.is-active svg{fill:currentColor}
+
+/* Trust guarantees */
+.trust{display:grid;grid-template-columns:1fr;gap:12px;
+  padding:20px;background:white;border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-sm);border:1px solid var(--neutral-200)}
+@media(min-width:640px){.trust{grid-template-columns:repeat(3,1fr)}}
+.trust__item{display:flex;align-items:flex-start;gap:12px}
+.trust__icon{flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;
+  width:40px;height:40px;background:var(--brand-50);border-radius:50%;font-size:1.125rem}
+.trust__title{font-size:.8125rem;font-weight:800;color:var(--neutral-900)}
+.trust__desc{font-size:.75rem;color:var(--neutral-500);margin-top:2px}
+
+/* Payment methods */
+.payments{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.75rem;
+  color:var(--neutral-500)}
+.payments__badges{display:flex;gap:6px;flex-wrap:wrap}
+.pay-badge{padding:4px 8px;background:white;border:1px solid var(--neutral-200);
+  border-radius:var(--radius-sm);font-size:.6875rem;font-weight:800;color:var(--neutral-700)}
+
+/* ============================================================
+   10. SECCIONES INFERIORES
+   ============================================================ */
+.section{margin-top:56px}
+.section__title{font-size:clamp(1.375rem,3vw,1.75rem);font-weight:800;
+  letter-spacing:-.01em;margin-bottom:20px}
+
+/* Descripción + specs */
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--neutral-200);margin-bottom:20px;
+  overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{padding:12px 18px;font-size:.9375rem;font-weight:700;color:var(--neutral-500);
+  border-bottom:2px solid transparent;transition:var(--t-fast);white-space:nowrap}
+.tab:hover{color:var(--neutral-900)}
+.tab.is-active{color:var(--brand-700);border-color:var(--brand-600)}
+
+.tab-panel{display:none;font-size:.9375rem;color:var(--neutral-700);line-height:1.7}
+.tab-panel.is-active{display:block;animation:fadeInUp .3s ease-out}
+.tab-panel h3{font-size:1rem;font-weight:800;color:var(--neutral-900);margin:16px 0 8px}
+.tab-panel p{margin-bottom:12px}
+.tab-panel ul{list-style:disc;padding-left:24px;margin-bottom:12px}
+.tab-panel li{margin-bottom:4px}
+
+.specs{display:grid;grid-template-columns:1fr;gap:0;
+  border:1px solid var(--neutral-200);border-radius:var(--radius-lg);
+  overflow:hidden;background:white}
+@media(min-width:640px){.specs{grid-template-columns:1fr 1fr}}
+.spec-row{display:flex;justify-content:space-between;gap:16px;
+  padding:14px 18px;border-bottom:1px solid var(--neutral-200);font-size:.875rem}
+.spec-row:nth-last-child(-n+2){border-bottom:none}
+@media(max-width:639px){.spec-row:last-child{border-bottom:none}}
+.spec-row__key{font-weight:700;color:var(--neutral-500)}
+.spec-row__val{font-weight:600;color:var(--neutral-900);text-align:right}
+
+/* ============================================================
+   11. REVIEWS
+   ============================================================ */
+.reviews{background:white;border-radius:var(--radius-lg);padding:24px;
+  box-shadow:var(--shadow-sm);border:1px solid var(--neutral-200)}
+@media(min-width:768px){.reviews{padding:32px}}
+
+.reviews__head{display:grid;grid-template-columns:1fr;gap:24px;
+  padding-bottom:24px;border-bottom:1px solid var(--neutral-200);margin-bottom:24px}
+@media(min-width:768px){.reviews__head{grid-template-columns:240px 1fr}}
+
+.reviews__score{text-align:center}
+@media(min-width:768px){.reviews__score{text-align:left}}
+.reviews__score-num{font-size:3rem;font-weight:800;line-height:1;letter-spacing:-.03em}
+.reviews__score-stars{color:var(--gold-500);font-size:1.25rem;letter-spacing:3px;
+  margin-top:6px}
+.reviews__score-sub{font-size:.8125rem;color:var(--neutral-500);margin-top:6px}
+
+.reviews__bars{display:flex;flex-direction:column;gap:8px;justify-content:center}
+.review-bar{display:grid;grid-template-columns:56px 1fr 48px;gap:12px;
+  align-items:center;font-size:.8125rem}
+.review-bar__label{color:var(--neutral-500);font-weight:600}
+.review-bar__track{height:8px;background:var(--neutral-100);border-radius:var(--radius-full);overflow:hidden}
+.review-bar__fill{height:100%;background:var(--gold-500);border-radius:var(--radius-full)}
+.review-bar__pct{text-align:right;color:var(--neutral-700);font-weight:600}
+
+.review{display:flex;flex-direction:column;gap:10px;padding:20px 0;
+  border-bottom:1px solid var(--neutral-100)}
+.review:last-child{border-bottom:none}
+.review__head{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.review__avatar{width:40px;height:40px;border-radius:50%;
+  background:linear-gradient(135deg,var(--brand-500),var(--brand-700));
+  display:inline-flex;align-items:center;justify-content:center;
+  color:white;font-weight:800;font-size:.9375rem;flex-shrink:0}
+.review__author{font-weight:800;font-size:.9375rem;color:var(--neutral-900)}
+.review__verified{display:inline-flex;align-items:center;gap:4px;
+  font-size:.75rem;font-weight:700;color:var(--success-700);
+  background:var(--success-50);padding:2px 8px;border-radius:var(--radius-full)}
+.review__meta{font-size:.75rem;color:var(--neutral-500);margin-left:auto}
+.review__stars{color:var(--gold-500);letter-spacing:1px;font-size:.875rem}
+.review__title{font-size:.9375rem;font-weight:800;color:var(--neutral-900);margin-top:4px}
+.review__body{font-size:.875rem;color:var(--neutral-700);line-height:1.6}
+.review__helpful{display:flex;gap:10px;align-items:center;margin-top:6px;
+  font-size:.75rem;color:var(--neutral-500)}
+.review__helpful button{display:inline-flex;align-items:center;gap:4px;
+  padding:4px 10px;border:1px solid var(--neutral-200);border-radius:var(--radius-full);
+  font-size:.75rem;font-weight:600;transition:var(--t-fast)}
+.review__helpful button:hover{border-color:var(--brand-500);color:var(--brand-700)}
+
+/* ============================================================
+   12. CROSS-SELL
+   ============================================================ */
+.crosssell{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:640px){.crosssell{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.crosssell{grid-template-columns:repeat(4,1fr)}}
+
+.mini-card{background:white;border-radius:var(--radius-lg);overflow:hidden;
+  box-shadow:var(--shadow-sm);transition:var(--t-base);cursor:pointer;
+  display:flex;flex-direction:column}
+.mini-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.mini-card__media{aspect-ratio:1/1;background:var(--neutral-100);overflow:hidden}
+.mini-card__media img{width:100%;height:100%;object-fit:cover;
+  transition:transform .5s}
+.mini-card:hover .mini-card__media img{transform:scale(1.06)}
+.mini-card__body{padding:12px;display:flex;flex-direction:column;gap:6px;flex:1}
+.mini-card__title{font-size:.8125rem;font-weight:700;line-height:1.35;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+  overflow:hidden;min-height:2.2em}
+.mini-card__price{font-size:1rem;font-weight:800}
+.mini-card__price-old{font-size:.75rem;color:var(--neutral-400);
+  text-decoration:line-through;margin-left:6px}
+.mini-card__cta{min-height:36px;padding:0 12px;background:var(--brand-50);
+  color:var(--brand-700);border-radius:var(--radius-md);font-size:.75rem;
+  font-weight:800;margin-top:auto;transition:var(--t-fast)}
+.mini-card__cta:hover{background:var(--brand-100)}
+
+/* ============================================================
+   13. STICKY CTA (mobile)
+   ============================================================ */
+.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:60;
+  background:white;border-top:1px solid var(--neutral-200);
+  box-shadow:0 -8px 24px rgba(0,0,0,.08);
+  padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));
+  transform:translateY(100%);transition:transform var(--t-base);
+  display:flex;align-items:center;gap:12px}
+.sticky-cta.is-visible{transform:translateY(0)}
+@media(min-width:1024px){.sticky-cta{display:none}}
+.sticky-cta__info{flex:1;min-width:0}
+.sticky-cta__price{font-size:1.125rem;font-weight:800}
+.sticky-cta__title{font-size:.75rem;color:var(--neutral-500);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sticky-cta__btn{min-height:48px;padding:0 20px;background:var(--success-600);
+  color:white;border-radius:var(--radius-md);font-weight:800;font-size:.9375rem;
+  display:inline-flex;align-items:center;gap:8px}
+.sticky-cta__btn:hover{background:var(--success-700)}
+
+/* ============================================================
+   14. TOAST
+   ============================================================ */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(120%);
+  background:var(--neutral-900);color:white;padding:14px 20px;
+  border-radius:var(--radius-md);box-shadow:var(--shadow-xl);
+  display:flex;align-items:center;gap:10px;font-size:.875rem;font-weight:600;
+  z-index:200;transition:transform var(--t-base);max-width:calc(100vw - 32px)}
+.toast.is-visible{transform:translateX(-50%) translateY(0)}
+.toast__check{display:inline-flex;align-items:center;justify-content:center;
+  width:22px;height:22px;border-radius:50%;background:var(--success-500);
+  color:white;font-size:.75rem;flex-shrink:0}
+
+/* ============================================================
+   15. FOOTER
+   ============================================================ */
+.footer{background:var(--neutral-900);color:var(--neutral-400);
+  padding-block:32px;text-align:center;font-size:.8125rem;margin-top:64px}
+</style>
+</head>
+
+<body>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header class="header">
+  <div class="container header__inner">
+    <a href="https://aai.inacap.cl/pluginfile.php/2895173/mod_resource/content/2/Landing.html#" class="logo" aria-label="NovaShop, ir al inicio">
+      <span class="logo__mark" aria-hidden="true">N</span>
+      <span class="logo__text">NovaShop</span>
+    </a>
+
+    <form class="search" role="search" onsubmit="event.preventDefault(); track('search_submit');">
+      <span class="search__icon" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path>
+        </svg>
+      </span>
+      <input type="search" placeholder="Buscar productos, marcas..." aria-label="Buscar productos">
+    </form>
+
+    <div class="header__actions">
+      <button class="icon-btn" aria-label="Mi cuenta" onclick="track('account_click')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+      </button>
+      <button class="icon-btn" aria-label="Favoritos" onclick="track('wishlist_click')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        </svg>
+      </button>
+      <button class="icon-btn" aria-label="Carrito de compras" onclick="track('cart_open')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="icon-btn__badge" id="cart-count" hidden="">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================
+     BREADCRUMB
+     ============================================================ -->
+<div class="container">
+  <nav class="breadcrumb" aria-label="Navegación">
+    <ol>
+      <li><a href="https://aai.inacap.cl/pluginfile.php/2895173/mod_resource/content/2/Landing.html#">Inicio</a></li>
+      <li><a href="https://aai.inacap.cl/pluginfile.php/2895173/mod_resource/content/2/Landing.html#">Tecnología</a></li>
+      <li><a href="https://aai.inacap.cl/pluginfile.php/2895173/mod_resource/content/2/Landing.html#">Auriculares</a></li>
+      <li aria-current="page">Auriculares Bluetooth Pro ANC</li>
+    </ol>
+  </nav>
+</div>
+
+<!-- ============================================================
+     PDP PRINCIPAL
+     ============================================================ -->
+<main class="container pdp">
+  <div class="pdp__grid">
+
+    <!-- ========== GALERÍA ========== -->
+    <section class="gallery animate-fadeInUp" aria-label="Imágenes del producto">
+      <div class="gallery__main" id="gallery-main">
+        <div class="gallery__badges">
+          <span class="badge badge--danger badge--pulse">🔥 Últimas 4 unidades</span>
+          <span class="badge badge--gold">🏆 Best seller</span>
+          <span class="badge badge--brand">-47%</span>
+        </div>
+        <img id="gallery-img" class="gallery__img" src="./Auriculares Bluetooth Pro con Cancelación de Ruido · NovaShop_files/photo-1505740420928-5e560c06d30e" alt="Auriculares Bluetooth Pro con cancelación de ruido, vista frontal">
+        <button class="gallery__zoom" onclick="track('gallery_zoom'); showToast('🔍 Zoom disponible en producción');">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3M11 8v6M8 11h6"></path>
+          </svg>
+          Ampliar
+        </button>
+      </div>
+
+      <div class="thumbs scrollbar-hide" role="tablist" aria-label="Miniaturas del producto">
+        <button class="thumb is-active" role="tab" aria-selected="true" onclick="setGalleryImage(this, 0)">
+          <img src="./Auriculares Bluetooth Pro con Cancelación de Ruido · NovaShop_files/photo-1505740420928-5e560c06d30e(1)" alt="Vista frontal">
+        </button>
+        <button class="thumb" role="tab" aria-selected="false" onclick="setGalleryImage(this, 1)">
+          <img src="./Auriculares Bluetooth Pro con Cancelación de Ruido · NovaShop_files/photo-1583394838336-acd977736f90" alt="Vista lateral">
+        </button>
+        <button class="thumb" role="tab" aria-selected="false" onclick="setGalleryImage(this, 2)">
+          <img src="./Auriculares Bluetooth Pro con Cancelación de Ruido · NovaShop_files/photo-1484704849700-f032a568e944" alt="Vista con estuche">
+        </button>
+        <button class="thumb" role="tab" aria-selected="false" onclick="setGalleryImage(this, 3)">
+          <img src="./Auriculares Bluetooth Pro con Cancelación de Ruido · NovaShop_files/photo-1546435770-a3e426bf472b" alt="Detalle de acabado">
+        </button>
+        <button class="thumb" role="tab" aria-selected="false" onclick="setGalleryImage(this, 4)">
+          <img src="./Auriculares Bluetooth Pro con Cancelación de Ruido · NovaShop_files/photo-1608043152269-423dbba4e7e1" alt="En uso">
+        </button>
+      </div>
+    </section>
+
+    <!-- ========== INFO ========== -->
+    <section class="info animate-fadeInUp" style="animation-delay:.1s">
+
+      <div>
+        <p class="info__brand">AudioTech · Serie Pro</p>
+        <h1 class="info__title">
+          Auriculares Bluetooth Pro con Cancelación de Ruido Activa y Batería 40h
+        </h1>
+      </div>
+
+      <!-- Rating + link a reviews -->
+      <div class="rating">
+        <span class="rating__stars" aria-hidden="true">★★★★★</span>
+        <span class="rating__score">4.8</span>
+        <span class="rating__count">(<a href="https://aai.inacap.cl/pluginfile.php/2895173/mod_resource/content/2/Landing.html#reviews">1.247 reseñas verificadas</a>)</span>
+      </div>
+
+      <!-- Precio (anclaje) -->
+      <div class="price-box">
+        <div class="price-box__row">
+          <span class="price-box__current">$79</span>
+          <span class="price-box__old">$149</span>
+          <span class="price-box__discount">-47%</span>
+        </div>
+        <p class="price-box__savings">Ahorras $70 respecto al precio habitual</p>
+        <p class="price-box__installment">o 3 cuotas sin interés de $26,33</p>
+      </div>
+
+      <!-- Urgencia + prueba social en vivo -->
+      <div class="urgency">
+        <div class="urgency__row urgency__row--danger">
+          <span class="urgency__dot" aria-hidden="true"></span>
+          <span>🔥 Solo quedan <strong>4 unidades</strong> disponibles</span>
+        </div>
+        <div class="urgency__row urgency__row--success">
+          <span class="urgency__dot" aria-hidden="true"></span>
+          <span>👀 <strong id="live-viewers">86</strong> personas viendo este producto ahora</span>
+        </div>
+        <div class="urgency__row urgency__row--brand">
+          <span aria-hidden="true">⏰</span>
+          <span>Oferta termina en <strong id="pdp-timer">02:46:59</strong></span>
+        </div>
+
+        <!-- Barra de stock -->
+        <div class="stock-bar" aria-hidden="true">
+          <div class="stock-bar__track">
+            <div class="stock-bar__fill" style="width:20%"></div>
+          </div>
+          <p class="stock-bar__label">Quedan 4 de 20 unidades · 84% vendido</p>
+        </div>
+      </div>
+
+      <!-- Variantes: color -->
+      <div class="variant-group">
+        <div class="variant-group__head">
+          <span class="variant-group__label">Color:</span>
+          <span class="variant-group__value" id="color-label">Negro Medianoche</span>
+        </div>
+        <div class="variant-group__options" role="radiogroup" aria-label="Selecciona color">
+          <button class="variant-color is-active" role="radio" aria-checked="true" aria-label="Negro Medianoche" onclick="selectColor(this, 'Negro Medianoche')">
+            <span class="variant-color__dot" style="background:#111827"></span>
+          </button>
+          <button class="variant-color" role="radio" aria-checked="false" aria-label="Blanco Perla" onclick="selectColor(this, 'Blanco Perla')">
+            <span class="variant-color__dot" style="background:#F3F4F6"></span>
+          </button>
+          <button class="variant-color" role="radio" aria-checked="false" aria-label="Azul Cobalto" onclick="selectColor(this, 'Azul Cobalto')">
+            <span class="variant-color__dot" style="background:#1D4ED8"></span>
+          </button>
+          <button class="variant-color" role="radio" aria-checked="false" aria-label="Rosa Coral" onclick="selectColor(this, 'Rosa Coral')">
+            <span class="variant-color__dot" style="background:#F472B6"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Cantidad -->
+      <div class="variant-group">
+        <div class="variant-group__head">
+          <span class="variant-group__label">Cantidad:</span>
+        </div>
+        <div class="qty">
+          <button type="button" onclick="changeQty(-1)" aria-label="Reducir cantidad">−</button>
+          <input id="qty" type="number" min="1" max="4" value="1" aria-label="Cantidad">
+          <button type="button" onclick="changeQty(1)" aria-label="Aumentar cantidad">+</button>
+        </div>
+      </div>
+
+      <!-- CTAs -->
+      <div class="ctas">
+        <button class="btn btn--primary" onclick="addToCart()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          Añadir al carrito — $79
+        </button>
+        <button class="btn btn--ghost btn--wish" id="wish-btn" aria-label="Añadir a favoritos" onclick="toggleWish(this)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Trust guarantees -->
+      <div class="trust">
+        <div class="trust__item">
+          <div class="trust__icon" aria-hidden="true">🚚</div>
+          <div>
+            <div class="trust__title">Envío gratis</div>
+            <div class="trust__desc">Llega mañana antes de las 12h</div>
+          </div>
+        </div>
+        <div class="trust__item">
+          <div class="trust__icon" aria-hidden="true">↩️</div>
+          <div>
+            <div class="trust__title">Devolución 30 días</div>
+            <div class="trust__desc">Sin preguntas</div>
+          </div>
+        </div>
+        <div class="trust__item">
+          <div class="trust__icon" aria-hidden="true">🔒</div>
+          <div>
+            <div class="trust__title">Pago 100% seguro</div>
+            <div class="trust__desc">SSL · 3D Secure</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Métodos de pago -->
+      <div class="payments">
+        <span>Paga con:</span>
+        <div class="payments__badges">
+          <span class="pay-badge">VISA</span>
+          <span class="pay-badge">MC</span>
+          <span class="pay-badge">PayPal</span>
+          <span class="pay-badge">Apple Pay</span>
+          <span class="pay-badge">G Pay</span>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- ============================================================
+       DESCRIPCIÓN + ESPECIFICACIONES (tabs)
+       ============================================================ -->
+  <section class="section" aria-labelledby="details-heading">
+    <h2 class="section__title" id="details-heading">Detalles del producto</h2>
+
+    <div class="tabs" role="tablist">
+      <button class="tab is-active" role="tab" aria-selected="true" onclick="switchTab(this, 'desc')">Descripción</button>
+      <button class="tab" role="tab" aria-selected="false" onclick="switchTab(this, 'specs')">Especificaciones</button>
+      <button class="tab" role="tab" aria-selected="false" onclick="switchTab(this, 'box')">En la caja</button>
+    </div>
+
+    <div class="tab-panel is-active" id="tab-desc" role="tabpanel">
+      <p>
+        Los <strong>Auriculares Bluetooth Pro</strong> ofrecen un sonido Hi-Res de estudio con
+        <strong>cancelación activa de ruido híbrida</strong> que elimina hasta el 95% del ruido
+        ambiental. Diseñados con materiales premium y almohadillas de espuma viscoelástica
+        para máxima comodidad durante horas.
+      </p>
+      <h3>Características destacadas</h3>
+      <ul>
+        <li>Cancelación activa de ruido (ANC) híbrida de última generación</li>
+        <li>Batería de 40 horas con carga rápida (10 min = 5h de música)</li>
+        <li>Bluetooth 5.3 con multipunto (conecta 2 dispositivos a la vez)</li>
+        <li>Modo transparencia para escuchar sin quitártelos</li>
+        <li>Drivers de 40 mm con diafragma de titanio</li>
+        <li>Certificación IPX4 resistente a salpicaduras</li>
+      </ul>
+      <p>
+        Compatibles con <strong>iOS, Android, Windows y macOS</strong>. Incluye app móvil para
+        ecualizador personalizable y actualizaciones de firmware.
+      </p>
+    </div>
+
+    <div class="tab-panel" id="tab-specs" role="tabpanel">
+      <div class="specs">
+        <div class="spec-row"><span class="spec-row__key">Marca</span><span class="spec-row__val">AudioTech</span></div>
+        <div class="spec-row"><span class="spec-row__key">Modelo</span><span class="spec-row__val">Pro ANC-40</span></div>
+        <div class="spec-row"><span class="spec-row__key">Tipo</span><span class="spec-row__val">Over-ear</span></div>
+        <div class="spec-row"><span class="spec-row__key">Conectividad</span><span class="spec-row__val">Bluetooth 5.3</span></div>
+        <div class="spec-row"><span class="spec-row__key">Batería</span><span class="spec-row__val">40 h (ANC off)</span></div>
+        <div class="spec-row"><span class="spec-row__key">Carga rápida</span><span class="spec-row__val">10 min = 5 h</span></div>
+        <div class="spec-row"><span class="spec-row__key">Drivers</span><span class="spec-row__val">40 mm titanio</span></div>
+        <div class="spec-row"><span class="spec-row__key">Resistencia</span><span class="spec-row__val">IPX4</span></div>
+        <div class="spec-row"><span class="spec-row__key">Peso</span><span class="spec-row__val">255 g</span></div>
+        <div class="spec-row"><span class="spec-row__key">Garantía</span><span class="spec-row__val">24 meses</span></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab-box" role="tabpanel">
+      <ul>
+        <li>Auriculares Bluetooth Pro ANC-40</li>
+        <li>Estuche rígido de transporte</li>
+        <li>Cable USB-C de carga (1 m)</li>
+        <li>Cable jack 3.5 mm (modo cable)</li>
+        <li>Adaptador de avión</li>
+        <li>Manual de usuario (ES/EN)</li>
+        <li>Tarjeta de garantía 24 meses</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       REVIEWS
+       ============================================================ -->
+  <section class="section" id="reviews" aria-labelledby="reviews-heading">
+    <h2 class="section__title" id="reviews-heading">Lo que dicen nuestros clientes</h2>
+
+    <div class="reviews">
+      <div class="reviews__head">
+        <div class="reviews__score">
+          <div class="reviews__score-num">4.8</div>
+          <div class="reviews__score-stars" aria-hidden="true">★★★★★</div>
+          <div class="reviews__score-sub">Basado en 1.247 reseñas</div>
+        </div>
+
+        <div class="reviews__bars">
+          <div class="review-bar">
+            <span class="review-bar__label">5 ★</span>
+            <div class="review-bar__track"><div class="review-bar__fill" style="width:85%"></div></div>
+            <span class="review-bar__pct">85%</span>
+          </div>
+          <div class="review-bar">
+            <span class="review-bar__label">4 ★</span>
+            <div class="review-bar__track"><div class="review-bar__fill" style="width:10%"></div></div>
+            <span class="review-bar__pct">10%</span>
+          </div>
+          <div class="review-bar">
+            <span class="review-bar__label">3 ★</span>
+            <div class="review-bar__track"><div class="review-bar__fill" style="width:3%"></div></div>
+            <span class="review-bar__pct">3%</span>
+          </div>
+          <div class="review-bar">
+            <span class="review-bar__label">2 ★</span>
+            <div class="review-bar__track"><div class="review-bar__fill" style="width:1%"></div></div>
+            <span class="review-bar__pct">1%</span>
+          </div>
+          <div class="review-bar">
+            <span class="review-bar__label">1 ★</span>
+            <div class="review-bar__track"><div class="review-bar__fill" style="width:1%"></div></div>
+            <span class="review-bar__pct">1%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 1 -->
+      <article class="review">
+        <div class="review__head">
+          <div class="review__avatar" aria-hidden="true">MC</div>
+          <div>
+            <div class="review__author">María C.</div>
+            <div class="review__stars" aria-label="5 estrellas">★★★★★</div>
+          </div>
+          <span class="review__verified">✓ Compra verificada</span>
+          <span class="review__meta">Hace 3 días</span>
+        </div>
+        <h3 class="review__title">Increíbles, la mejor compra del año</h3>
+        <p class="review__body">
+          Llevo usándolos 2 semanas y estoy encantada. La cancelación de ruido es brutal, los uso
+          en el metro y no escucho nada. La batería dura muchísimo, cargo una vez por semana. Los
+          recomiendo 100%.
+        </p>
+        <div class="review__helpful">
+          <span>¿Te resultó útil?</span>
+          <button onclick="markHelpful(this)">👍 Sí (34)</button>
+          <button onclick="markHelpful(this)">👎 No (2)</button>
+        </div>
+      </article>
+
+      <!-- Review 2 -->
+      <article class="review">
+        <div class="review__head">
+          <div class="review__avatar" aria-hidden="true">JL</div>
+          <div>
+            <div class="review__author">Javier L.</div>
+            <div class="review__stars" aria-label="5 estrellas">★★★★★</div>
+          </div>
+          <span class="review__verified">✓ Compra verificada</span>
+          <span class="review__meta">Hace 1 semana</span>
+        </div>
+        <h3 class="review__title">Calidad profesional a precio justo</h3>
+        <p class="review__body">
+          Soy productor musical y los uso para monitoreo. La respuesta en graves es excelente y el
+          modo transparencia es muy útil. El estuche rígido es un plus.
+        </p>
+        <div class="review__helpful">
+          <span>¿Te resultó útil?</span>
+          <button onclick="markHelpful(this)">👍 Sí (21)</button>
+          <button onclick="markHelpful(this)">👎 No (1)</button>
+        </div>
+      </article>
+
+      <!-- Review 3 -->
+      <article class="review">
+        <div class="review__head">
+          <div class="review__avatar" aria-hidden="true">AP</div>
+          <div>
+            <div class="review__author">Ana P.</div>
+            <div class="review__stars" aria-label="4 estrellas">★★★★☆</div>
+          </div>
+          <span class="review__verified">✓ Compra verificada</span>
+          <span class="review__meta">Hace 2 semanas</span>
+        </div>
+        <h3 class="review__title">Muy buenos, pero la diadema aprieta un poco</h3>
+        <p class="review__body">
+          El sonido es espectacular y la ANC funciona muy bien. Le doy 4 estrellas porque tras 3
+          horas seguidas noto algo de presión en las orejas. Por lo demás, geniales.
+        </p>
+        <div class="review__helpful">
+          <span>¿Te resultó útil?</span>
+          <button onclick="markHelpful(this)">👍 Sí (12)</button>
+          <button onclick="markHelpful(this)">👎 No (3)</button>
+        </div>
+      </article>
+
+      <div style="text-align:center;margin-top:24px">
+        <button class="btn btn--ghost" onclick="track('reviews_load_more'); showToast('Cargando más reseñas...');">
+          Ver las 1.244 reseñas restantes
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CROSS-SELL: COMPRADOS JUNTOS FRECUENTEMENTE
+       ============================================================ -->
+  <section class="section" aria-labelledby="cross-heading">
+    <h2 class="section__title" id="cross-heading">
+      🛒 Comprados juntos frecuentemente
+    </h2>
+    <div class="crosssell" id="crosssell-grid">
+    <article class="mini-card" onclick="track('mini_card_click', {id:'x1'})">
+      <div class="mini-card__media">
+        <img src="./Auriculares Bluetooth Pro con Cancelación de Ruido · NovaShop_files/photo-1606220945770-b5b6c2c55bf1" alt="Estuche Rígido Premium para Auriculares" loading="lazy" width="400" height="400">
+      </div>
+      <div class="mini-card__body">
+        <h3 class="mini-card__title">Estuche Rígido Premium para Auriculares</h3>
+        <div>
+          <span class="mini-card__price">$19</span>
+          <span class="mini-card__price-old">$29</span>
+          <span class="badge badge--brand" style="font-size:.625rem;padding:2px 6px;margin-left:6px">-34%</span>
+        </div>
+        <button class="mini-card__cta" onclick="event.stopPropagation(); addMini('x1');">
+          + Añadir
+        </button>
+      </div>
+    </article>
+  
+    <article class="mini-card" onclick="track('mini_card_click', {id:'x2'})">
+      <div class="mini-card__media">
+        <img src="./Auriculares Bluetooth Pro con Cancelación de Ruido · NovaShop_files/photo-1589492477829-5e65395b66cc" alt="Cable USB-C Trenzado 2m Carga Rápida 60W" loading="lazy" width="400" height="400">
+      </div>
+      <div class="mini-card__body">
+        <h3 class="mini-card__title">Cable USB-C Trenzado 2m Carga Rápida 60W</h3>
+        <div>
+          <span class="mini-card__price">$12</span>
+          <span class="mini-card__price-old">$19</span>
+          <span class="badge badge--brand" style="font-size:.625rem;padding:2px 6px;margin-left:6px">-37%</span>
+        </div>
+        <button class="mini-card__cta" onclick="event.stopPropagation(); addMini('x2');">
+          + Añadir
+        </button>
+      </div>
+    </article>
+  
+    <article class="mini-card" onclick="track('mini_card_click', {id:'x3'})">
+      <div class="mini-card__media">
+        <img src="./Auriculares Bluetooth Pro con Cancelación de Ruido · NovaShop_files/photo-1618366712010-f4ae9c647dcb" alt="Adaptador Bluetooth 5.3 para PC y TV" loading="lazy" width="400" height="400">
+      </div>
+      <div class="mini-card__body">
+        <h3 class="mini-card__title">Adaptador Bluetooth 5.3 para PC y TV</h3>
+        <div>
+          <span class="mini-card__price">$24</span>
+          <span class="mini-card__price-old">$39</span>
+          <span class="badge badge--brand" style="font-size:.625rem;padding:2px 6px;margin-left:6px">-38%</span>
+        </div>
+        <button class="mini-card__cta" onclick="event.stopPropagation(); addMini('x3');">
+          + Añadir
+        </button>
+      </div>
+    </article>
+  
+    <article class="mini-card" onclick="track('mini_card_click', {id:'x4'})">
+      <div class="mini-card__media">
+        <img src="./Auriculares Bluetooth Pro con Cancelación de Ruido · NovaShop_files/photo-1590658268037-6bf12165a8df" alt="Almohadillas de Repuesto Espuma Memory" loading="lazy" width="400" height="400">
+      </div>
+      <div class="mini-card__body">
+        <h3 class="mini-card__title">Almohadillas de Repuesto Espuma Memory</h3>
+        <div>
+          <span class="mini-card__price">$15</span>
+          <span class="mini-card__price-old">$25</span>
+          <span class="badge badge--brand" style="font-size:.625rem;padding:2px 6px;margin-left:6px">-40%</span>
+        </div>
+        <button class="mini-card__cta" onclick="event.stopPropagation(); addMini('x4');">
+          + Añadir
+        </button>
+      </div>
+    </article>
+  </div>
+  </section>
+
+  <!-- ============================================================
+       VISTOS RECIENTEMENTE
+       ============================================================ -->
+  <section class="section" aria-labelledby="recent-heading">
+    <h2 class="section__title" id="recent-heading">👀 Vistos recientemente</h2>
+    <div class="crosssell" id="recent-grid">
+    <article class="mini-card" onclick="track('mini_card_click', {id:'r1'})">
+      <div class="mini-card__media">
+        <img src="./Auriculares Bluetooth Pro con Cancelación de Ruido · NovaShop_files/photo-1590658268037-6bf12165a8df" alt="Auriculares Inalámbricos Sport IPX7" loading="lazy" width="400" height="400">
+      </div>
+      <div class="mini-card__body">
+        <h3 class="mini-card__title">Auriculares Inalámbricos Sport IPX7</h3>
+        <div>
+          <span class="mini-card__price">$45</span>
+          <span class="mini-card__price-old">$79</span>
+          <span class="badge badge--brand" style="font-size:.625rem;padding:2px 6px;margin-left:6px">-43%</span>
+        </div>
+        <button class="mini-card__cta" onclick="event.stopPropagation(); addMini('r1');">
+          + Añadir
+        </button>
+      </div>
+    </article>
+  
+    <article class="mini-card" onclick="track('mini_card_click', {id:'r2'})">
+      <div class="mini-card__media">
+        <img src="./Auriculares Bluetooth Pro con Cancelación de Ruido · NovaShop_files/photo-1606220945770-b5b6c2c55bf1" alt="Earbuds TWS con Carga Inalámbrica" loading="lazy" width="400" height="400">
+      </div>
+      <div class="mini-card__body">
+        <h3 class="mini-card__title">Earbuds TWS con Carga Inalámbrica</h3>
+        <div>
+          <span class="mini-card__price">$39</span>
+          <span class="mini-card__price-old">$89</span>
+          <span class="badge badge--brand" style="font-size:.625rem;padding:2px 6px;margin-left:6px">-56%</span>
+        </div>
+        <button class="mini-card__cta" onclick="event.stopPropagation(); addMini('r2');">
+          + Añadir
+        </button>
+      </div>
+    </article>
+  
+    <article class="mini-card" onclick="track('mini_card_click', {id:'r3'})">
+      <div class="mini-card__media">
+        <img src="./Auriculares Bluetooth Pro con Cancelación de Ruido · NovaShop_files/photo-1618366712010-f4ae9c647dcb" alt="Auriculares Gaming 7.1 con Micrófono" loading="lazy" width="400" height="400">
+      </div>
+      <div class="mini-card__body">
+        <h3 class="mini-card__title">Auriculares Gaming 7.1 con Micrófono</h3>
+        <div>
+          <span class="mini-card__price">$89</span>
+          <span class="mini-card__price-old">$139</span>
+          <span class="badge badge--brand" style="font-size:.625rem;padding:2px 6px;margin-left:6px">-36%</span>
+        </div>
+        <button class="mini-card__cta" onclick="event.stopPropagation(); addMini('r3');">
+          + Añadir
+        </button>
+      </div>
+    </article>
+  
+    <article class="mini-card" onclick="track('mini_card_click', {id:'r4'})">
+      <div class="mini-card__media">
+        <img src="./Auriculares Bluetooth Pro con Cancelación de Ruido · NovaShop_files/photo-1484704849700-f032a568e944(1)" alt="Auriculares Over-Ear Hi-Res Studio" loading="lazy" width="400" height="400">
+      </div>
+      <div class="mini-card__body">
+        <h3 class="mini-card__title">Auriculares Over-Ear Hi-Res Studio</h3>
+        <div>
+          <span class="mini-card__price">$129</span>
+          <span class="mini-card__price-old">$199</span>
+          <span class="badge badge--brand" style="font-size:.625rem;padding:2px 6px;margin-left:6px">-35%</span>
+        </div>
+        <button class="mini-card__cta" onclick="event.stopPropagation(); addMini('r4');">
+          + Añadir
+        </button>
+      </div>
+    </article>
+  </div>
+  </section>
+</main>
+
+<!-- ============================================================
+     STICKY CTA (mobile)
+     ============================================================ -->
+<div class="sticky-cta is-visible" id="sticky-cta" role="region" aria-label="Añadir al carrito">
+  <div class="sticky-cta__info">
+    <div class="sticky-cta__price">$79</div>
+    <div class="sticky-cta__title">Auriculares Bluetooth Pro ANC</div>
+  </div>
+  <button class="sticky-cta__btn" onclick="addToCart()">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+      <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+    </svg>
+    Añadir
+  </button>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <span class="toast__check" aria-hidden="true">✓</span>
+  <span id="toast-msg">Producto añadido al carrito</span>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">© 2025 NovaShop · Demo PDP · Diseño persuasivo + UX</div>
+</footer>
+
+<script>
+/* ============================================================
+   1. DATOS
+   ============================================================ */
+const GALLERY_IMAGES = [
+  'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=900&q=80&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1583394838336-acd977736f90?w=900&q=80&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1484704849700-f032a568e944?w=900&q=80&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=900&q=80&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=900&q=80&auto=format&fit=crop',
+];
+
+const CROSS_SELL = [
+  { id:'x1', title:'Estuche Rígido Premium para Auriculares', image:'https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=400&q=80&auto=format&fit=crop', price:19, originalPrice:29 },
+  { id:'x2', title:'Cable USB-C Trenzado 2m Carga Rápida 60W', image:'https://images.unsplash.com/photo-1589492477829-5e65395b66cc?w=400&q=80&auto=format&fit=crop', price:12, originalPrice:19 },
+  { id:'x3', title:'Adaptador Bluetooth 5.3 para PC y TV',     image:'https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=400&q=80&auto=format&fit=crop', price:24, originalPrice:39 },
+  { id:'x4', title:'Almohadillas de Repuesto Espuma Memory',   image:'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400&q=80&auto=format&fit=crop', price:15, originalPrice:25 },
+];
+
+const RECENTLY_VIEWED = [
+  { id:'r1', title:'Auriculares Inalámbricos Sport IPX7',      image:'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400&q=80&auto=format&fit=crop', price:45, originalPrice:79 },
+  { id:'r2', title:'Earbuds TWS con Carga Inalámbrica',        image:'https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=400&q=80&auto=format&fit=crop', price:39, originalPrice:89 },
+  { id:'r3', title:'Auriculares Gaming 7.1 con Micrófono',     image:'https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=400&q=80&auto=format&fit=crop', price:89, originalPrice:139 },
+  { id:'r4', title:'Auriculares Over-Ear Hi-Res Studio',       image:'https://images.unsplash.com/photo-1484704849700-f032a568e944?w=400&q=80&auto=format&fit=crop', price:129, originalPrice:199 },
+];
+
+/* ============================================================
+   2. ANALYTICS
+   ============================================================ */
+function track(eventName, payload = {}) {
+  if (window.gtag) window.gtag('event', eventName, payload);
+  console.log(`📊 [analytics] ${eventName}`, payload);
+}
+
+/* ============================================================
+   3. GALERÍA
+   ============================================================ */
+function setGalleryImage(btn, idx) {
+  const img = document.getElementById('gallery-img');
+  img.src = GALLERY_IMAGES[idx];
+  img.alt = btn.querySelector('img').alt;
+
+  document.querySelectorAll('.thumb').forEach((t, i) => {
+    const active = i === idx;
+    t.classList.toggle('is-active', active);
+    t.setAttribute('aria-selected', active ? 'true' : 'false');
+  });
+
+  track('gallery_image_change', { index: idx });
+}
+
+/* ============================================================
+   4. VARIANTES
+   ============================================================ */
+function selectColor(btn, colorName) {
+  document.querySelectorAll('.variant-color').forEach(b => {
+    const active = b === btn;
+    b.classList.toggle('is-active', active);
+    b.setAttribute('aria-checked', active ? 'true' : 'false');
+  });
+  document.getElementById('color-label').textContent = colorName;
+  track('variant_select', { color: colorName });
+}
+
+/* ============================================================
+   5. CANTIDAD
+   ============================================================ */
+function changeQty(delta) {
+  const input = document.getElementById('qty');
+  const min = Number(input.min);
+  const max = Number(input.max);
+  let v = Number(input.value) + delta;
+  v = Math.max(min, Math.min(max, v));
+  input.value = v;
+  track('qty_change', { qty: v });
+}
+
+/* ============================================================
+   6. CARRITO + WISHLIST + TOAST
+   ============================================================ */
+let cartCount = 0;
+let wishActive = false;
+
+function addToCart() {
+  const qty = Number(document.getElementById('qty').value);
+  cartCount += qty;
+
+  const badge = document.getElementById('cart-count');
+  badge.textContent = cartCount;
+  badge.hidden = false;
+
+  showToast(`✓ ${qty} × Auriculares Bluetooth Pro añadidos al carrito`);
+  track('add_to_cart', { id: 'p1', qty, value: 79 * qty, currency: 'USD' });
+}
+
+function toggleWish(btn) {
+  wishActive = !wishActive;
+  btn.classList.toggle('is-active', wishActive);
+  showToast(wishActive ? '❤️ Añadido a favoritos' : 'Eliminado de favoritos');
+  track('wishlist_toggle', { active: wishActive });
+}
+
+function showToast(msg) {
+  const toast = document.getElementById('toast');
+  document.getElementById('toast-msg').textContent = msg;
+  toast.classList.add('is-visible');
+  clearTimeout(showToast._t);
+  showToast._t = setTimeout(() => toast.classList.remove('is-visible'), 2400);
+}
+
+/* ============================================================
+   7. TABS
+   ============================================================ */
+function switchTab(btn, id) {
+  document.querySelectorAll('.tab').forEach(t => {
+    const active = t === btn;
+    t.classList.toggle('is-active', active);
+    t.setAttribute('aria-selected', active ? 'true' : 'false');
+  });
+  document.querySelectorAll('.tab-panel').forEach(p => {
+    p.classList.toggle('is-active', p.id === 'tab-' + id);
+  });
+  track('tab_change', { tab: id });
+}
+
+/* ============================================================
+   8. REVIEWS ÚTILES
+   ============================================================ */
+function markHelpful(btn) {
+  const original = btn.textContent;
+  btn.disabled = true;
+  btn.style.borderColor = 'var(--success-500)';
+  btn.style.color = 'var(--success-700)';
+  setTimeout(() => {
+    btn.textContent = '✓ Gracias';
+  }, 100);
+  track('review_helpful', { text: original });
+}
+
+/* ============================================================
+   9. CROSS-SELL + VISTOS RECIENTEMENTE
+   ============================================================ */
+function renderMiniCard(p) {
+  const discount = p.originalPrice ? Math.round((1 - p.price / p.originalPrice) * 100) : 0;
+  return `
+    <article class="mini-card" onclick="track('mini_card_click', {id:'${p.id}'})">
+      <div class="mini-card__media">
+        <img src="${p.image}" alt="${p.title}" loading="lazy" width="400" height="400" />
+      </div>
+      <div class="mini-card__body">
+        <h3 class="mini-card__title">${p.title}</h3>
+        <div>
+          <span class="mini-card__price">$${p.price}</span>
+          ${p.originalPrice ? `<span class="mini-card__price-old">$${p.originalPrice}</span>` : ''}
+          ${discount > 0 ? `<span class="badge badge--brand" style="font-size:.625rem;padding:2px 6px;margin-left:6px">-${discount}%</span>` : ''}
+        </div>
+        <button class="mini-card__cta"
+          onclick="event.stopPropagation(); addMini('${p.id}');">
+          + Añadir
+        </button>
+      </div>
+    </article>
+  `;
+}
+
+function addMini(id) {
+  cartCount++;
+  const badge = document.getElementById('cart-count');
+  badge.textContent = cartCount;
+  badge.hidden = false;
+  showToast('✓ Añadido al carrito');
+  track('add_to_cart_mini', { id });
+}
+
+function renderAllCards() {
+  document.getElementById('crosssell-grid').innerHTML =
+    CROSS_SELL.map(renderMiniCard).join('');
+  document.getElementById('recent-grid').innerHTML =
+    RECENTLY_VIEWED.map(renderMiniCard).join('');
+}
+
+/* ============================================================
+   10. CONTADOR "EN VIVO" + TEMPORIZADOR
+   ============================================================ */
+function startLiveViewers() {
+  const el = document.getElementById('live-viewers');
+  setInterval(() => {
+    const cur = parseInt(el.textContent);
+    const delta = Math.floor(Math.random() * 5) - 2;
+    el.textContent = Math.max(50, cur + delta);
+  }, 4000);
+}
+
+function startTimer() {
+  const el = document.getElementById('pdp-timer');
+  const deadline = Date.now() + (2 * 3600 + 47 * 60 + 13) * 1000;
+
+  const fmt = (ms) => {
+    const h = String(Math.floor(ms / 3600000)).padStart(2, '0');
+    const m = String(Math.floor((ms % 3600000) / 60000)).padStart(2, '0');
+    const s = String(Math.floor((ms % 60000) / 1000)).padStart(2, '0');
+    return `${h}:${m}:${s}`;
+  };
+
+  const tick = () => {
+    const remaining = Math.max(0, deadline - Date.now());
+    el.textContent = fmt(remaining);
+  };
+  tick();
+  setInterval(tick, 1000);
+}
+
+/* ============================================================
+   11. STICKY CTA (mobile, aparece tras scroll)
+   ============================================================ */
+function setupStickyCTA() {
+  const sticky = document.getElementById('sticky-cta');
+  const trigger = document.querySelector('.info__title');
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      // Muestra el sticky cuando el título ya no es visible
+      sticky.classList.toggle('is-visible', !entry.isIntersecting);
+    },
+    { rootMargin: '-100px 0px 0px 0px' }
+  );
+  observer.observe(trigger);
+}
+
+/* ============================================================
+   12. INIT
+   ============================================================ */
+document.addEventListener('DOMContentLoaded', () => {
+  renderAllCards();
+  startLiveViewers();
+  startTimer();
+  setupStickyCTA();
+
+  track('page_view', { page: 'pdp', product: 'p1' });
+});
+</script>
+
+
+</body></html>

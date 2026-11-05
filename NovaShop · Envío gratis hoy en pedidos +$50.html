@@ -1,0 +1,1852 @@
+<!DOCTYPE html>
+<!-- saved from url=(0088)https://aai.inacap.cl/pluginfile.php/2895122/mod_resource/content/1/EjemploLanding1.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1D4ED8">
+<title>NovaShop · Envío gratis hoy en pedidos +$50</title>
+<meta name="description" content="Descubre las mejores ofertas con envío gratis, devolución en 30 días y pago 100% seguro. Más de 50.000 clientes satisfechos.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="NovaShop · Envío gratis hoy">
+<meta property="og:description" content="Ofertas increíbles con garantía y envío gratis.">
+<meta property="og:type" content="website">
+
+<style>
+/* ============================================================
+   1. DESIGN TOKENS (Fase 1: Psicología del color)
+   ============================================================ */
+:root {
+  /* Autoridad / Confianza */
+  --brand-50:  #EFF6FF;
+  --brand-100: #DBEAFE;
+  --brand-500: #3B82F6;
+  --brand-600: #2563EB;
+  --brand-700: #1D4ED8;
+  --brand-900: #1E3A8A;
+
+  /* Acción positiva */
+  --success-50:  #ECFDF5;
+  --success-500: #10B981;
+  --success-600: #059669;
+  --success-700: #047857;
+
+  /* Urgencia */
+  --danger-50:  #FEF2F2;
+  --danger-500: #EF4444;
+  --danger-600: #DC2626;
+
+  /* Valor / Premios */
+  --gold-50:  #FFFBEB;
+  --gold-500: #F59E0B;
+  --gold-600: #D97706;
+
+  /* Neutrales */
+  --neutral-50:  #F9FAFB;
+  --neutral-100: #F3F4F6;
+  --neutral-200: #E5E7EB;
+  --neutral-400: #9CA3AF;
+  --neutral-500: #6B7280;
+  --neutral-700: #374151;
+  --neutral-900: #111827;
+
+  /* Espaciado */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+
+  /* Radios */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Sombras */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,.08);
+  --shadow-lg: 0 10px 25px rgba(0,0,0,.10);
+  --shadow-xl: 0 20px 40px rgba(0,0,0,.12);
+
+  /* Tipografía */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Transiciones */
+  --t-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --t-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================================
+   2. RESET + BASE
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--neutral-50);
+  color: var(--neutral-900);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img, svg { display: block; max-width: 100%; }
+
+a { color: inherit; text-decoration: none; }
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+ul { list-style: none; }
+
+/* Foco accesible AA */
+:focus-visible {
+  outline: 2px solid var(--brand-600);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+/* ============================================================
+   3. LAYOUT
+   ============================================================ */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+}
+@media (min-width: 640px)  { .container { padding-inline: var(--space-lg); } }
+@media (min-width: 1024px) { .container { padding-inline: var(--space-xl); } }
+
+.section { padding-block: 40px; }
+@media (min-width: 768px) { .section { padding-block: 56px; } }
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+
+/* ============================================================
+   4. ANIMACIONES
+   ============================================================ */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulseSoft {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: .7; }
+}
+@keyframes pulseDot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(16,185,129,.7); }
+  70%      { box-shadow: 0 0 0 10px rgba(16,185,129,0); }
+}
+@keyframes shimmer {
+  0%   { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-fadeInUp { animation: fadeInUp .7s ease-out both; }
+.animate-float    { animation: float 3s ease-in-out infinite; }
+
+/* ============================================================
+   5. TOP BAR — Reciprocidad + Urgencia
+   ============================================================ */
+.topbar {
+  background: linear-gradient(90deg, var(--brand-900), var(--brand-600));
+  color: white;
+  font-size: .8125rem;
+  overflow: hidden;
+}
+.topbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  padding: 10px var(--space-md);
+  white-space: nowrap;
+}
+.topbar__item { display: inline-flex; align-items: center; gap: 6px; }
+.topbar__dot {
+  display: inline-block;
+  width: 8px; height: 8px;
+  background: var(--success-500);
+  border-radius: 50%;
+  animation: pulseDot 1.6s infinite;
+}
+@media (max-width: 640px) {
+  .topbar__item--desktop { display: none; }
+}
+
+/* ============================================================
+   6. HEADER + NAV
+   ============================================================ */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--neutral-200);
+}
+.header__inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding-block: 12px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 1.125rem;
+  color: var(--brand-700);
+  flex-shrink: 0;
+}
+.logo__mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px; height: 34px;
+  background: linear-gradient(135deg, var(--brand-600), var(--brand-900));
+  color: white;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+}
+
+.search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--neutral-100);
+  border: 1px solid transparent;
+  border-radius: var(--radius-full);
+  padding: 10px 16px;
+  transition: var(--t-base);
+}
+.search:focus-within {
+  background: white;
+  border-color: var(--brand-500);
+  box-shadow: 0 0 0 4px rgba(37,99,235,.12);
+}
+.search input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: .9375rem;
+  outline: none;
+  color: var(--neutral-900);
+}
+.search input::placeholder { color: var(--neutral-400); }
+.search__icon { color: var(--neutral-500); flex-shrink: 0; }
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.icon-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px; height: 44px;
+  border-radius: var(--radius-md);
+  color: var(--neutral-700);
+  transition: var(--t-fast);
+}
+.icon-btn:hover { background: var(--neutral-100); }
+.icon-btn__badge {
+  position: absolute;
+  top: 6px; right: 6px;
+  min-width: 18px; height: 18px;
+  padding: 0 5px;
+  background: var(--danger-500);
+  color: white;
+  font-size: .6875rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+}
+@media (max-width: 768px) {
+  .search { padding: 8px 12px; }
+  .logo__text { display: none; }
+}
+
+/* ============================================================
+   7. HERO
+   ============================================================ */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--brand-900) 0%, var(--brand-700) 50%, var(--brand-600) 100%);
+  color: white;
+}
+.hero::before,
+.hero::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: .35;
+  pointer-events: none;
+}
+.hero::before {
+  width: 400px; height: 400px;
+  background: white;
+  top: -100px; left: -100px;
+}
+.hero::after {
+  width: 500px; height: 500px;
+  background: var(--success-500);
+  bottom: -150px; right: -100px;
+}
+.hero__inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  padding-block: 48px;
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .hero__inner {
+    grid-template-columns: 1fr 1fr;
+    padding-block: 80px;
+    min-height: 560px;
+  }
+}
+
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-size: .875rem;
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+}
+
+.hero__title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -.02em;
+  text-wrap: balance;
+}
+.hero__title em {
+  font-style: normal;
+  color: #FDE68A;
+}
+
+.hero__sub {
+  margin-top: var(--space-md);
+  font-size: 1.0625rem;
+  color: rgba(255,255,255,.9);
+  max-width: 480px;
+}
+
+.hero__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-xl);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 52px;
+  padding: 0 28px;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-weight: 700;
+  transition: var(--t-base);
+  white-space: nowrap;
+}
+.btn:active { transform: scale(.97); }
+
+.btn--primary {
+  background: var(--brand-600);
+  color: white;
+  box-shadow: 0 8px 20px rgba(37,99,235,.3);
+}
+.btn--primary:hover {
+  background: var(--brand-700);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(37,99,235,.4);
+}
+
+.btn--light {
+  background: white;
+  color: var(--brand-700);
+}
+.btn--light:hover {
+  background: var(--neutral-100);
+  transform: translateY(-1px);
+}
+
+.btn--outline {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,.35);
+  backdrop-filter: blur(8px);
+}
+.btn--outline:hover { background: rgba(255,255,255,.1); }
+
+.btn--success {
+  background: var(--success-600);
+  color: white;
+  box-shadow: 0 8px 20px rgba(5,150,105,.25);
+}
+.btn--success:hover { background: var(--success-700); }
+
+.hero__microtrust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md) var(--space-lg);
+  margin-top: var(--space-lg);
+  font-size: .875rem;
+  color: rgba(255,255,255,.85);
+}
+.hero__microtrust span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Imagen + sello flotante */
+.hero__visual {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  background: linear-gradient(135deg, #1E3A8A, #3B82F6);
+}
+@media (min-width: 900px) {
+  .hero__visual { aspect-ratio: 4 / 5; }
+}
+.hero__visual-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero__seal {
+  position: absolute;
+  bottom: -16px; left: -16px;
+  background: white;
+  color: var(--neutral-900);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  box-shadow: var(--shadow-xl);
+  animation: float 3s ease-in-out infinite;
+}
+@media (min-width: 900px) {
+  .hero__seal { bottom: -20px; left: -32px; padding: 18px 24px; }
+}
+.hero__seal-label {
+  font-size: .6875rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--neutral-500);
+  font-weight: 700;
+}
+.hero__seal-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-top: 4px;
+}
+.hero__seal-rating {
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1;
+}
+.hero__seal-stars { color: var(--gold-500); font-size: 1rem; letter-spacing: 1px; }
+.hero__seal-sub { font-size: .75rem; color: var(--neutral-500); margin-top: 2px; }
+
+/* ============================================================
+   8. TRUST BAR
+   ============================================================ */
+.trust-bar {
+  background: white;
+  border-bottom: 1px solid var(--neutral-200);
+}
+.trust-bar__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+  padding-block: 20px;
+}
+@media (min-width: 768px) {
+  .trust-bar__grid { grid-template-columns: repeat(4, 1fr); }
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.trust-item__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--brand-50);
+  font-size: 1.125rem;
+}
+.trust-item__title {
+  font-size: .875rem;
+  font-weight: 700;
+  color: var(--neutral-900);
+  line-height: 1.2;
+}
+.trust-item__sub {
+  font-size: .75rem;
+  color: var(--neutral-500);
+  margin-top: 2px;
+}
+
+/* ============================================================
+   9. SECCIONES
+   ============================================================ */
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+.section-title {
+  font-size: clamp(1.375rem, 3vw, 1.875rem);
+  font-weight: 800;
+  letter-spacing: -.01em;
+}
+.section-sub {
+  font-size: .9375rem;
+  color: var(--neutral-500);
+  margin-top: 4px;
+}
+
+/* ============================================================
+   10. CATEGORÍAS
+   ============================================================ */
+.cat-scroller {
+  display: flex;
+  gap: var(--space-md);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: var(--space-sm);
+  margin-inline: -var(--space-md);
+  padding-inline: var(--space-md);
+}
+@media (min-width: 768px) {
+  .cat-scroller {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    overflow: visible;
+    margin-inline: 0;
+    padding-inline: 0;
+  }
+}
+.cat-card {
+  flex: 0 0 auto;
+  width: 130px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 8px;
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: var(--t-base);
+}
+@media (min-width: 768px) {
+  .cat-card { width: auto; }
+}
+.cat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.cat-card:active { transform: scale(.98); }
+
+.cat-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  background: var(--brand-50);
+  font-size: 2rem;
+  transition: transform var(--t-base);
+}
+.cat-card:hover .cat-card__icon { transform: scale(1.08); }
+
+.cat-card__name {
+  font-size: .875rem;
+  font-weight: 700;
+  text-align: center;
+}
+.cat-card__count {
+  font-size: .75rem;
+  color: var(--neutral-500);
+}
+
+/* ============================================================
+   11. FLASH DEALS
+   ============================================================ */
+.flash {
+  background: linear-gradient(180deg, var(--danger-50), transparent);
+}
+.flash__timer {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--danger-500);
+  color: white;
+  padding: 8px 14px;
+  border-radius: var(--radius-full);
+  font-size: .8125rem;
+  font-weight: 700;
+  animation: pulseSoft 2s infinite;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+}
+@media (min-width: 640px)  { .products-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1024px) { .products-grid { grid-template-columns: repeat(4, 1fr); gap: var(--space-lg); } }
+
+/* ============================================================
+   12. PRODUCT CARD
+   ============================================================ */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--t-base);
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card__media {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  background: var(--neutral-100);
+  overflow: hidden;
+}
+.card__img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform .5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card:hover .card__img { transform: scale(1.06); }
+
+.card__badges {
+  position: absolute;
+  top: 10px; left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 2;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 10px;
+  font-size: .6875rem;
+  font-weight: 800;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
+  letter-spacing: .02em;
+  white-space: nowrap;
+}
+.badge--danger  { background: var(--danger-500);  color: white; }
+.badge--gold    { background: var(--gold-500);    color: white; }
+.badge--success { background: var(--success-500); color: white; }
+.badge--brand   { background: var(--brand-600);   color: white; }
+.badge--pulse   { animation: pulseSoft 1.8s infinite; }
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  flex: 1;
+}
+
+.card__title {
+  font-size: .875rem;
+  font-weight: 600;
+  color: var(--neutral-900);
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 2.4em;
+}
+
+.card__rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: .75rem;
+}
+.card__stars { color: var(--gold-500); letter-spacing: .5px; }
+.card__reviews { color: var(--neutral-500); }
+
+.card__price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+.card__price {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--neutral-900);
+}
+.card__price-old {
+  font-size: .875rem;
+  color: var(--neutral-400);
+  text-decoration: line-through;
+}
+.card__price-discount {
+  font-size: .75rem;
+  font-weight: 800;
+  color: var(--success-600);
+  background: var(--success-50);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+}
+
+.card__cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 44px;
+  width: 100%;
+  padding: 0 12px;
+  border-radius: var(--radius-md);
+  background: var(--success-600);
+  color: white;
+  font-size: .875rem;
+  font-weight: 700;
+  transition: var(--t-base);
+}
+.card__cta:hover { background: var(--success-700); }
+.card__cta:active { transform: scale(.97); }
+.card__cta.is-added {
+  background: var(--brand-600);
+}
+
+.card__stock-warning {
+  font-size: .75rem;
+  color: var(--danger-600);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ============================================================
+   13. SOCIAL PROOF COUNTER (móvil fijo)
+   ============================================================ */
+.live-counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  padding: 8px 14px;
+  border-radius: var(--radius-full);
+  font-size: .8125rem;
+  font-weight: 600;
+  box-shadow: var(--shadow-md);
+  color: var(--neutral-700);
+}
+.live-counter__dot {
+  width: 8px; height: 8px;
+  background: var(--success-500);
+  border-radius: 50%;
+  animation: pulseDot 1.6s infinite;
+}
+
+/* ============================================================
+   14. NEWSLETTER
+   ============================================================ */
+.newsletter {
+  background: linear-gradient(135deg, var(--brand-700), var(--brand-900));
+  border-radius: var(--radius-xl);
+  padding: 40px 24px;
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .newsletter { padding: 56px 48px; text-align: left; }
+}
+.newsletter__title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+.newsletter__sub {
+  margin-top: 12px;
+  color: rgba(255,255,255,.85);
+  font-size: .9375rem;
+  max-width: 480px;
+}
+.newsletter__form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 24px;
+  max-width: 480px;
+}
+@media (min-width: 640px) {
+  .newsletter__form { flex-direction: row; }
+}
+.newsletter__input {
+  flex: 1;
+  min-height: 52px;
+  padding: 0 18px;
+  border: 2px solid transparent;
+  border-radius: var(--radius-md);
+  background: rgba(255,255,255,.12);
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: var(--t-base);
+}
+.newsletter__input::placeholder { color: rgba(255,255,255,.6); }
+.newsletter__input:focus {
+  background: rgba(255,255,255,.18);
+  border-color: white;
+}
+.newsletter__cta {
+  min-height: 52px;
+  padding: 0 28px;
+  border-radius: var(--radius-md);
+  background: white;
+  color: var(--brand-700);
+  font-weight: 800;
+  transition: var(--t-base);
+}
+.newsletter__cta:hover { background: var(--gold-500); color: white; }
+
+.newsletter__note {
+  margin-top: 12px;
+  font-size: .75rem;
+  color: rgba(255,255,255,.7);
+}
+
+/* ============================================================
+   15. FOOTER
+   ============================================================ */
+.footer {
+  background: var(--neutral-900);
+  color: var(--neutral-400);
+  padding-block: 48px 24px;
+  margin-top: 64px;
+}
+.footer__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+}
+@media (min-width: 768px) { .footer__grid { grid-template-columns: repeat(4, 1fr); } }
+.footer__title {
+  color: white;
+  font-weight: 700;
+  font-size: .875rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: var(--space-md);
+}
+.footer__list li { margin-bottom: 10px; font-size: .875rem; }
+.footer__list a { transition: var(--t-fast); }
+.footer__list a:hover { color: white; }
+
+.footer__bottom {
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid rgba(255,255,255,.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  justify-content: space-between;
+  align-items: center;
+  font-size: .8125rem;
+}
+
+/* ============================================================
+   16. TOAST (feedback al añadir al carrito)
+   ============================================================ */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(120%);
+  background: var(--neutral-900);
+  color: white;
+  padding: 14px 20px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-xl);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: .875rem;
+  font-weight: 600;
+  z-index: 100;
+  transition: transform var(--t-base);
+  max-width: calc(100vw - 32px);
+}
+.toast.is-visible { transform: translateX(-50%) translateY(0); }
+.toast__check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--success-500);
+  color: white;
+  font-size: .75rem;
+  flex-shrink: 0;
+}
+
+/* Utility */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ============================================================
+     TOP BAR — Urgencia + Reciprocidad
+     ============================================================ -->
+<div class="topbar" role="region" aria-label="Anuncio destacado">
+  <div class="topbar__inner">
+    <span class="topbar__item">
+      <span class="topbar__dot" aria-hidden="true"></span>
+      <strong id="topbar-viewers">250</strong> personas comprando ahora
+    </span>
+    <span class="topbar__item topbar__item--desktop">
+      🚚 Envío gratis en pedidos +$50
+    </span>
+    <span class="topbar__item topbar__item--desktop">
+      ⏰ Oferta termina en <strong id="topbar-timer">03:46:42</strong>
+    </span>
+  </div>
+</div>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header class="header">
+  <div class="container header__inner">
+    <a href="https://aai.inacap.cl/" class="logo" aria-label="NovaShop, ir al inicio">
+      <span class="logo__mark" aria-hidden="true">N</span>
+      <span class="logo__text">NovaShop</span>
+    </a>
+
+    <form class="search" role="search" onsubmit="event.preventDefault(); track('search_submit');">
+      <span class="search__icon" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path>
+        </svg>
+      </span>
+      <input type="search" placeholder="Buscar productos, marcas..." aria-label="Buscar productos">
+    </form>
+
+    <div class="header__actions">
+      <button class="icon-btn" aria-label="Mi cuenta" onclick="track('account_click')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+      </button>
+      <button class="icon-btn" aria-label="Favoritos" onclick="track('wishlist_click')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        </svg>
+      </button>
+      <button class="icon-btn" aria-label="Carrito de compras" onclick="track('cart_open')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="icon-btn__badge" id="cart-count" hidden="">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero">
+  <div class="container hero__inner">
+    <div class="animate-fadeInUp">
+      <span class="hero__badge">🔥 Oferta del día · hasta -40%</span>
+
+      <h1 class="hero__title">
+        Envío gratis <em>hoy mismo</em> en pedidos superiores a $50
+      </h1>
+
+      <p class="hero__sub">
+        Descubre miles de productos con garantía de devolución en 30 días y pago 100% seguro. Únete a más de 50.000 clientes satisfechos.
+      </p>
+
+      <div class="hero__ctas">
+        <a href="https://aai.inacap.cl/pluginfile.php/2895122/mod_resource/content/1/EjemploLanding1.html#deals" class="btn btn--light" onclick="track('hero_cta_click', {cta:'descubrir'})">
+          Descubrir ofertas
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+        <a href="https://aai.inacap.cl/pluginfile.php/2895122/mod_resource/content/1/EjemploLanding1.html#categorias" class="btn btn--outline" onclick="track('hero_cta_click', {cta:'categorias'})">
+          Explorar categorías
+        </a>
+      </div>
+
+      <div class="hero__microtrust">
+        <span>🚚 Envío 24-48h</span>
+        <span>↩️ Devolución 30 días</span>
+        <span>🔒 Pago seguro SSL</span>
+      </div>
+    </div>
+
+    <div class="hero__visual animate-fadeInUp" style="animation-delay:.15s">
+      <img class="hero__visual-img" src="./NovaShop · Envío gratis hoy en pedidos +$50_files/photo-1523275335684-37898b6baf30" alt="Producto destacado: reloj premium en oferta" loading="eager" fetchpriority="high">
+      <div class="hero__seal">
+        <div class="hero__seal-label">Valoración media</div>
+        <div class="hero__seal-row">
+          <span class="hero__seal-rating">4.9</span>
+          <span class="hero__seal-stars" aria-label="5 estrellas">★★★★★</span>
+        </div>
+        <div class="hero__seal-sub">12.483 reseñas verificadas</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TRUST BAR
+     ============================================================ -->
+<section class="trust-bar" aria-label="Garantías de compra">
+  <div class="container trust-bar__grid">
+    <div class="trust-item">
+      <div class="trust-item__icon" aria-hidden="true">🔒</div>
+      <div>
+        <div class="trust-item__title">Pago 100% seguro</div>
+        <div class="trust-item__sub">SSL · 3D Secure</div>
+      </div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-item__icon" aria-hidden="true">🚚</div>
+      <div>
+        <div class="trust-item__title">Envío gratis +$50</div>
+        <div class="trust-item__sub">Entrega 24-48h</div>
+      </div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-item__icon" aria-hidden="true">↩️</div>
+      <div>
+        <div class="trust-item__title">Devolución 30 días</div>
+        <div class="trust-item__sub">Sin preguntas</div>
+      </div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-item__icon" aria-hidden="true">💬</div>
+      <div>
+        <div class="trust-item__title">Soporte 24/7</div>
+        <div class="trust-item__sub">Chat · Email · Tel</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CATEGORÍAS
+     ============================================================ -->
+<section class="section" id="categorias" aria-labelledby="cat-heading">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title" id="cat-heading">Explora por categoría</h2>
+        <p class="section-sub">Todo lo que necesitas, organizado para ti</p>
+      </div>
+    </div>
+
+    <div class="cat-scroller scrollbar-hide" role="list">
+    <a href="https://aai.inacap.cl/categoria/tecnologia" class="cat-card" role="listitem" onclick="track('category_click', {category:'tecnologia', position:0})">
+      <div class="cat-card__icon" aria-hidden="true">📱</div>
+      <div>
+        <div class="cat-card__name">Tecnología</div>
+        <div class="cat-card__count">1240 productos</div>
+      </div>
+    </a>
+  
+    <a href="https://aai.inacap.cl/categoria/moda" class="cat-card" role="listitem" onclick="track('category_click', {category:'moda', position:1})">
+      <div class="cat-card__icon" aria-hidden="true">👕</div>
+      <div>
+        <div class="cat-card__name">Moda</div>
+        <div class="cat-card__count">2890 productos</div>
+      </div>
+    </a>
+  
+    <a href="https://aai.inacap.cl/categoria/hogar" class="cat-card" role="listitem" onclick="track('category_click', {category:'hogar', position:2})">
+      <div class="cat-card__icon" aria-hidden="true">🏠</div>
+      <div>
+        <div class="cat-card__name">Hogar</div>
+        <div class="cat-card__count">980 productos</div>
+      </div>
+    </a>
+  
+    <a href="https://aai.inacap.cl/categoria/deportes" class="cat-card" role="listitem" onclick="track('category_click', {category:'deportes', position:3})">
+      <div class="cat-card__icon" aria-hidden="true">⚽</div>
+      <div>
+        <div class="cat-card__name">Deportes</div>
+        <div class="cat-card__count">760 productos</div>
+      </div>
+    </a>
+  
+    <a href="https://aai.inacap.cl/categoria/belleza" class="cat-card" role="listitem" onclick="track('category_click', {category:'belleza', position:4})">
+      <div class="cat-card__icon" aria-hidden="true">💄</div>
+      <div>
+        <div class="cat-card__name">Belleza</div>
+        <div class="cat-card__count">1450 productos</div>
+      </div>
+    </a>
+  
+    <a href="https://aai.inacap.cl/categoria/juguetes" class="cat-card" role="listitem" onclick="track('category_click', {category:'juguetes', position:5})">
+      <div class="cat-card__icon" aria-hidden="true">🧸</div>
+      <div>
+        <div class="cat-card__name">Juguetes</div>
+        <div class="cat-card__count">640 productos</div>
+      </div>
+    </a>
+  </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FLASH DEALS
+     ============================================================ -->
+<section class="section flash" id="deals" aria-labelledby="deals-heading">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title" id="deals-heading">⚡ Ofertas flash</h2>
+        <p class="section-sub">Descuentos exclusivos por tiempo limitado</p>
+      </div>
+      <span class="flash__timer" role="timer" aria-live="polite">
+        ⏰ Termina en <span id="deals-timer">03:46:42</span>
+      </span>
+    </div>
+
+    <div class="products-grid" id="deals-grid">
+    <article class="card" onclick="track('product_card_click', {id:'p1', position:0})">
+      <div class="card__media">
+        <div class="card__badges">
+    <span class="badge badge--danger badge--pulse">
+      🔥 Últimas 4
+    </span></div>
+        <img class="card__img" src="./NovaShop · Envío gratis hoy en pedidos +$50_files/photo-1505740420928-5e560c06d30e" alt="Auriculares Bluetooth Pro con Cancelación de Ruido" loading="lazy" width="600" height="600">
+      </div>
+      <div class="card__body">
+        <h3 class="card__title">Auriculares Bluetooth Pro con Cancelación de Ruido</h3>
+
+        <div class="card__rating">
+          <span class="card__stars" aria-hidden="true">★★★★★</span>
+          <span class="card__reviews">4.8 (1247)</span>
+        </div>
+
+        <div class="card__price-row">
+          <span class="card__price">$79</span>
+          <span class="card__price-old">$149</span>
+          <span class="card__price-discount">-47%</span>
+        </div>
+
+        
+          <div class="card__stock-warning">⚠️ Solo quedan 4 unidades</div>
+        
+
+        <button class="card__cta" onclick="event.stopPropagation(); addToCart('p1', this);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          Añadir
+        </button>
+      </div>
+    </article>
+  
+    <article class="card" onclick="track('product_card_click', {id:'p2', position:1})">
+      <div class="card__media">
+        <div class="card__badges">
+    <span class="badge badge--gold ">
+      🏆 Best seller
+    </span></div>
+        <img class="card__img" src="./NovaShop · Envío gratis hoy en pedidos +$50_files/photo-1542291026-7eec264c27ff" alt="Zapatillas Deportivas Ultraligeras Unisex" loading="lazy" width="600" height="600">
+      </div>
+      <div class="card__body">
+        <h3 class="card__title">Zapatillas Deportivas Ultraligeras Unisex</h3>
+
+        <div class="card__rating">
+          <span class="card__stars" aria-hidden="true">★★★★★</span>
+          <span class="card__reviews">4.9 (2312)</span>
+        </div>
+
+        <div class="card__price-row">
+          <span class="card__price">$65</span>
+          <span class="card__price-old">$120</span>
+          <span class="card__price-discount">-46%</span>
+        </div>
+
+        
+
+        <button class="card__cta" onclick="event.stopPropagation(); addToCart('p2', this);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          Añadir
+        </button>
+      </div>
+    </article>
+  
+    <article class="card" onclick="track('product_card_click', {id:'p3', position:2})">
+      <div class="card__media">
+        <div class="card__badges">
+    <span class="badge badge--success ">
+      ✨ Nuevo
+    </span></div>
+        <img class="card__img" src="./NovaShop · Envío gratis hoy en pedidos +$50_files/photo-1546868871-7041f2a55e12" alt="Reloj Inteligente Serie 8 con GPS y Oxímetro" loading="lazy" width="600" height="600">
+      </div>
+      <div class="card__body">
+        <h3 class="card__title">Reloj Inteligente Serie 8 con GPS y Oxímetro</h3>
+
+        <div class="card__rating">
+          <span class="card__stars" aria-hidden="true">★★★★★</span>
+          <span class="card__reviews">4.7 (843)</span>
+        </div>
+
+        <div class="card__price-row">
+          <span class="card__price">$189</span>
+          <span class="card__price-old">$299</span>
+          <span class="card__price-discount">-37%</span>
+        </div>
+
+        
+
+        <button class="card__cta" onclick="event.stopPropagation(); addToCart('p3', this);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          Añadir
+        </button>
+      </div>
+    </article>
+  
+    <article class="card" onclick="track('product_card_click', {id:'p4', position:3})">
+      <div class="card__media">
+        <div class="card__badges">
+    <span class="badge badge--danger badge--pulse">
+      🔥 Últimas 3
+    </span></div>
+        <img class="card__img" src="./NovaShop · Envío gratis hoy en pedidos +$50_files/photo-1526170375885-4d8ecf77b99f" alt="Cámara Instantánea Retro con Estuche Premium" loading="lazy" width="600" height="600">
+      </div>
+      <div class="card__body">
+        <h3 class="card__title">Cámara Instantánea Retro con Estuche Premium</h3>
+
+        <div class="card__rating">
+          <span class="card__stars" aria-hidden="true">★★★★★</span>
+          <span class="card__reviews">4.6 (512)</span>
+        </div>
+
+        <div class="card__price-row">
+          <span class="card__price">$89</span>
+          <span class="card__price-old">$130</span>
+          <span class="card__price-discount">-32%</span>
+        </div>
+
+        
+          <div class="card__stock-warning">⚠️ Solo quedan 3 unidades</div>
+        
+
+        <button class="card__cta" onclick="event.stopPropagation(); addToCart('p4', this);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          Añadir
+        </button>
+      </div>
+    </article>
+  </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     RECOMENDADOS
+     ============================================================ -->
+<section class="section" aria-labelledby="reco-heading">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title" id="reco-heading">Recomendado para ti</h2>
+        <p class="section-sub">Basado en tus gustos y tendencias actuales</p>
+      </div>
+      <span class="live-counter" aria-live="polite">
+        <span class="live-counter__dot" aria-hidden="true"></span>
+        <span id="reco-viewers">134</span> viendo ahora
+      </span>
+    </div>
+
+    <div class="products-grid" id="reco-grid">
+    <article class="card" onclick="track('product_card_click', {id:'p5', position:0})">
+      <div class="card__media">
+        <div class="card__badges">
+    <span class="badge badge--brand ">
+      🚚 Envío gratis
+    </span></div>
+        <img class="card__img" src="./NovaShop · Envío gratis hoy en pedidos +$50_files/photo-1553062407-98eeb64c6a62" alt="Mochila Antirrobo Impermeable para Portátil 15" "="" loading="lazy" width="600" height="600">
+      </div>
+      <div class="card__body">
+        <h3 class="card__title">Mochila Antirrobo Impermeable para Portátil 15"</h3>
+
+        <div class="card__rating">
+          <span class="card__stars" aria-hidden="true">★★★★★</span>
+          <span class="card__reviews">4.8 (1876)</span>
+        </div>
+
+        <div class="card__price-row">
+          <span class="card__price">$45</span>
+          <span class="card__price-old">$79</span>
+          <span class="card__price-discount">-43%</span>
+        </div>
+
+        
+
+        <button class="card__cta" onclick="event.stopPropagation(); addToCart('p5', this);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          Añadir
+        </button>
+      </div>
+    </article>
+  
+    <article class="card" onclick="track('product_card_click', {id:'p6', position:1})">
+      <div class="card__media">
+        <div class="card__badges">
+    <span class="badge badge--gold ">
+      🏆 Best seller
+    </span></div>
+        <img class="card__img" src="./NovaShop · Envío gratis hoy en pedidos +$50_files/photo-1511499767150-a48a237f0083" alt="Gafas de Sol Polarizadas UV400 con Estuche" loading="lazy" width="600" height="600">
+      </div>
+      <div class="card__body">
+        <h3 class="card__title">Gafas de Sol Polarizadas UV400 con Estuche</h3>
+
+        <div class="card__rating">
+          <span class="card__stars" aria-hidden="true">★★★★★</span>
+          <span class="card__reviews">4.7 (934)</span>
+        </div>
+
+        <div class="card__price-row">
+          <span class="card__price">$39</span>
+          <span class="card__price-old">$89</span>
+          <span class="card__price-discount">-56%</span>
+        </div>
+
+        
+
+        <button class="card__cta" onclick="event.stopPropagation(); addToCart('p6', this);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          Añadir
+        </button>
+      </div>
+    </article>
+  
+    <article class="card" onclick="track('product_card_click', {id:'p7', position:2})">
+      <div class="card__media">
+        <div class="card__badges">
+    <span class="badge badge--danger badge--pulse">
+      🔥 Últimas 6
+    </span></div>
+        <img class="card__img" src="./NovaShop · Envío gratis hoy en pedidos +$50_files/photo-1608043152269-423dbba4e7e1" alt="Altavoz Portátil Bluetooth Resistente al Agua IPX7" loading="lazy" width="600" height="600">
+      </div>
+      <div class="card__body">
+        <h3 class="card__title">Altavoz Portátil Bluetooth Resistente al Agua IPX7</h3>
+
+        <div class="card__rating">
+          <span class="card__stars" aria-hidden="true">★★★★★</span>
+          <span class="card__reviews">4.8 (1524)</span>
+        </div>
+
+        <div class="card__price-row">
+          <span class="card__price">$55</span>
+          <span class="card__price-old">$99</span>
+          <span class="card__price-discount">-44%</span>
+        </div>
+
+        
+
+        <button class="card__cta" onclick="event.stopPropagation(); addToCart('p7', this);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          Añadir
+        </button>
+      </div>
+    </article>
+  
+    <article class="card" onclick="track('product_card_click', {id:'p8', position:3})">
+      <div class="card__media">
+        <div class="card__badges">
+    <span class="badge badge--success ">
+      ✨ Nuevo
+    </span></div>
+        <img class="card__img" src="./NovaShop · Envío gratis hoy en pedidos +$50_files/photo-1587829741301-dc798b83add3" alt="Teclado Mecánico RGB Inalámbrico para Gaming" loading="lazy" width="600" height="600">
+      </div>
+      <div class="card__body">
+        <h3 class="card__title">Teclado Mecánico RGB Inalámbrico para Gaming</h3>
+
+        <div class="card__rating">
+          <span class="card__stars" aria-hidden="true">★★★★★</span>
+          <span class="card__reviews">4.9 (2067)</span>
+        </div>
+
+        <div class="card__price-row">
+          <span class="card__price">$99</span>
+          <span class="card__price-old">$169</span>
+          <span class="card__price-discount">-41%</span>
+        </div>
+
+        
+
+        <button class="card__cta" onclick="event.stopPropagation(); addToCart('p8', this);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          Añadir
+        </button>
+      </div>
+    </article>
+  </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     NEWSLETTER
+     ============================================================ -->
+<section class="section">
+  <div class="container">
+    <div class="newsletter">
+      <h2 class="newsletter__title">Consigue un 10% de descuento en tu primera compra</h2>
+      <p class="newsletter__sub">
+        Suscríbete y recibe ofertas exclusivas, novedades y descuentos solo para suscriptores. Cero spam, prometido.
+      </p>
+
+      <form class="newsletter__form" onsubmit="handleNewsletter(event)">
+        <label for="newsletter-email" class="sr-only">Correo electrónico</label>
+        <input id="newsletter-email" class="newsletter__input" type="email" required="" placeholder="tu@email.com" autocomplete="email">
+        <button type="submit" class="newsletter__cta">Quiero mi 10%</button>
+      </form>
+
+      <p class="newsletter__note">🔒 Tus datos están protegidos. Puedes darte de baja cuando quieras.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__title">Comprar</div>
+        <ul class="footer__list">
+          <li><a href="https://aai.inacap.cl/pluginfile.php/2895122/mod_resource/content/1/EjemploLanding1.html#">Novedades</a></li>
+          <li><a href="https://aai.inacap.cl/pluginfile.php/2895122/mod_resource/content/1/EjemploLanding1.html#">Más vendidos</a></li>
+          <li><a href="https://aai.inacap.cl/pluginfile.php/2895122/mod_resource/content/1/EjemploLanding1.html#">Ofertas</a></li>
+          <li><a href="https://aai.inacap.cl/pluginfile.php/2895122/mod_resource/content/1/EjemploLanding1.html#">Tarjetas regalo</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__title">Ayuda</div>
+        <ul class="footer__list">
+          <li><a href="https://aai.inacap.cl/pluginfile.php/2895122/mod_resource/content/1/EjemploLanding1.html#">Envíos y entregas</a></li>
+          <li><a href="https://aai.inacap.cl/pluginfile.php/2895122/mod_resource/content/1/EjemploLanding1.html#">Devoluciones</a></li>
+          <li><a href="https://aai.inacap.cl/pluginfile.php/2895122/mod_resource/content/1/EjemploLanding1.html#">Formas de pago</a></li>
+          <li><a href="https://aai.inacap.cl/pluginfile.php/2895122/mod_resource/content/1/EjemploLanding1.html#">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__title">Empresa</div>
+        <ul class="footer__list">
+          <li><a href="https://aai.inacap.cl/pluginfile.php/2895122/mod_resource/content/1/EjemploLanding1.html#">Sobre nosotros</a></li>
+          <li><a href="https://aai.inacap.cl/pluginfile.php/2895122/mod_resource/content/1/EjemploLanding1.html#">Sostenibilidad</a></li>
+          <li><a href="https://aai.inacap.cl/pluginfile.php/2895122/mod_resource/content/1/EjemploLanding1.html#">Trabaja con nosotros</a></li>
+          <li><a href="https://aai.inacap.cl/pluginfile.php/2895122/mod_resource/content/1/EjemploLanding1.html#">Prensa</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__title">Legal</div>
+        <ul class="footer__list">
+          <li><a href="https://aai.inacap.cl/pluginfile.php/2895122/mod_resource/content/1/EjemploLanding1.html#">Aviso legal</a></li>
+          <li><a href="https://aai.inacap.cl/pluginfile.php/2895122/mod_resource/content/1/EjemploLanding1.html#">Privacidad</a></li>
+          <li><a href="https://aai.inacap.cl/pluginfile.php/2895122/mod_resource/content/1/EjemploLanding1.html#">Cookies</a></li>
+          <li><a href="https://aai.inacap.cl/pluginfile.php/2895122/mod_resource/content/1/EjemploLanding1.html#">Términos</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© 2025 NovaShop. Todos los derechos reservados.</span>
+      <span>🔒 Pago seguro · Visa · Mastercard · PayPal · Apple Pay</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Toast de confirmación -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <span class="toast__check" aria-hidden="true">✓</span>
+  <span id="toast-msg">Producto añadido al carrito</span>
+</div>
+
+<script>
+/* ============================================================
+   DATOS (mock — en producción vienen de API)
+   ============================================================ */
+const CATEGORIES = [
+  { id: 'c1', name: 'Tecnología',   slug: 'tecnologia',   icon: '📱', count: 1240 },
+  { id: 'c2', name: 'Moda',         slug: 'moda',         icon: '👕', count: 2890 },
+  { id: 'c3', name: 'Hogar',        slug: 'hogar',        icon: '🏠', count: 980  },
+  { id: 'c4', name: 'Deportes',     slug: 'deportes',     icon: '⚽', count: 760  },
+  { id: 'c5', name: 'Belleza',      slug: 'belleza',      icon: '💄', count: 1450 },
+  { id: 'c6', name: 'Juguetes',     slug: 'juguetes',     icon: '🧸', count: 640  },
+];
+
+const PRODUCTS = [
+  {
+    id: 'p1', title: 'Auriculares Bluetooth Pro con Cancelación de Ruido',
+    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&q=80&auto=format&fit=crop',
+    price: 79, originalPrice: 149, rating: 4.8, reviews: 1247,
+    stock: 4, badge: { text: '🔥 Últimas 4', variant: 'danger', pulse: true },
+  },
+  {
+    id: 'p2', title: 'Zapatillas Deportivas Ultraligeras Unisex',
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80&auto=format&fit=crop',
+    price: 65, originalPrice: 120, rating: 4.9, reviews: 2312,
+    stock: 12, badge: { text: '🏆 Best seller', variant: 'gold' },
+  },
+  {
+    id: 'p3', title: 'Reloj Inteligente Serie 8 con GPS y Oxímetro',
+    image: 'https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&q=80&auto=format&fit=crop',
+    price: 189, originalPrice: 299, rating: 4.7, reviews: 843,
+    stock: 8, badge: { text: '✨ Nuevo', variant: 'success' },
+  },
+  {
+    id: 'p4', title: 'Cámara Instantánea Retro con Estuche Premium',
+    image: 'https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=600&q=80&auto=format&fit=crop',
+    price: 89, originalPrice: 130, rating: 4.6, reviews: 512,
+    stock: 3, badge: { text: '🔥 Últimas 3', variant: 'danger', pulse: true },
+  },
+  {
+    id: 'p5', title: 'Mochila Antirrobo Impermeable para Portátil 15"',
+    image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&q=80&auto=format&fit=crop',
+    price: 45, originalPrice: 79, rating: 4.8, reviews: 1876,
+    stock: 25, badge: { text: '🚚 Envío gratis', variant: 'brand' },
+  },
+  {
+    id: 'p6', title: 'Gafas de Sol Polarizadas UV400 con Estuche',
+    image: 'https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600&q=80&auto=format&fit=crop',
+    price: 39, originalPrice: 89, rating: 4.7, reviews: 934,
+    stock: 15, badge: { text: '🏆 Best seller', variant: 'gold' },
+  },
+  {
+    id: 'p7', title: 'Altavoz Portátil Bluetooth Resistente al Agua IPX7',
+    image: 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=600&q=80&auto=format&fit=crop',
+    price: 55, originalPrice: 99, rating: 4.8, reviews: 1524,
+    stock: 6, badge: { text: '🔥 Últimas 6', variant: 'danger', pulse: true },
+  },
+  {
+    id: 'p8', title: 'Teclado Mecánico RGB Inalámbrico para Gaming',
+    image: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600&q=80&auto=format&fit=crop',
+    price: 99, originalPrice: 169, rating: 4.9, reviews: 2067,
+    stock: 10, badge: { text: '✨ Nuevo', variant: 'success' },
+  },
+];
+
+/* ============================================================
+   ANALYTICS (stub)
+   ============================================================ */
+function track(eventName, payload = {}) {
+  // En producción: enviar a GA4 / Segment / Vercel Analytics
+  if (window.gtag) window.gtag('event', eventName, payload);
+  console.log(`📊 [analytics] ${eventName}`, payload);
+}
+
+/* ============================================================
+   RENDER: CATEGORÍAS
+   ============================================================ */
+function renderCategories() {
+  const scroller = document.querySelector('.cat-scroller');
+  scroller.innerHTML = CATEGORIES.map((c, i) => `
+    <a href="/categoria/${c.slug}" class="cat-card" role="listitem"
+       onclick="track('category_click', {category:'${c.slug}', position:${i}})">
+      <div class="cat-card__icon" aria-hidden="true">${c.icon}</div>
+      <div>
+        <div class="cat-card__name">${c.name}</div>
+        <div class="cat-card__count">${c.count.toLocaleString('es-ES')} productos</div>
+      </div>
+    </a>
+  `).join('');
+}
+
+/* ============================================================
+   RENDER: PRODUCT CARD
+   ============================================================ */
+function renderCard(p, index = 0) {
+  const discount = p.originalPrice
+    ? Math.round((1 - p.price / p.originalPrice) * 100)
+    : 0;
+
+  const badgeHtml = p.badge ? `
+    <span class="badge badge--${p.badge.variant} ${p.badge.pulse ? 'badge--pulse' : ''}">
+      ${p.badge.text}
+    </span>` : '';
+
+  const stars = '★'.repeat(Math.round(p.rating)) + '☆'.repeat(5 - Math.round(p.rating));
+
+  return `
+    <article class="card"
+      onclick="track('product_card_click', {id:'${p.id}', position:${index}})">
+      <div class="card__media">
+        <div class="card__badges">${badgeHtml}</div>
+        <img class="card__img" src="${p.image}" alt="${p.title}" loading="lazy" width="600" height="600" />
+      </div>
+      <div class="card__body">
+        <h3 class="card__title">${p.title}</h3>
+
+        <div class="card__rating">
+          <span class="card__stars" aria-hidden="true">${stars}</span>
+          <span class="card__reviews">${p.rating} (${p.reviews.toLocaleString('es-ES')})</span>
+        </div>
+
+        <div class="card__price-row">
+          <span class="card__price">$${p.price}</span>
+          ${p.originalPrice ? `<span class="card__price-old">$${p.originalPrice}</span>` : ''}
+          ${discount > 0 ? `<span class="card__price-discount">-${discount}%</span>` : ''}
+        </div>
+
+        ${p.stock <= 5 ? `
+          <div class="card__stock-warning">⚠️ Solo quedan ${p.stock} unidades</div>
+        ` : ''}
+
+        <button class="card__cta"
+          onclick="event.stopPropagation(); addToCart('${p.id}', this);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          </svg>
+          Añadir
+        </button>
+      </div>
+    </article>
+  `;
+}
+
+function renderProducts() {
+  document.getElementById('deals-grid').innerHTML =
+    PRODUCTS.slice(0, 4).map((p, i) => renderCard(p, i)).join('');
+  document.getElementById('reco-grid').innerHTML =
+    PRODUCTS.slice(4, 8).map((p, i) => renderCard(p, i)).join('');
+}
+
+/* ============================================================
+   CARRITO + TOAST
+   ============================================================ */
+let cartCount = 0;
+
+function addToCart(productId, btn) {
+  const product = PRODUCTS.find(p => p.id === productId);
+  if (!product) return;
+
+  cartCount++;
+  const badge = document.getElementById('cart-count');
+  badge.textContent = cartCount;
+  badge.hidden = false;
+
+  // Feedback visual en el botón
+  const original = btn.innerHTML;
+  btn.classList.add('is-added');
+  btn.innerHTML = '✓ Añadido';
+  setTimeout(() => {
+    btn.classList.remove('is-added');
+    btn.innerHTML = original;
+  }, 1200);
+
+  showToast(`${product.title.slice(0, 40)}… añadido al carrito`);
+  track('add_to_cart', { id: productId, value: product.price, currency: 'USD' });
+}
+
+function showToast(msg) {
+  const toast = document.getElementById('toast');
+  document.getElementById('toast-msg').textContent = msg;
+  toast.classList.add('is-visible');
+  clearTimeout(showToast._t);
+  showToast._t = setTimeout(() => toast.classList.remove('is-visible'), 2600);
+}
+
+/* ============================================================
+   NEWSLETTER
+   ============================================================ */
+function handleNewsletter(e) {
+  e.preventDefault();
+  const email = document.getElementById('newsletter-email').value;
+  track('newsletter_subscribe', { email_domain: email.split('@')[1] });
+  showToast('¡Bienvenido! Revisa tu email para el 10% 🎉');
+  e.target.reset();
+}
+
+/* ============================================================
+   CONTADORES "EN VIVO" (prueba social)
+   ============================================================ */
+function startLiveCounters() {
+  const topbar = document.getElementById('topbar-viewers');
+  const reco = document.getElementById('reco-viewers');
+
+  const tick = () => {
+    const baseTop = 240, baseReco = 120;
+    const delta = () => Math.floor(Math.random() * 7) - 3;
+    topbar.textContent = Math.max(200, parseInt(topbar.textContent) + delta());
+    reco.textContent   = Math.max(80,  parseInt(reco.textContent) + delta());
+  };
+  setInterval(tick, 3500);
+}
+
+/* ============================================================
+   TEMPORIZADORES (escasez / urgencia)
+   ============================================================ */
+function startTimers() {
+  const topbarTimer = document.getElementById('topbar-timer');
+  const dealsTimer  = document.getElementById('deals-timer');
+
+  // Termina en 3h 47min desde ahora
+  const deadline = Date.now() + (3 * 3600 + 47 * 60) * 1000;
+
+  const fmt = (ms) => {
+    const h = String(Math.floor(ms / 3600000)).padStart(2, '0');
+    const m = String(Math.floor((ms % 3600000) / 60000)).padStart(2, '0');
+    const s = String(Math.floor((ms % 60000) / 1000)).padStart(2, '0');
+    return `${h}:${m}:${s}`;
+  };
+
+  const tick = () => {
+    const remaining = Math.max(0, deadline - Date.now());
+    const text = fmt(remaining);
+    topbarTimer.textContent = text;
+    dealsTimer.textContent  = text;
+  };
+  tick();
+  setInterval(tick, 1000);
+}
+
+/* ============================================================
+   INIT
+   ============================================================ */
+document.addEventListener('DOMContentLoaded', () => {
+  renderCategories();
+  renderProducts();
+  startLiveCounters();
+  startTimers();
+  track('page_view', { page: 'home' });
+});
+</script>
+
+
+</body></html>

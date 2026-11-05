@@ -1,0 +1,2476 @@
+<!DOCTYPE html>
+<!-- saved from url=(0087)https://aai.inacap.cl/pluginfile.php/2895158/mod_resource/content/1/EjemploCarrito.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1D4ED8">
+<title>Ofertas flash · NovaShop</title>
+<meta name="description" content="Descubre miles de productos con descuentos de hasta el 60%. Envío gratis, devolución 30 días y pago seguro.">
+
+<style>
+/* ============================================================
+   1. DESIGN TOKENS
+   ============================================================ */
+:root {
+  --brand-50:  #EFF6FF;
+  --brand-100: #DBEAFE;
+  --brand-500: #3B82F6;
+  --brand-600: #2563EB;
+  --brand-700: #1D4ED8;
+  --brand-900: #1E3A8A;
+
+  --success-50:  #ECFDF5;
+  --success-500: #10B981;
+  --success-600: #059669;
+  --success-700: #047857;
+
+  --danger-50:  #FEF2F2;
+  --danger-500: #EF4444;
+  --danger-600: #DC2626;
+
+  --gold-50:  #FFFBEB;
+  --gold-500: #F59E0B;
+  --gold-600: #D97706;
+
+  --neutral-50:  #F9FAFB;
+  --neutral-100: #F3F4F6;
+  --neutral-200: #E5E7EB;
+  --neutral-300: #D1D5DB;
+  --neutral-400: #9CA3AF;
+  --neutral-500: #6B7280;
+  --neutral-700: #374151;
+  --neutral-900: #111827;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,.08);
+  --shadow-lg: 0 10px 25px rgba(0,0,0,.10);
+  --shadow-xl: 0 20px 40px rgba(0,0,0,.12);
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --t-fast: 150ms cubic-bezier(.4,0,.2,1);
+  --t-base: 250ms cubic-bezier(.4,0,.2,1);
+
+  --header-h: 64px;
+}
+
+/* ============================================================
+   2. RESET + BASE
+   ============================================================ */
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
+body {
+  font-family: var(--font-sans);
+  background: var(--neutral-50);
+  color: var(--neutral-900);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+ul { list-style: none; }
+input, select { font: inherit; }
+
+:focus-visible {
+  outline: 2px solid var(--brand-600);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,*::before,*::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+/* ============================================================
+   3. LAYOUT
+   ============================================================ */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+@media (min-width: 640px)  { .container { padding-inline: 24px; } }
+@media (min-width: 1024px) { .container { padding-inline: 32px; } }
+
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); border: 0;
+}
+
+/* ============================================================
+   4. ANIMACIONES
+   ============================================================ */
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulseSoft { 0%,100% { opacity: 1; } 50% { opacity: .65; } }
+@keyframes pulseDot {
+  0%,100% { box-shadow: 0 0 0 0 rgba(16,185,129,.7); }
+  70%     { box-shadow: 0 0 0 8px rgba(16,185,129,0); }
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.animate-fadeInUp { animation: fadeInUp .5s ease-out both; }
+
+/* ============================================================
+   5. HEADER (compartido con Home)
+   ============================================================ */
+.header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--neutral-200);
+}
+.header__inner {
+  display: flex; align-items: center; gap: 16px;
+  padding-block: 12px;
+}
+.logo {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-weight: 800; font-size: 1.125rem; color: var(--brand-700);
+  flex-shrink: 0;
+}
+.logo__mark {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px;
+  background: linear-gradient(135deg, var(--brand-600), var(--brand-900));
+  color: white; border-radius: var(--radius-sm); font-size: 1rem;
+}
+.search {
+  flex: 1; display: flex; align-items: center; gap: 8px;
+  background: var(--neutral-100);
+  border: 1px solid transparent;
+  border-radius: var(--radius-full);
+  padding: 10px 16px;
+  transition: var(--t-base);
+}
+.search:focus-within {
+  background: white; border-color: var(--brand-500);
+  box-shadow: 0 0 0 4px rgba(37,99,235,.12);
+}
+.search input {
+  flex: 1; border: none; background: transparent;
+  font-size: .9375rem; outline: none;
+}
+.search input::placeholder { color: var(--neutral-400); }
+.search__icon { color: var(--neutral-500); flex-shrink: 0; }
+
+.header__actions { display: flex; align-items: center; gap: 4px; }
+.icon-btn {
+  position: relative;
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px;
+  border-radius: var(--radius-md);
+  color: var(--neutral-700);
+  transition: var(--t-fast);
+}
+.icon-btn:hover { background: var(--neutral-100); }
+.icon-btn__badge {
+  position: absolute; top: 6px; right: 6px;
+  min-width: 18px; height: 18px; padding: 0 5px;
+  background: var(--danger-500); color: white;
+  font-size: .6875rem; font-weight: 700;
+  border-radius: var(--radius-full);
+  display: flex; align-items: center; justify-content: center;
+  border: 2px solid white;
+}
+@media (max-width: 768px) {
+  .search { padding: 8px 12px; }
+  .logo__text { display: none; }
+}
+
+/* ============================================================
+   6. BREADCRUMB + HEADER DE CATEGORÍA
+   ============================================================ */
+.breadcrumb {
+  padding-block: 16px 8px;
+  font-size: .8125rem;
+  color: var(--neutral-500);
+}
+.breadcrumb ol { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.breadcrumb li:not(:last-child)::after {
+  content: '/'; margin-left: 6px; color: var(--neutral-300);
+}
+.breadcrumb a:hover { color: var(--brand-600); }
+.breadcrumb [aria-current="page"] { color: var(--neutral-900); font-weight: 600; }
+
+.plp-header {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  gap: 16px; flex-wrap: wrap;
+  padding-block: 8px 20px;
+}
+.plp-header__title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  letter-spacing: -.01em;
+}
+.plp-header__desc {
+  color: var(--neutral-500);
+  font-size: .9375rem;
+  margin-top: 4px;
+  max-width: 640px;
+}
+.plp-header__count {
+  font-size: .875rem;
+  color: var(--neutral-500);
+}
+.plp-header__count strong { color: var(--neutral-900); font-weight: 700; }
+
+/* ============================================================
+   7. TOOLBAR (mobile + desktop)
+   ============================================================ */
+.toolbar {
+  position: sticky;
+  top: var(--header-h);
+  z-index: 40;
+  background: rgba(255,255,255,.96);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-block: 1px solid var(--neutral-200);
+  padding-block: 10px;
+  margin-bottom: 20px;
+}
+.toolbar__inner {
+  display: flex; align-items: center; gap: 10px;
+  flex-wrap: wrap;
+}
+.toolbar__spacer { flex: 1; }
+
+/* Botón de filtros (mobile) */
+.filter-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  min-height: 40px; padding: 0 14px;
+  background: white;
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-full);
+  font-size: .875rem;
+  font-weight: 600;
+  transition: var(--t-fast);
+}
+.filter-btn:hover { border-color: var(--brand-500); color: var(--brand-700); }
+.filter-btn__count {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 18px; height: 18px; padding: 0 5px;
+  background: var(--brand-600); color: white;
+  font-size: .6875rem; font-weight: 700;
+  border-radius: var(--radius-full);
+}
+.filter-btn[hidden] { display: none; }
+
+/* Chips rápidos */
+.chips {
+  display: flex; gap: 8px; overflow-x: auto;
+  scrollbar-width: none; -ms-overflow-style: none;
+  padding-block: 4px;
+}
+.chips::-webkit-scrollbar { display: none; }
+.chip {
+  flex-shrink: 0;
+  display: inline-flex; align-items: center; gap: 6px;
+  min-height: 36px; padding: 0 14px;
+  background: white;
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-full);
+  font-size: .8125rem;
+  font-weight: 600;
+  color: var(--neutral-700);
+  transition: var(--t-fast);
+  white-space: nowrap;
+}
+.chip:hover { border-color: var(--brand-500); color: var(--brand-700); }
+.chip.is-active {
+  background: var(--brand-600);
+  color: white;
+  border-color: var(--brand-600);
+}
+
+/* Ordenar (select) */
+.sort {
+  display: inline-flex; align-items: center; gap: 6px;
+  min-height: 40px;
+  padding: 0 12px 0 14px;
+  background: white;
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-full);
+  font-size: .875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--t-fast);
+}
+.sort:hover { border-color: var(--brand-500); }
+.sort select {
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  font-size: .875rem;
+  cursor: pointer;
+  outline: none;
+  padding-right: 4px;
+  color: var(--neutral-900);
+}
+
+/* Toggle vista grid/list (desktop) */
+.view-toggle {
+  display: none;
+  background: white;
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+@media (min-width: 768px) { .view-toggle { display: inline-flex; } }
+.view-toggle button {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px;
+  color: var(--neutral-500);
+  transition: var(--t-fast);
+}
+.view-toggle button.is-active {
+  background: var(--brand-600);
+  color: white;
+}
+.view-toggle button:not(.is-active):hover { background: var(--neutral-100); }
+
+/* ============================================================
+   8. LAYOUT PLP (sidebar + grid)
+   ============================================================ */
+.plp-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding-bottom: 48px;
+}
+@media (min-width: 1024px) {
+  .plp-layout { grid-template-columns: 260px 1fr; gap: 32px; }
+}
+
+/* Sidebar (desktop) */
+.sidebar {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .sidebar {
+    display: block;
+    position: sticky;
+    top: calc(var(--header-h) + 70px);
+    align-self: start;
+    max-height: calc(100vh - var(--header-h) - 90px);
+    overflow-y: auto;
+    padding-right: 8px;
+  }
+}
+
+/* Drawer (mobile) */
+.drawer-backdrop {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.4);
+  z-index: 90;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--t-base);
+}
+.drawer-backdrop.is-open { opacity: 1; pointer-events: auto; }
+
+.drawer {
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  width: min(360px, 90vw);
+  background: white;
+  z-index: 100;
+  transform: translateX(-100%);
+  transition: transform var(--t-base);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-xl);
+}
+.drawer.is-open { transform: translateX(0); }
+.drawer__header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--neutral-200);
+  flex-shrink: 0;
+}
+.drawer__title { font-size: 1.0625rem; font-weight: 800; }
+.drawer__close {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px;
+  border-radius: var(--radius-md);
+  color: var(--neutral-500);
+  transition: var(--t-fast);
+}
+.drawer__close:hover { background: var(--neutral-100); }
+.drawer__body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 20px;
+}
+.drawer__footer {
+  display: flex; gap: 10px;
+  padding: 12px 20px;
+  border-top: 1px solid var(--neutral-200);
+  background: white;
+  padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   9. FILTROS (bloques reutilizables)
+   ============================================================ */
+.filter-group {
+  border-bottom: 1px solid var(--neutral-200);
+  padding-block: 16px;
+}
+.filter-group:first-child { padding-top: 0; }
+.filter-group:last-child { border-bottom: none; }
+
+.filter-group__head {
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%;
+  padding: 4px 0;
+  font-size: .875rem;
+  font-weight: 800;
+  color: var(--neutral-900);
+  text-align: left;
+  transition: var(--t-fast);
+}
+.filter-group__head:hover { color: var(--brand-700); }
+.filter-group__head svg {
+  transition: transform var(--t-base);
+  flex-shrink: 0;
+  color: var(--neutral-500);
+}
+.filter-group.is-collapsed .filter-group__head svg { transform: rotate(-90deg); }
+.filter-group.is-collapsed .filter-group__body { display: none; }
+
+.filter-group__body {
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Checkbox personalizado */
+.check {
+  display: flex; align-items: center; gap: 10px;
+  padding: 6px 0;
+  cursor: pointer;
+  font-size: .875rem;
+  color: var(--neutral-700);
+  transition: color var(--t-fast);
+  min-height: 32px;
+}
+.check:hover { color: var(--neutral-900); }
+.check input { position: absolute; opacity: 0; pointer-events: none; }
+.check__box {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 20px; height: 20px;
+  border: 2px solid var(--neutral-300);
+  border-radius: 5px;
+  background: white;
+  transition: var(--t-fast);
+  flex-shrink: 0;
+}
+.check input:checked + .check__box {
+  background: var(--brand-600);
+  border-color: var(--brand-600);
+  color: white;
+}
+.check input:focus-visible + .check__box {
+  outline: 2px solid var(--brand-600);
+  outline-offset: 2px;
+}
+.check__box svg { opacity: 0; transition: opacity var(--t-fast); }
+.check input:checked + .check__box svg { opacity: 1; }
+.check__count { margin-left: auto; color: var(--neutral-400); font-size: .8125rem; }
+
+/* Rango de precio */
+.price-range { display: flex; flex-direction: column; gap: 12px; }
+.price-range__inputs {
+  display: grid; grid-template-columns: 1fr auto 1fr;
+  gap: 8px; align-items: center;
+}
+.price-range__input {
+  width: 100%;
+  min-height: 40px;
+  padding: 0 10px;
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-sm);
+  background: white;
+  font-size: .875rem;
+  text-align: center;
+  transition: var(--t-fast);
+}
+.price-range__input:focus {
+  outline: none;
+  border-color: var(--brand-500);
+  box-shadow: 0 0 0 3px rgba(37,99,235,.12);
+}
+.price-range__sep { color: var(--neutral-400); font-size: .8125rem; }
+
+.price-range__slider {
+  width: 100%;
+  height: 4px;
+  background: var(--neutral-200);
+  border-radius: var(--radius-full);
+  appearance: none;
+  outline: none;
+}
+.price-range__slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px; height: 20px;
+  background: var(--brand-600);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(37,99,235,.4);
+}
+.price-range__slider::-moz-range-thumb {
+  width: 20px; height: 20px;
+  background: var(--brand-600);
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+/* Rating filter */
+.rating-opt {
+  display: flex; align-items: center; gap: 10px;
+  padding: 6px 0;
+  cursor: pointer;
+  font-size: .875rem;
+  color: var(--neutral-700);
+  min-height: 32px;
+}
+.rating-opt input { position: absolute; opacity: 0; }
+.rating-opt__radio {
+  width: 20px; height: 20px;
+  border: 2px solid var(--neutral-300);
+  border-radius: 50%;
+  background: white;
+  flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  transition: var(--t-fast);
+}
+.rating-opt input:checked + .rating-opt__radio {
+  border-color: var(--brand-600);
+}
+.rating-opt input:checked + .rating-opt__radio::after {
+  content: '';
+  width: 10px; height: 10px;
+  background: var(--brand-600);
+  border-radius: 50%;
+}
+.rating-opt input:focus-visible + .rating-opt__radio {
+  outline: 2px solid var(--brand-600);
+  outline-offset: 2px;
+}
+.rating-opt__stars { color: var(--gold-500); letter-spacing: 1px; }
+.rating-opt__label { color: var(--neutral-500); font-size: .8125rem; margin-left: auto; }
+
+/* ============================================================
+   10. ACTIVE FILTERS (chips removibles)
+   ============================================================ */
+.active-filters {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  align-items: center;
+  margin-bottom: 16px;
+  min-height: 0;
+}
+.active-filters:empty { display: none; }
+.active-filters__label {
+  font-size: .8125rem;
+  color: var(--neutral-500);
+  font-weight: 600;
+}
+.tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  min-height: 30px; padding: 0 10px 0 12px;
+  background: var(--brand-50);
+  color: var(--brand-700);
+  border: 1px solid var(--brand-100);
+  border-radius: var(--radius-full);
+  font-size: .8125rem;
+  font-weight: 600;
+  transition: var(--t-fast);
+}
+.tag:hover { background: var(--brand-100); }
+.tag__x {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: rgba(37,99,235,.15);
+  font-size: .75rem;
+  font-weight: 700;
+  transition: var(--t-fast);
+}
+.tag:hover .tag__x { background: rgba(37,99,235,.3); }
+.clear-all {
+  font-size: .8125rem;
+  color: var(--neutral-500);
+  text-decoration: underline;
+  font-weight: 600;
+  padding: 4px 6px;
+}
+.clear-all:hover { color: var(--danger-600); }
+
+/* ============================================================
+   11. GRID DE PRODUCTOS
+   ============================================================ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+@media (min-width: 640px)  { .grid { grid-template-columns: repeat(3, 1fr); gap: 16px; } }
+@media (min-width: 1280px) { .grid { grid-template-columns: repeat(4, 1fr); gap: 20px; } }
+
+/* Vista lista */
+.grid.is-list { grid-template-columns: 1fr; }
+.grid.is-list .card {
+  flex-direction: row;
+  align-items: stretch;
+}
+.grid.is-list .card__media {
+  width: 160px;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+}
+@media (min-width: 768px) {
+  .grid.is-list .card__media { width: 220px; }
+}
+.grid.is-list .card__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px 20px;
+}
+@media (max-width: 640px) {
+  .grid.is-list .card { flex-direction: column; }
+  .grid.is-list .card__media { width: 100%; }
+}
+
+/* ============================================================
+   12. PRODUCT CARD (idéntica a Home, adaptada)
+   ============================================================ */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--t-base);
+  animation: fadeInUp .4s ease-out both;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card__media {
+  position: relative;
+  aspect-ratio: 1/1;
+  background: var(--neutral-100);
+  overflow: hidden;
+}
+.card__img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform .5s cubic-bezier(.4,0,.2,1);
+}
+.card:hover .card__img { transform: scale(1.06); }
+
+.card__badges {
+  position: absolute;
+  top: 10px; left: 10px;
+  display: flex; flex-direction: column; gap: 6px;
+  z-index: 2;
+}
+
+.card__wish {
+  position: absolute;
+  top: 10px; right: 10px;
+  width: 36px; height: 36px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,.95);
+  backdrop-filter: blur(4px);
+  border-radius: 50%;
+  color: var(--neutral-500);
+  z-index: 2;
+  transition: var(--t-fast);
+  box-shadow: var(--shadow-sm);
+}
+.card__wish:hover { color: var(--danger-500); transform: scale(1.1); }
+.card__wish.is-active { color: var(--danger-500); }
+.card__wish.is-active svg { fill: currentColor; }
+
+.badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 5px 10px;
+  font-size: .6875rem;
+  font-weight: 800;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
+  letter-spacing: .02em;
+  white-space: nowrap;
+}
+.badge--danger  { background: var(--danger-500);  color: white; }
+.badge--gold    { background: var(--gold-500);    color: white; }
+.badge--success { background: var(--success-500); color: white; }
+.badge--brand   { background: var(--brand-600);   color: white; }
+.badge--pulse   { animation: pulseSoft 1.8s infinite; }
+
+.card__body {
+  display: flex; flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  flex: 1;
+}
+
+.card__brand {
+  font-size: .6875rem;
+  font-weight: 700;
+  color: var(--neutral-500);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+.card__title {
+  font-size: .875rem;
+  font-weight: 600;
+  color: var(--neutral-900);
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 2.4em;
+}
+
+.card__rating {
+  display: flex; align-items: center; gap: 6px;
+  font-size: .75rem;
+}
+.card__stars { color: var(--gold-500); letter-spacing: .5px; }
+.card__reviews { color: var(--neutral-500); }
+
+.card__price-row {
+  display: flex; align-items: baseline; gap: 8px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+.card__price {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--neutral-900);
+}
+.card__price-old {
+  font-size: .875rem;
+  color: var(--neutral-400);
+  text-decoration: line-through;
+}
+.card__price-discount {
+  font-size: .75rem;
+  font-weight: 800;
+  color: var(--success-600);
+  background: var(--success-50);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+}
+
+.card__shipping {
+  font-size: .75rem;
+  color: var(--success-600);
+  font-weight: 700;
+  display: flex; align-items: center; gap: 4px;
+}
+
+.card__cta {
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  min-height: 44px;
+  width: 100%;
+  padding: 0 12px;
+  border-radius: var(--radius-md);
+  background: var(--success-600);
+  color: white;
+  font-size: .875rem;
+  font-weight: 700;
+  transition: var(--t-base);
+  margin-top: 4px;
+}
+.card__cta:hover { background: var(--success-700); }
+.card__cta:active { transform: scale(.97); }
+.card__cta.is-added { background: var(--brand-600); }
+
+/* ============================================================
+   13. SKELETON LOADING
+   ============================================================ */
+.skeleton {
+  background: linear-gradient(90deg, #f3f4f6 0%, #e5e7eb 50%, #f3f4f6 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s linear infinite;
+  border-radius: var(--radius-sm);
+}
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.skeleton-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.skeleton-card__media { aspect-ratio: 1/1; }
+.skeleton-card__body { padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+.skeleton-card__line { height: 12px; border-radius: 4px; }
+
+/* ============================================================
+   14. LOAD MORE + EMPTY STATE
+   ============================================================ */
+.load-more-wrap {
+  display: flex; justify-content: center;
+  padding-block: 32px;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.load-more {
+  display: inline-flex; align-items: center; gap: 10px;
+  min-height: 52px;
+  padding: 0 32px;
+  background: white;
+  border: 2px solid var(--neutral-200);
+  border-radius: var(--radius-md);
+  font-size: .9375rem;
+  font-weight: 700;
+  color: var(--neutral-900);
+  transition: var(--t-base);
+}
+.load-more:hover {
+  border-color: var(--brand-600);
+  color: var(--brand-700);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+.load-more[disabled] {
+  opacity: .6;
+  cursor: wait;
+}
+.load-more__spinner {
+  width: 18px; height: 18px;
+  border: 2px solid var(--neutral-300);
+  border-top-color: var(--brand-600);
+  border-radius: 50%;
+  animation: spin .7s linear infinite;
+}
+
+.progress-info {
+  font-size: .8125rem;
+  color: var(--neutral-500);
+  text-align: center;
+}
+.progress-info strong { color: var(--neutral-900); }
+
+.empty {
+  text-align: center;
+  padding: 64px 20px;
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+.empty__icon {
+  font-size: 4rem;
+  margin-bottom: 16px;
+}
+.empty__title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.empty__desc {
+  color: var(--neutral-500);
+  margin-bottom: 24px;
+  max-width: 400px;
+  margin-inline: auto;
+}
+
+/* ============================================================
+   15. BOTONES BASE
+   ============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 24px;
+  border-radius: var(--radius-md);
+  font-size: .9375rem;
+  font-weight: 700;
+  transition: var(--t-base);
+  white-space: nowrap;
+}
+.btn:active { transform: scale(.97); }
+.btn--primary {
+  background: var(--brand-600);
+  color: white;
+}
+.btn--primary:hover { background: var(--brand-700); }
+.btn--ghost {
+  background: white;
+  color: var(--neutral-700);
+  border: 1px solid var(--neutral-200);
+}
+.btn--ghost:hover { background: var(--neutral-50); }
+.btn--flex { flex: 1; }
+
+/* ============================================================
+   16. TOAST
+   ============================================================ */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(120%);
+  background: var(--neutral-900);
+  color: white;
+  padding: 14px 20px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-xl);
+  display: flex; align-items: center; gap: 10px;
+  font-size: .875rem; font-weight: 600;
+  z-index: 200;
+  transition: transform var(--t-base);
+  max-width: calc(100vw - 32px);
+}
+.toast.is-visible { transform: translateX(-50%) translateY(0); }
+.toast__check {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--success-500);
+  color: white;
+  font-size: .75rem;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   17. FOOTER (mínimo)
+   ============================================================ */
+.footer {
+  background: var(--neutral-900);
+  color: var(--neutral-400);
+  padding-block: 32px;
+  text-align: center;
+  font-size: .8125rem;
+  margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header class="header">
+  <div class="container header__inner">
+    <a href="https://aai.inacap.cl/pluginfile.php/2895158/mod_resource/content/1/EjemploCarrito.html#" class="logo" aria-label="NovaShop, ir al inicio">
+      <span class="logo__mark" aria-hidden="true">N</span>
+      <span class="logo__text">NovaShop</span>
+    </a>
+
+    <form class="search" role="search" onsubmit="event.preventDefault(); track('search_submit');">
+      <span class="search__icon" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path>
+        </svg>
+      </span>
+      <input type="search" placeholder="Buscar productos, marcas..." aria-label="Buscar productos">
+    </form>
+
+    <div class="header__actions">
+      <button class="icon-btn" aria-label="Mi cuenta" onclick="track('account_click')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+      </button>
+      <button class="icon-btn" aria-label="Favoritos" onclick="track('wishlist_click')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        </svg>
+      </button>
+      <button class="icon-btn" aria-label="Carrito de compras" onclick="track('cart_open')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="icon-btn__badge" id="cart-count" hidden="">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================
+     BREADCRUMB + HEADER DE CATEGORÍA
+     ============================================================ -->
+<div class="container">
+  <nav class="breadcrumb" aria-label="Navegación">
+    <ol>
+      <li><a href="https://aai.inacap.cl/pluginfile.php/2895158/mod_resource/content/1/EjemploCarrito.html#">Inicio</a></li>
+      <li><a href="https://aai.inacap.cl/pluginfile.php/2895158/mod_resource/content/1/EjemploCarrito.html#">Tecnología</a></li>
+      <li aria-current="page">Auriculares</li>
+    </ol>
+  </nav>
+
+  <div class="plp-header">
+    <div>
+      <h1 class="plp-header__title">Auriculares Bluetooth</h1>
+      <p class="plp-header__desc">
+        Encuentra los mejores auriculares con cancelación de ruido, sonido premium y batería de larga duración. Envío gratis en pedidos +$50.
+      </p>
+    </div>
+    <p class="plp-header__count">
+      <strong id="result-count">12</strong> productos encontrados
+    </p>
+  </div>
+</div>
+
+<!-- ============================================================
+     TOOLBAR (filtros + orden + vista)
+     ============================================================ -->
+<div class="toolbar">
+  <div class="container toolbar__inner">
+    <!-- Mobile: botón abrir filtros -->
+    <button class="filter-btn" id="open-filters" onclick="openDrawer()" aria-controls="filters-drawer">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="4" x2="20" y1="6" y2="6"></line>
+        <line x1="7" x2="17" y1="12" y2="12"></line>
+        <line x1="10" x2="14" y1="18" y2="18"></line>
+      </svg>
+      Filtros
+      <span class="filter-btn__count" id="filter-count" hidden="">0</span>
+    </button>
+
+    <!-- Chips rápidos -->
+    <div class="chips scrollbar-hide" role="group" aria-label="Filtros rápidos">
+      <button class="chip" data-quick="deals">🔥 Ofertas</button>
+      <button class="chip" data-quick="new">✨ Novedades</button>
+      <button class="chip" data-quick="bestseller">🏆 Best sellers</button>
+      <button class="chip" data-quick="freeship">🚚 Envío gratis</button>
+      <button class="chip" data-quick="rating4">⭐ +4 estrellas</button>
+    </div>
+
+    <div class="toolbar__spacer"></div>
+
+    <!-- Ordenar -->
+    <label class="sort">
+      <span class="sr-only">Ordenar por</span>
+      <select id="sort" onchange="onSortChange()">
+        <option value="relevance">Relevancia</option>
+        <option value="price-asc">Precio: menor → mayor</option>
+        <option value="price-desc">Precio: mayor → menor</option>
+        <option value="rating">Mejor valorados</option>
+        <option value="newest">Más recientes</option>
+        <option value="discount">Mayor descuento</option>
+      </select>
+    </label>
+
+    <!-- Vista grid/list (desktop) -->
+    <div class="view-toggle" role="group" aria-label="Cambiar vista">
+      <button class="is-active" data-view="grid" aria-label="Vista en cuadrícula" aria-pressed="true" onclick="setView('grid')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect width="7" height="7" x="3" y="3" rx="1"></rect>
+          <rect width="7" height="7" x="14" y="3" rx="1"></rect>
+          <rect width="7" height="7" x="14" y="14" rx="1"></rect>
+          <rect width="7" height="7" x="3" y="14" rx="1"></rect>
+        </svg>
+      </button>
+      <button data-view="list" aria-label="Vista en lista" aria-pressed="false" onclick="setView('list')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="8" x2="21" y1="6" y2="6"></line>
+          <line x1="8" x2="21" y1="12" y2="12"></line>
+          <line x1="8" x2="21" y1="18" y2="18"></line>
+          <line x1="3" x2="3.01" y1="6" y2="6"></line>
+          <line x1="3" x2="3.01" y1="12" y2="12"></line>
+          <line x1="3" x2="3.01" y1="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     LAYOUT PLP (sidebar + contenido)
+     ============================================================ -->
+<div class="container plp-layout">
+
+  <!-- SIDEBAR (desktop) -->
+  <aside class="sidebar" aria-label="Filtros">
+    <div id="sidebar-filters">
+    <!-- Precio -->
+    <div class="filter-group" data-group="price">
+      <button type="button" class="filter-group__head" onclick="toggleGroup(this)">
+        Precio
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m6 9 6 6 6-6"></path>
+        </svg>
+      </button>
+      <div class="filter-group__body">
+        <div class="price-range">
+          <div class="price-range__inputs">
+            <input class="price-range__input" type="number" min="0" max="300" step="10" value="0" id="price-min" onchange="updatePrice('min', this.value)" aria-label="Precio mínimo">
+            <span class="price-range__sep">—</span>
+            <input class="price-range__input" type="number" min="0" max="300" step="10" value="300" id="price-max" onchange="updatePrice('max', this.value)" aria-label="Precio máximo">
+          </div>
+          <input class="price-range__slider" type="range" min="0" max="300" step="10" value="300" id="price-slider" oninput="updatePriceSlider(this.value)" aria-label="Precio máximo">
+        </div>
+      </div>
+    </div>
+
+    <!-- Marca -->
+    <div class="filter-group" data-group="brand">
+      <button type="button" class="filter-group__head" onclick="toggleGroup(this)">
+        Marca
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m6 9 6 6 6-6"></path>
+        </svg>
+      </button>
+      <div class="filter-group__body">
+        
+            <label class="check">
+              <input type="checkbox" onchange="toggleBrand('AudioTech', this.checked)">
+              <span class="check__box" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+              </span>
+              <span>AudioTech</span>
+              <span class="check__count">2</span>
+            </label>
+          
+            <label class="check">
+              <input type="checkbox" onchange="toggleBrand('SoundWave', this.checked)">
+              <span class="check__box" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+              </span>
+              <span>SoundWave</span>
+              <span class="check__count">2</span>
+            </label>
+          
+            <label class="check">
+              <input type="checkbox" onchange="toggleBrand('ProAudio', this.checked)">
+              <span class="check__box" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+              </span>
+              <span>ProAudio</span>
+              <span class="check__count">2</span>
+            </label>
+          
+            <label class="check">
+              <input type="checkbox" onchange="toggleBrand('BuddySound', this.checked)">
+              <span class="check__box" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+              </span>
+              <span>BuddySound</span>
+              <span class="check__count">2</span>
+            </label>
+          
+            <label class="check">
+              <input type="checkbox" onchange="toggleBrand('StudioMax', this.checked)">
+              <span class="check__box" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+              </span>
+              <span>StudioMax</span>
+              <span class="check__count">1</span>
+            </label>
+          
+            <label class="check">
+              <input type="checkbox" onchange="toggleBrand('BassBoom', this.checked)">
+              <span class="check__box" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+              </span>
+              <span>BassBoom</span>
+              <span class="check__count">1</span>
+            </label>
+          
+            <label class="check">
+              <input type="checkbox" onchange="toggleBrand('SilentPro', this.checked)">
+              <span class="check__box" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+              </span>
+              <span>SilentPro</span>
+              <span class="check__count">1</span>
+            </label>
+          
+            <label class="check">
+              <input type="checkbox" onchange="toggleBrand('EcoSound', this.checked)">
+              <span class="check__box" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+              </span>
+              <span>EcoSound</span>
+              <span class="check__count">1</span>
+            </label>
+          
+      </div>
+    </div>
+
+    <!-- Valoración -->
+    <div class="filter-group" data-group="rating">
+      <button type="button" class="filter-group__head" onclick="toggleGroup(this)">
+        Valoración
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m6 9 6 6 6-6"></path>
+        </svg>
+      </button>
+      <div class="filter-group__body">
+        
+            <label class="rating-opt">
+              <input type="radio" name="rating" value="4.5" onchange="setRating(4.5)">
+              <span class="rating-opt__radio" aria-hidden="true"></span>
+              <span class="rating-opt__stars">★★★★½</span>
+              <span class="rating-opt__label">+4.5</span>
+              <span class="check__count">10</span>
+            </label>
+          
+            <label class="rating-opt">
+              <input type="radio" name="rating" value="4" onchange="setRating(4)">
+              <span class="rating-opt__radio" aria-hidden="true"></span>
+              <span class="rating-opt__stars">★★★★</span>
+              <span class="rating-opt__label">+4</span>
+              <span class="check__count">12</span>
+            </label>
+          
+            <label class="rating-opt">
+              <input type="radio" name="rating" value="3.5" onchange="setRating(3.5)">
+              <span class="rating-opt__radio" aria-hidden="true"></span>
+              <span class="rating-opt__stars">★★★½</span>
+              <span class="rating-opt__label">+3.5</span>
+              <span class="check__count">12</span>
+            </label>
+          
+        <label class="rating-opt">
+          <input type="radio" name="rating" value="0" checked="" onchange="setRating(0)">
+          <span class="rating-opt__radio" aria-hidden="true"></span>
+          <span>Todas</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Otros -->
+    <div class="filter-group" data-group="other">
+      <button type="button" class="filter-group__head" onclick="toggleGroup(this)">
+        Características
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m6 9 6 6 6-6"></path>
+        </svg>
+      </button>
+      <div class="filter-group__body">
+        <label class="check">
+          <input type="checkbox" onchange="toggleOther('inStock', this.checked)">
+          <span class="check__box" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5"></path>
+            </svg>
+          </span>
+          <span>Solo en stock</span>
+        </label>
+        <label class="check">
+          <input type="checkbox" onchange="toggleOther('freeShipping', this.checked)">
+          <span class="check__box" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5"></path>
+            </svg>
+          </span>
+          <span>Envío gratis</span>
+        </label>
+        <label class="check">
+          <input type="checkbox" onchange="toggleOther('onSale', this.checked)">
+          <span class="check__box" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5"></path>
+            </svg>
+          </span>
+          <span>Solo en oferta</span>
+        </label>
+      </div>
+    </div>
+  </div>
+  </aside>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+    <!-- Chips de filtros activos -->
+    <div class="active-filters" id="active-filters" aria-live="polite"></div>
+
+    <!-- Grid de productos -->
+    <div class="grid" id="grid">
+    <article class="card" style="animation-delay:0ms" onclick="track('product_card_click', {id:'p3', position:0})">
+      <div class="card__media">
+        <div class="card__badges"><span class="badge badge--gold">🏆 Best seller</span></div>
+        <button class="card__wish" aria-label="Añadir Auriculares Over-Ear Hi-Res con Cable Desmontable a favoritos" onclick="event.stopPropagation(); toggleWish(this);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </button>
+        <img class="card__img" src="./Ofertas flash · NovaShop_files/photo-1484704849700-f032a568e944" alt="Auriculares Over-Ear Hi-Res con Cable Desmontable" loading="lazy" width="600" height="600">
+      </div>
+      <div class="card__body">
+        <div class="card__brand">ProAudio</div>
+        <h3 class="card__title">Auriculares Over-Ear Hi-Res con Cable Desmontable</h3>
+
+        <div class="card__rating">
+          <span class="card__stars" aria-hidden="true">★★★★★</span>
+          <span class="card__reviews">4.9 (2103)</span>
+        </div>
+
+        <div class="card__price-row">
+          <span class="card__price">$129</span>
+          <span class="card__price-old">$199</span>
+          <span class="card__price-discount">-35%</span>
+        </div>
+
+        
+
+        <button class="card__cta" onclick="event.stopPropagation(); addToCart('p3', this);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          Añadir
+        </button>
+      </div>
+    </article>
+  
+    <article class="card" style="animation-delay:40ms" onclick="track('product_card_click', {id:'p1', position:1})">
+      <div class="card__media">
+        <div class="card__badges"><span class="badge badge--danger badge--pulse">🔥 Últimas 4</span><span class="badge badge--gold">🏆 Best seller</span><span class="badge badge--brand">-47%</span></div>
+        <button class="card__wish" aria-label="Añadir Auriculares Bluetooth Pro con Cancelación de Ruido Activa a favoritos" onclick="event.stopPropagation(); toggleWish(this);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </button>
+        <img class="card__img" src="./Ofertas flash · NovaShop_files/photo-1505740420928-5e560c06d30e" alt="Auriculares Bluetooth Pro con Cancelación de Ruido Activa" loading="lazy" width="600" height="600">
+      </div>
+      <div class="card__body">
+        <div class="card__brand">AudioTech</div>
+        <h3 class="card__title">Auriculares Bluetooth Pro con Cancelación de Ruido Activa</h3>
+
+        <div class="card__rating">
+          <span class="card__stars" aria-hidden="true">★★★★★</span>
+          <span class="card__reviews">4.8 (1247)</span>
+        </div>
+
+        <div class="card__price-row">
+          <span class="card__price">$79</span>
+          <span class="card__price-old">$149</span>
+          <span class="card__price-discount">-47%</span>
+        </div>
+
+        
+
+        <button class="card__cta" onclick="event.stopPropagation(); addToCart('p1', this);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          Añadir
+        </button>
+      </div>
+    </article>
+  
+    <article class="card" style="animation-delay:80ms" onclick="track('product_card_click', {id:'p8', position:2})">
+      <div class="card__media">
+        <div class="card__badges"><span class="badge badge--gold">🏆 Best seller</span></div>
+        <button class="card__wish" aria-label="Añadir Auriculares ANC Premium con Modo Transparencia a favoritos" onclick="event.stopPropagation(); toggleWish(this);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </button>
+        <img class="card__img" src="./Ofertas flash · NovaShop_files/photo-1545127398-14699f92334b" alt="Auriculares ANC Premium con Modo Transparencia" loading="lazy" width="600" height="600">
+      </div>
+      <div class="card__body">
+        <div class="card__brand">SilentPro</div>
+        <h3 class="card__title">Auriculares ANC Premium con Modo Transparencia</h3>
+
+        <div class="card__rating">
+          <span class="card__stars" aria-hidden="true">★★★★★</span>
+          <span class="card__reviews">4.8 (1567)</span>
+        </div>
+
+        <div class="card__price-row">
+          <span class="card__price">$199</span>
+          <span class="card__price-old">$299</span>
+          <span class="card__price-discount">-33%</span>
+        </div>
+
+        
+
+        <button class="card__cta" onclick="event.stopPropagation(); addToCart('p8', this);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          Añadir
+        </button>
+      </div>
+    </article>
+  
+    <article class="card" style="animation-delay:120ms" onclick="track('product_card_click', {id:'p6', position:3})">
+      <div class="card__media">
+        <div class="card__badges"><span class="badge badge--gold">🏆 Best seller</span></div>
+        <button class="card__wish" aria-label="Añadir Auriculares Gaming 7.1 con Micrófono Cancelación Ruido a favoritos" onclick="event.stopPropagation(); toggleWish(this);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </button>
+        <img class="card__img" src="./Ofertas flash · NovaShop_files/photo-1618366712010-f4ae9c647dcb" alt="Auriculares Gaming 7.1 con Micrófono Cancelación Ruido" loading="lazy" width="600" height="600">
+      </div>
+      <div class="card__body">
+        <div class="card__brand">AudioTech</div>
+        <h3 class="card__title">Auriculares Gaming 7.1 con Micrófono Cancelación Ruido</h3>
+
+        <div class="card__rating">
+          <span class="card__stars" aria-hidden="true">★★★★★</span>
+          <span class="card__reviews">4.7 (1023)</span>
+        </div>
+
+        <div class="card__price-row">
+          <span class="card__price">$89</span>
+          <span class="card__price-old">$139</span>
+          <span class="card__price-discount">-36%</span>
+        </div>
+
+        <div class="card__shipping">🚚 Envío gratis</div>
+
+        <button class="card__cta" onclick="event.stopPropagation(); addToCart('p6', this);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          Añadir
+        </button>
+      </div>
+    </article>
+  
+    <article class="card" style="animation-delay:160ms" onclick="track('product_card_click', {id:'p5', position:4})">
+      <div class="card__media">
+        <div class="card__badges"><span class="badge badge--success">✨ Nuevo</span></div>
+        <button class="card__wish" aria-label="Añadir Auriculares de Estudio Profesional Monitor 50mm a favoritos" onclick="event.stopPropagation(); toggleWish(this);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </button>
+        <img class="card__img" src="./Ofertas flash · NovaShop_files/photo-1583394838336-acd977736f90" alt="Auriculares de Estudio Profesional Monitor 50mm" loading="lazy" width="600" height="600">
+      </div>
+      <div class="card__body">
+        <div class="card__brand">StudioMax</div>
+        <h3 class="card__title">Auriculares de Estudio Profesional Monitor 50mm</h3>
+
+        <div class="card__rating">
+          <span class="card__stars" aria-hidden="true">★★★★★</span>
+          <span class="card__reviews">4.9 (340)</span>
+        </div>
+
+        <div class="card__price-row">
+          <span class="card__price">$159</span>
+          <span class="card__price-old">$249</span>
+          <span class="card__price-discount">-36%</span>
+        </div>
+
+        
+
+        <button class="card__cta" onclick="event.stopPropagation(); addToCart('p5', this);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          Añadir
+        </button>
+      </div>
+    </article>
+  
+    <article class="card" style="animation-delay:200ms" onclick="track('product_card_click', {id:'p11', position:5})">
+      <div class="card__media">
+        <div class="card__badges"></div>
+        <button class="card__wish" aria-label="Añadir Auriculares DJ Profesionales Plegables a favoritos" onclick="event.stopPropagation(); toggleWish(this);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </button>
+        <img class="card__img" src="./Ofertas flash · NovaShop_files/photo-1577174881658-0f30ed549adc" alt="Auriculares DJ Profesionales Plegables" loading="lazy" width="600" height="600">
+      </div>
+      <div class="card__body">
+        <div class="card__brand">ProAudio</div>
+        <h3 class="card__title">Auriculares DJ Profesionales Plegables</h3>
+
+        <div class="card__rating">
+          <span class="card__stars" aria-hidden="true">★★★★★</span>
+          <span class="card__reviews">4.7 (445)</span>
+        </div>
+
+        <div class="card__price-row">
+          <span class="card__price">$139</span>
+          <span class="card__price-old">$210</span>
+          <span class="card__price-discount">-34%</span>
+        </div>
+
+        
+
+        <button class="card__cta" onclick="event.stopPropagation(); addToCart('p11', this);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          Añadir
+        </button>
+      </div>
+    </article>
+  
+    <article class="card" style="animation-delay:240ms" onclick="track('product_card_click', {id:'p2', position:6})">
+      <div class="card__media">
+        <div class="card__badges"><span class="badge badge--success">✨ Nuevo</span><span class="badge badge--brand">-43%</span></div>
+        <button class="card__wish" aria-label="Añadir Auriculares Inalámbricos Sport con Gancho de Oído a favoritos" onclick="event.stopPropagation(); toggleWish(this);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </button>
+        <img class="card__img" src="./Ofertas flash · NovaShop_files/photo-1590658268037-6bf12165a8df" alt="Auriculares Inalámbricos Sport con Gancho de Oído" loading="lazy" width="600" height="600">
+      </div>
+      <div class="card__body">
+        <div class="card__brand">SoundWave</div>
+        <h3 class="card__title">Auriculares Inalámbricos Sport con Gancho de Oído</h3>
+
+        <div class="card__rating">
+          <span class="card__stars" aria-hidden="true">★★★★★</span>
+          <span class="card__reviews">4.6 (834)</span>
+        </div>
+
+        <div class="card__price-row">
+          <span class="card__price">$45</span>
+          <span class="card__price-old">$79</span>
+          <span class="card__price-discount">-43%</span>
+        </div>
+
+        <div class="card__shipping">🚚 Envío gratis</div>
+
+        <button class="card__cta" onclick="event.stopPropagation(); addToCart('p2', this);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          Añadir
+        </button>
+      </div>
+    </article>
+  
+    <article class="card" style="animation-delay:280ms" onclick="track('product_card_click', {id:'p9', position:7})">
+      <div class="card__media">
+        <div class="card__badges"><span class="badge badge--success">✨ Nuevo</span></div>
+        <button class="card__wish" aria-label="Añadir Auriculares Sostenibles Hechos con Materiales Reciclados a favoritos" onclick="event.stopPropagation(); toggleWish(this);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </button>
+        <img class="card__img" src="./Ofertas flash · NovaShop_files/photo-1572569511254-d8f925fe2cbb" alt="Auriculares Sostenibles Hechos con Materiales Reciclados" loading="lazy" width="600" height="600">
+      </div>
+      <div class="card__body">
+        <div class="card__brand">EcoSound</div>
+        <h3 class="card__title">Auriculares Sostenibles Hechos con Materiales Reciclados</h3>
+
+        <div class="card__rating">
+          <span class="card__stars" aria-hidden="true">★★★★★</span>
+          <span class="card__reviews">4.6 (298)</span>
+        </div>
+
+        <div class="card__price-row">
+          <span class="card__price">$69</span>
+          <span class="card__price-old">$110</span>
+          <span class="card__price-discount">-37%</span>
+        </div>
+
+        <div class="card__shipping">🚚 Envío gratis</div>
+
+        <button class="card__cta" onclick="event.stopPropagation(); addToCart('p9', this);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          Añadir
+        </button>
+      </div>
+    </article>
+  </div>
+
+    <!-- Load more -->
+    <div class="load-more-wrap" id="load-more-wrap">
+      <p class="progress-info" id="progress-info">Mostrando <strong>8</strong> de <strong>12</strong> productos</p>
+      <button class="load-more" id="load-more" onclick="loadMore()">
+        <span>Cargar más productos</span>
+      </button>
+    </div>
+
+    <!-- Empty state -->
+    <div class="empty" id="empty-state" hidden="">
+      <div class="empty__icon" aria-hidden="true">🔍</div>
+      <h2 class="empty__title">No encontramos resultados</h2>
+      <p class="empty__desc">
+        Prueba a quitar algunos filtros o ajustar tu búsqueda para encontrar lo que buscas.
+      </p>
+      <button class="btn btn--primary" onclick="clearAllFilters()">
+        Limpiar todos los filtros
+      </button>
+    </div>
+  </main>
+</div>
+
+<!-- ============================================================
+     DRAWER FILTROS (mobile)
+     ============================================================ -->
+<div class="drawer-backdrop" id="drawer-backdrop" onclick="closeDrawer()" aria-hidden="true"></div>
+<aside class="drawer" id="filters-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+  <div class="drawer__header">
+    <h2 class="drawer__title" id="drawer-title">Filtros</h2>
+    <button class="drawer__close" onclick="closeDrawer()" aria-label="Cerrar filtros">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 6 6 18M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
+  <div class="drawer__body" id="drawer-filters">
+    <!-- Precio -->
+    <div class="filter-group" data-group="price">
+      <button type="button" class="filter-group__head" onclick="toggleGroup(this)">
+        Precio
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m6 9 6 6 6-6"></path>
+        </svg>
+      </button>
+      <div class="filter-group__body">
+        <div class="price-range">
+          <div class="price-range__inputs">
+            <input class="price-range__input" type="number" min="0" max="300" step="10" value="0" id="price-min" onchange="updatePrice('min', this.value)" aria-label="Precio mínimo">
+            <span class="price-range__sep">—</span>
+            <input class="price-range__input" type="number" min="0" max="300" step="10" value="300" id="price-max" onchange="updatePrice('max', this.value)" aria-label="Precio máximo">
+          </div>
+          <input class="price-range__slider" type="range" min="0" max="300" step="10" value="300" id="price-slider" oninput="updatePriceSlider(this.value)" aria-label="Precio máximo">
+        </div>
+      </div>
+    </div>
+
+    <!-- Marca -->
+    <div class="filter-group" data-group="brand">
+      <button type="button" class="filter-group__head" onclick="toggleGroup(this)">
+        Marca
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m6 9 6 6 6-6"></path>
+        </svg>
+      </button>
+      <div class="filter-group__body">
+        
+            <label class="check">
+              <input type="checkbox" onchange="toggleBrand('AudioTech', this.checked)">
+              <span class="check__box" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+              </span>
+              <span>AudioTech</span>
+              <span class="check__count">2</span>
+            </label>
+          
+            <label class="check">
+              <input type="checkbox" onchange="toggleBrand('SoundWave', this.checked)">
+              <span class="check__box" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+              </span>
+              <span>SoundWave</span>
+              <span class="check__count">2</span>
+            </label>
+          
+            <label class="check">
+              <input type="checkbox" onchange="toggleBrand('ProAudio', this.checked)">
+              <span class="check__box" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+              </span>
+              <span>ProAudio</span>
+              <span class="check__count">2</span>
+            </label>
+          
+            <label class="check">
+              <input type="checkbox" onchange="toggleBrand('BuddySound', this.checked)">
+              <span class="check__box" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+              </span>
+              <span>BuddySound</span>
+              <span class="check__count">2</span>
+            </label>
+          
+            <label class="check">
+              <input type="checkbox" onchange="toggleBrand('StudioMax', this.checked)">
+              <span class="check__box" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+              </span>
+              <span>StudioMax</span>
+              <span class="check__count">1</span>
+            </label>
+          
+            <label class="check">
+              <input type="checkbox" onchange="toggleBrand('BassBoom', this.checked)">
+              <span class="check__box" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+              </span>
+              <span>BassBoom</span>
+              <span class="check__count">1</span>
+            </label>
+          
+            <label class="check">
+              <input type="checkbox" onchange="toggleBrand('SilentPro', this.checked)">
+              <span class="check__box" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+              </span>
+              <span>SilentPro</span>
+              <span class="check__count">1</span>
+            </label>
+          
+            <label class="check">
+              <input type="checkbox" onchange="toggleBrand('EcoSound', this.checked)">
+              <span class="check__box" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+              </span>
+              <span>EcoSound</span>
+              <span class="check__count">1</span>
+            </label>
+          
+      </div>
+    </div>
+
+    <!-- Valoración -->
+    <div class="filter-group" data-group="rating">
+      <button type="button" class="filter-group__head" onclick="toggleGroup(this)">
+        Valoración
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m6 9 6 6 6-6"></path>
+        </svg>
+      </button>
+      <div class="filter-group__body">
+        
+            <label class="rating-opt">
+              <input type="radio" name="rating" value="4.5" onchange="setRating(4.5)">
+              <span class="rating-opt__radio" aria-hidden="true"></span>
+              <span class="rating-opt__stars">★★★★½</span>
+              <span class="rating-opt__label">+4.5</span>
+              <span class="check__count">10</span>
+            </label>
+          
+            <label class="rating-opt">
+              <input type="radio" name="rating" value="4" onchange="setRating(4)">
+              <span class="rating-opt__radio" aria-hidden="true"></span>
+              <span class="rating-opt__stars">★★★★</span>
+              <span class="rating-opt__label">+4</span>
+              <span class="check__count">12</span>
+            </label>
+          
+            <label class="rating-opt">
+              <input type="radio" name="rating" value="3.5" onchange="setRating(3.5)">
+              <span class="rating-opt__radio" aria-hidden="true"></span>
+              <span class="rating-opt__stars">★★★½</span>
+              <span class="rating-opt__label">+3.5</span>
+              <span class="check__count">12</span>
+            </label>
+          
+        <label class="rating-opt">
+          <input type="radio" name="rating" value="0" checked="" onchange="setRating(0)">
+          <span class="rating-opt__radio" aria-hidden="true"></span>
+          <span>Todas</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Otros -->
+    <div class="filter-group" data-group="other">
+      <button type="button" class="filter-group__head" onclick="toggleGroup(this)">
+        Características
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m6 9 6 6 6-6"></path>
+        </svg>
+      </button>
+      <div class="filter-group__body">
+        <label class="check">
+          <input type="checkbox" onchange="toggleOther('inStock', this.checked)">
+          <span class="check__box" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5"></path>
+            </svg>
+          </span>
+          <span>Solo en stock</span>
+        </label>
+        <label class="check">
+          <input type="checkbox" onchange="toggleOther('freeShipping', this.checked)">
+          <span class="check__box" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5"></path>
+            </svg>
+          </span>
+          <span>Envío gratis</span>
+        </label>
+        <label class="check">
+          <input type="checkbox" onchange="toggleOther('onSale', this.checked)">
+          <span class="check__box" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5"></path>
+            </svg>
+          </span>
+          <span>Solo en oferta</span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="drawer__footer">
+    <button class="btn btn--ghost btn--flex" onclick="clearAllFilters()">Limpiar</button>
+    <button class="btn btn--primary btn--flex" onclick="applyAndClose()">
+      Ver <span id="drawer-apply-count">12</span>
+    </button>
+  </div>
+</aside>
+
+<!-- Toast -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <span class="toast__check" aria-hidden="true">✓</span>
+  <span id="toast-msg">Producto añadido al carrito</span>
+</div>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <div class="container">
+    © 2025 NovaShop · Demo PLP · Diseño persuasivo + UX
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   1. DATOS (mock)
+   ============================================================ */
+const ALL_PRODUCTS = [
+  { id:'p1',  brand:'AudioTech',  title:'Auriculares Bluetooth Pro con Cancelación de Ruido Activa', image:'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&q=80&auto=format&fit=crop', price:79,  originalPrice:149, rating:4.8, reviews:1247, stock:4,  tags:['deals','bestseller'],     createdAt:'2025-09-20' },
+  { id:'p2',  brand:'SoundWave',  title:'Auriculares Inalámbricos Sport con Gancho de Oído',          image:'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&q=80&auto=format&fit=crop', price:45,  originalPrice:79,  rating:4.6, reviews:834,  stock:18, tags:['new','freeship'],         createdAt:'2025-09-28' },
+  { id:'p3',  brand:'ProAudio',   title:'Auriculares Over-Ear Hi-Res con Cable Desmontable',           image:'https://images.unsplash.com/photo-1484704849700-f032a568e944?w=600&q=80&auto=format&fit=crop', price:129, originalPrice:199, rating:4.9, reviews:2103, stock:12, tags:['bestseller','rating4'],    createdAt:'2025-08-15' },
+  { id:'p4',  brand:'BuddySound', title:'Earbuds TWS con Estuche de Carga Inalámbrica',                image:'https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=600&q=80&auto=format&fit=crop', price:39,  originalPrice:89,  rating:4.5, reviews:612,  stock:30, tags:['deals','freeship'],        createdAt:'2025-09-10' },
+  { id:'p5',  brand:'StudioMax',  title:'Auriculares de Estudio Profesional Monitor 50mm',            image:'https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600&q=80&auto=format&fit=crop', price:159, originalPrice:249, rating:4.9, reviews:340,  stock:6,  tags:['rating4','new'],           createdAt:'2025-09-30' },
+  { id:'p6',  brand:'AudioTech',  title:'Auriculares Gaming 7.1 con Micrófono Cancelación Ruido',      image:'https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=600&q=80&auto=format&fit=crop', price:89,  originalPrice:139, rating:4.7, reviews:1023, stock:15, tags:['bestseller','freeship'],   createdAt:'2025-08-22' },
+  { id:'p7',  brand:'BassBoom',   title:'Auriculares Bass Boost con Batería 40h',                      image:'https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=600&q=80&auto=format&fit=crop', price:59,  originalPrice:99,  rating:4.4, reviews:487,  stock:22, tags:['deals','new'],             createdAt:'2025-09-25' },
+  { id:'p8',  brand:'SilentPro',  title:'Auriculares ANC Premium con Modo Transparencia',              image:'https://images.unsplash.com/photo-1545127398-14699f92334b?w=600&q=80&auto=format&fit=crop', price:199, originalPrice:299, rating:4.8, reviews:1567, stock:9,  tags:['bestseller','rating4'],    createdAt:'2025-07-12' },
+  { id:'p9',  brand:'EcoSound',   title:'Auriculares Sostenibles Hechos con Materiales Reciclados',   image:'https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=600&q=80&auto=format&fit=crop', price:69,  originalPrice:110, rating:4.6, reviews:298,  stock:14, tags:['new','freeship'],          createdAt:'2025-09-29' },
+  { id:'p10', brand:'SoundWave',  title:'Auriculares Deportivos IPX7 Resistente al Agua',              image:'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=600&q=80&auto=format&fit=crop', price:55,  originalPrice:95,  rating:4.5, reviews:721,  stock:3,  tags:['deals'],                    createdAt:'2025-09-05' },
+  { id:'p11', brand:'ProAudio',   title:'Auriculares DJ Profesionales Plegables',                      image:'https://images.unsplash.com/photo-1577174881658-0f30ed549adc?w=600&q=80&auto=format&fit=crop', price:139, originalPrice:210, rating:4.7, reviews:445,  stock:11, tags:['rating4'],                  createdAt:'2025-08-08' },
+  { id:'p12', brand:'BuddySound', title:'Earbuds Compactos con Bluetooth 5.3',                         image:'https://images.unsplash.com/photo-1631176093617-63490a3d785a?w=600&q=80&auto=format&fit=crop', price:35,  originalPrice:65,  rating:4.3, reviews:389,  stock:40, tags:['deals','freeship'],        createdAt:'2025-09-18' },
+];
+
+const BRANDS = ['AudioTech', 'SoundWave', 'ProAudio', 'BuddySound', 'StudioMax', 'BassBoom', 'SilentPro', 'EcoSound'];
+
+/* ============================================================
+   2. ESTADO
+   ============================================================ */
+const state = {
+  filters: {
+    priceMin: 0,
+    priceMax: 300,
+    brands: new Set(),
+    rating: 0,
+    inStock: false,
+    freeShipping: false,
+    onSale: false,
+    quick: null,
+  },
+  sort: 'relevance',
+  view: 'grid',
+  page: 1,
+  pageSize: 8,
+};
+
+/* ============================================================
+   3. ANALYTICS (stub)
+   ============================================================ */
+function track(eventName, payload = {}) {
+  if (window.gtag) window.gtag('event', eventName, payload);
+  console.log(`📊 [analytics] ${eventName}`, payload);
+}
+
+/* ============================================================
+   4. FILTRADO + ORDENACIÓN
+   ============================================================ */
+function getFilteredProducts() {
+  const f = state.filters;
+
+  let list = ALL_PRODUCTS.filter(p => {
+    // Precio
+    if (p.price < f.priceMin || p.price > f.priceMax) return false;
+    // Marca
+    if (f.brands.size > 0 && !f.brands.has(p.brand)) return false;
+    // Rating
+    if (f.rating > 0 && p.rating < f.rating) return false;
+    // En stock
+    if (f.inStock && p.stock <= 0) return false;
+    // Envío gratis
+    if (f.freeShipping && !p.tags.includes('freeship')) return false;
+    // En oferta
+    if (f.onSale && !p.originalPrice) return false;
+    // Quick filter
+    if (f.quick) {
+      if (f.quick === 'deals' && !p.tags.includes('deals')) return false;
+      if (f.quick === 'new' && !p.tags.includes('new')) return false;
+      if (f.quick === 'bestseller' && !p.tags.includes('bestseller')) return false;
+      if (f.quick === 'freeship' && !p.tags.includes('freeship')) return false;
+      if (f.quick === 'rating4' && p.rating < 4.5) return false;
+    }
+    return true;
+  });
+
+  // Ordenación
+  switch (state.sort) {
+    case 'price-asc':  list.sort((a, b) => a.price - b.price); break;
+    case 'price-desc': list.sort((a, b) => b.price - a.price); break;
+    case 'rating':     list.sort((a, b) => b.rating - a.rating || b.reviews - a.reviews); break;
+    case 'newest':     list.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)); break;
+    case 'discount':
+      list.sort((a, b) => {
+        const da = a.originalPrice ? (1 - a.price / a.originalPrice) : 0;
+        const db = b.originalPrice ? (1 - b.price / b.originalPrice) : 0;
+        return db - da;
+      });
+      break;
+    default: // relevance — bestseller primero
+      list.sort((a, b) => {
+        const sa = (a.tags.includes('bestseller') ? 1 : 0) + a.rating;
+        const sb = (b.tags.includes('bestseller') ? 1 : 0) + b.rating;
+        return sb - sa;
+      });
+  }
+
+  return list;
+}
+
+/* ============================================================
+   5. CONTADOR DE FILTROS ACTIVOS
+   ============================================================ */
+function countActiveFilters() {
+  const f = state.filters;
+  let n = 0;
+  if (f.priceMin > 0 || f.priceMax < 300) n++;
+  if (f.brands.size > 0) n += f.brands.size;
+  if (f.rating > 0) n++;
+  if (f.inStock) n++;
+  if (f.freeShipping) n++;
+  if (f.onSale) n++;
+  if (f.quick) n++;
+  return n;
+}
+
+/* ============================================================
+   6. RENDER: FILTROS (sidebar + drawer)
+   ============================================================ */
+function renderFilterBlocks() {
+  const html = `
+    <!-- Precio -->
+    <div class="filter-group" data-group="price">
+      <button type="button" class="filter-group__head" onclick="toggleGroup(this)">
+        Precio
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m6 9 6 6 6-6"/>
+        </svg>
+      </button>
+      <div class="filter-group__body">
+        <div class="price-range">
+          <div class="price-range__inputs">
+            <input class="price-range__input" type="number" min="0" max="300" step="10"
+              value="${state.filters.priceMin}" id="price-min"
+              onchange="updatePrice('min', this.value)" aria-label="Precio mínimo" />
+            <span class="price-range__sep">—</span>
+            <input class="price-range__input" type="number" min="0" max="300" step="10"
+              value="${state.filters.priceMax}" id="price-max"
+              onchange="updatePrice('max', this.value)" aria-label="Precio máximo" />
+          </div>
+          <input class="price-range__slider" type="range" min="0" max="300" step="10"
+            value="${state.filters.priceMax}" id="price-slider"
+            oninput="updatePriceSlider(this.value)" aria-label="Precio máximo" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Marca -->
+    <div class="filter-group" data-group="brand">
+      <button type="button" class="filter-group__head" onclick="toggleGroup(this)">
+        Marca
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m6 9 6 6 6-6"/>
+        </svg>
+      </button>
+      <div class="filter-group__body">
+        ${BRANDS.map(b => {
+          const count = ALL_PRODUCTS.filter(p => p.brand === b).length;
+          const checked = state.filters.brands.has(b) ? 'checked' : '';
+          return `
+            <label class="check">
+              <input type="checkbox" ${checked} onchange="toggleBrand('${b}', this.checked)" />
+              <span class="check__box" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 6 9 17l-5-5"/>
+                </svg>
+              </span>
+              <span>${b}</span>
+              <span class="check__count">${count}</span>
+            </label>
+          `;
+        }).join('')}
+      </div>
+    </div>
+
+    <!-- Valoración -->
+    <div class="filter-group" data-group="rating">
+      <button type="button" class="filter-group__head" onclick="toggleGroup(this)">
+        Valoración
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m6 9 6 6 6-6"/>
+        </svg>
+      </button>
+      <div class="filter-group__body">
+        ${[4.5, 4, 3.5].map(r => {
+          const count = ALL_PRODUCTS.filter(p => p.rating >= r).length;
+          const stars = '★'.repeat(Math.floor(r)) + (r % 1 ? '½' : '');
+          return `
+            <label class="rating-opt">
+              <input type="radio" name="rating" value="${r}" ${state.filters.rating === r ? 'checked' : ''}
+                onchange="setRating(${r})" />
+              <span class="rating-opt__radio" aria-hidden="true"></span>
+              <span class="rating-opt__stars">${stars}</span>
+              <span class="rating-opt__label">+${r}</span>
+              <span class="check__count">${count}</span>
+            </label>
+          `;
+        }).join('')}
+        <label class="rating-opt">
+          <input type="radio" name="rating" value="0" ${state.filters.rating === 0 ? 'checked' : ''}
+            onchange="setRating(0)" />
+          <span class="rating-opt__radio" aria-hidden="true"></span>
+          <span>Todas</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Otros -->
+    <div class="filter-group" data-group="other">
+      <button type="button" class="filter-group__head" onclick="toggleGroup(this)">
+        Características
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m6 9 6 6 6-6"/>
+        </svg>
+      </button>
+      <div class="filter-group__body">
+        <label class="check">
+          <input type="checkbox" ${state.filters.inStock ? 'checked' : ''} onchange="toggleOther('inStock', this.checked)" />
+          <span class="check__box" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </span>
+          <span>Solo en stock</span>
+        </label>
+        <label class="check">
+          <input type="checkbox" ${state.filters.freeShipping ? 'checked' : ''} onchange="toggleOther('freeShipping', this.checked)" />
+          <span class="check__box" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </span>
+          <span>Envío gratis</span>
+        </label>
+        <label class="check">
+          <input type="checkbox" ${state.filters.onSale ? 'checked' : ''} onchange="toggleOther('onSale', this.checked)" />
+          <span class="check__box" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </span>
+          <span>Solo en oferta</span>
+        </label>
+      </div>
+    </div>
+  `;
+
+  document.getElementById('sidebar-filters').innerHTML = html;
+  document.getElementById('drawer-filters').innerHTML = html;
+}
+
+function toggleGroup(head) {
+  head.parentElement.classList.toggle('is-collapsed');
+}
+
+/* ============================================================
+   7. HANDLERS DE FILTROS
+   ============================================================ */
+function updatePrice(which, value) {
+  const v = Math.max(0, Math.min(300, Number(value)));
+  if (which === 'min') state.filters.priceMin = Math.min(v, state.filters.priceMax);
+  else                 state.filters.priceMax = Math.max(v, state.filters.priceMin);
+  renderFilterBlocks();
+  renderActiveFilters();
+  resetAndRender();
+  track('filter_price', { min: state.filters.priceMin, max: state.filters.priceMax });
+}
+
+function updatePriceSlider(value) {
+  state.filters.priceMax = Number(value);
+  renderFilterBlocks();
+  renderActiveFilters();
+  resetAndRender();
+  track('filter_price_max', { max: value });
+}
+
+function toggleBrand(brand, checked) {
+  if (checked) state.filters.brands.add(brand);
+  else         state.filters.brands.delete(brand);
+  renderActiveFilters();
+  renderFilterBlocks();
+  resetAndRender();
+  track('filter_brand', { brand, checked });
+}
+
+function setRating(r) {
+  state.filters.rating = Number(r);
+  renderActiveFilters();
+  renderFilterBlocks();
+  resetAndRender();
+  track('filter_rating', { rating: r });
+}
+
+function toggleOther(key, value) {
+  state.filters[key] = value;
+  renderActiveFilters();
+  resetAndRender();
+  track('filter_other', { key, value });
+}
+
+function setQuickFilter(quick) {
+  state.filters.quick = state.filters.quick === quick ? null : quick;
+  document.querySelectorAll('[data-quick]').forEach(btn => {
+    btn.classList.toggle('is-active', btn.dataset.quick === state.filters.quick);
+  });
+  renderActiveFilters();
+  resetAndRender();
+  track('filter_quick', { quick });
+}
+
+function clearAllFilters() {
+  state.filters = {
+    priceMin: 0, priceMax: 300, brands: new Set(),
+    rating: 0, inStock: false, freeShipping: false, onSale: false, quick: null,
+  };
+  document.querySelectorAll('[data-quick]').forEach(b => b.classList.remove('is-active'));
+  renderFilterBlocks();
+  renderActiveFilters();
+  resetAndRender();
+  track('filters_clear');
+}
+
+function onSortChange() {
+  state.sort = document.getElementById('sort').value;
+  resetAndRender();
+  track('sort_change', { sort: state.sort });
+}
+
+function setView(view) {
+  state.view = view;
+  document.querySelectorAll('[data-view]').forEach(b => {
+    const active = b.dataset.view === view;
+    b.classList.toggle('is-active', active);
+    b.setAttribute('aria-pressed', active ? 'true' : 'false');
+  });
+  document.getElementById('grid').classList.toggle('is-list', view === 'list');
+  track('view_change', { view });
+}
+
+/* ============================================================
+   8. RENDER: CHIPS DE FILTROS ACTIVOS
+   ============================================================ */
+function renderActiveFilters() {
+  const container = document.getElementById('active-filters');
+  const f = state.filters;
+  const chips = [];
+
+  if (f.priceMin > 0 || f.priceMax < 300) {
+    chips.push({ label: `$${f.priceMin} - $${f.priceMax}`, action: () => updatePrice('min', 0) || updatePrice('max', 300) });
+  }
+  f.brands.forEach(b => chips.push({ label: b, action: () => toggleBrand(b, false) }));
+  if (f.rating > 0) chips.push({ label: `+${f.rating}★`, action: () => setRating(0) });
+  if (f.inStock) chips.push({ label: 'En stock', action: () => toggleOther('inStock', false) });
+  if (f.freeShipping) chips.push({ label: 'Envío gratis', action: () => toggleOther('freeShipping', false) });
+  if (f.onSale) chips.push({ label: 'En oferta', action: () => toggleOther('onSale', false) });
+  if (f.quick) {
+    const labels = { deals: '🔥 Ofertas', new: '✨ Novedades', bestseller: '🏆 Best sellers', freeship: '🚚 Envío gratis', rating4: '⭐ +4 estrellas' };
+    chips.push({ label: labels[f.quick], action: () => setQuickFilter(f.quick) });
+  }
+
+  const count = countActiveFilters();
+  const badge = document.getElementById('filter-count');
+  if (count > 0) { badge.textContent = count; badge.hidden = false; }
+  else            { badge.hidden = true; }
+
+  if (chips.length === 0) {
+    container.innerHTML = '';
+    return;
+  }
+
+  container.innerHTML = `
+    <span class="active-filters__label">Filtros activos:</span>
+    ${chips.map((c, i) => `
+      <button class="tag" data-idx="${i}">
+        ${c.label}
+        <span class="tag__x" aria-hidden="true">×</span>
+      </button>
+    `).join('')}
+    <button class="clear-all" onclick="clearAllFilters()">Limpiar todo</button>
+  `;
+
+  container.querySelectorAll('.tag').forEach((el, i) => {
+    el.addEventListener('click', () => chips[i].action());
+  });
+}
+
+/* ============================================================
+   9. RENDER: PRODUCT GRID
+   ============================================================ */
+function renderCard(p, index) {
+  const discount = p.originalPrice ? Math.round((1 - p.price / p.originalPrice) * 100) : 0;
+  const isBest = p.tags.includes('bestseller');
+  const isNew = p.tags.includes('new');
+  const freeShip = p.tags.includes('freeship');
+
+  let badgeHtml = '';
+  if (p.stock <= 5 && p.stock > 0) badgeHtml += `<span class="badge badge--danger badge--pulse">🔥 Últimas ${p.stock}</span>`;
+  if (isBest) badgeHtml += `<span class="badge badge--gold">🏆 Best seller</span>`;
+  else if (isNew) badgeHtml += `<span class="badge badge--success">✨ Nuevo</span>`;
+  if (discount >= 40) badgeHtml += `<span class="badge badge--brand">-${discount}%</span>`;
+
+  const stars = '★'.repeat(Math.round(p.rating)) + '☆'.repeat(5 - Math.round(p.rating));
+
+  return `
+    <article class="card" style="animation-delay:${index * 40}ms"
+      onclick="track('product_card_click', {id:'${p.id}', position:${index}})">
+      <div class="card__media">
+        <div class="card__badges">${badgeHtml}</div>
+        <button class="card__wish" aria-label="Añadir ${p.title} a favoritos"
+          onclick="event.stopPropagation(); toggleWish(this);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </button>
+        <img class="card__img" src="${p.image}" alt="${p.title}" loading="lazy" width="600" height="600" />
+      </div>
+      <div class="card__body">
+        <div class="card__brand">${p.brand}</div>
+        <h3 class="card__title">${p.title}</h3>
+
+        <div class="card__rating">
+          <span class="card__stars" aria-hidden="true">${stars}</span>
+          <span class="card__reviews">${p.rating} (${p.reviews.toLocaleString('es-ES')})</span>
+        </div>
+
+        <div class="card__price-row">
+          <span class="card__price">$${p.price}</span>
+          ${p.originalPrice ? `<span class="card__price-old">$${p.originalPrice}</span>` : ''}
+          ${discount > 0 ? `<span class="card__price-discount">-${discount}%</span>` : ''}
+        </div>
+
+        ${freeShip ? `<div class="card__shipping">🚚 Envío gratis</div>` : ''}
+
+        <button class="card__cta"
+          onclick="event.stopPropagation(); addToCart('${p.id}', this);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          </svg>
+          Añadir
+        </button>
+      </div>
+    </article>
+  `;
+}
+
+function resetAndRender() {
+  state.page = 1;
+  renderProducts();
+}
+
+function renderProducts() {
+  const filtered = getFilteredProducts();
+  const shown = filtered.slice(0, state.page * state.pageSize);
+
+  document.getElementById('result-count').textContent = filtered.length;
+
+  const grid = document.getElementById('grid');
+  const empty = document.getElementById('empty-state');
+  const loadWrap = document.getElementById('load-more-wrap');
+
+  if (filtered.length === 0) {
+    grid.innerHTML = '';
+    grid.hidden = true;
+    empty.hidden = false;
+    loadWrap.hidden = true;
+    return;
+  }
+
+  grid.hidden = false;
+  empty.hidden = true;
+
+  grid.innerHTML = shown.map((p, i) => renderCard(p, i)).join('');
+
+  // Load more
+  const hasMore = shown.length < filtered.length;
+  loadWrap.hidden = !hasMore;
+
+  const progress = document.getElementById('progress-info');
+  progress.innerHTML = `Mostrando <strong>${shown.length}</strong> de <strong>${filtered.length}</strong> productos`;
+  document.getElementById('drawer-apply-count').textContent = `${filtered.length}`;
+}
+
+function loadMore() {
+  const btn = document.getElementById('load-more');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="load-more__spinner" aria-hidden="true"></span><span>Cargando...</span>';
+
+  // Simular latencia de red
+  setTimeout(() => {
+    state.page++;
+    renderProducts();
+    btn.disabled = false;
+    btn.innerHTML = '<span>Cargar más productos</span>';
+    track('load_more', { page: state.page });
+  }, 600);
+}
+
+/* ============================================================
+   10. CARRITO + WISHLIST + TOAST
+   ============================================================ */
+let cartCount = 0;
+
+function addToCart(id, btn) {
+  const product = ALL_PRODUCTS.find(p => p.id === id);
+  if (!product) return;
+
+  cartCount++;
+  const badge = document.getElementById('cart-count');
+  badge.textContent = cartCount;
+  badge.hidden = false;
+
+  const original = btn.innerHTML;
+  btn.classList.add('is-added');
+  btn.innerHTML = '✓ Añadido';
+  setTimeout(() => {
+    btn.classList.remove('is-added');
+    btn.innerHTML = original;
+  }, 1200);
+
+  showToast(`${product.title.slice(0, 40)}… añadido`);
+  track('add_to_cart', { id, value: product.price, currency: 'USD' });
+}
+
+function toggleWish(btn) {
+  btn.classList.toggle('is-active');
+  track('wishlist_toggle', { active: btn.classList.contains('is-active') });
+}
+
+function showToast(msg) {
+  const toast = document.getElementById('toast');
+  document.getElementById('toast-msg').textContent = msg;
+  toast.classList.add('is-visible');
+  clearTimeout(showToast._t);
+  showToast._t = setTimeout(() => toast.classList.remove('is-visible'), 2400);
+}
+
+/* ============================================================
+   11. DRAWER (mobile)
+   ============================================================ */
+function openDrawer() {
+  document.getElementById('filters-drawer').classList.add('is-open');
+  document.getElementById('drawer-backdrop').classList.add('is-open');
+  document.body.style.overflow = 'hidden';
+  track('filters_drawer_open');
+}
+function closeDrawer() {
+  document.getElementById('filters-drawer').classList.remove('is-open');
+  document.getElementById('drawer-backdrop').classList.remove('is-open');
+  document.body.style.overflow = '';
+}
+function applyAndClose() {
+  closeDrawer();
+  track('filters_drawer_apply');
+}
+
+/* ============================================================
+   12. INIT
+   ============================================================ */
+document.addEventListener('DOMContentLoaded', () => {
+  renderFilterBlocks();
+  renderActiveFilters();
+  renderProducts();
+
+  // Quick chips
+  document.querySelectorAll('[data-quick]').forEach(btn => {
+    btn.addEventListener('click', () => setQuickFilter(btn.dataset.quick));
+  });
+
+  // Cerrar drawer con Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeDrawer();
+  });
+
+  track('page_view', { page: 'plp', category: 'auriculares' });
+});
+</script>
+
+
+</body></html>
